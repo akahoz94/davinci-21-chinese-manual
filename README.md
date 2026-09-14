@@ -60,6 +60,7 @@
 |-------|-------------------|
 | WorkBuddy | `~/.workbuddy/skills/` |
 | Claude Code | `~/.claude/skills/` |
+| OpenAI Codex | `~/.codex/skills/`（以客户端实际为准） |
 | CodeBuddy | `~/.codebuddy/skills/`（以客户端实际为准） |
 | Cursor | `~/.cursor/skills/` 或项目内 `.cursor/skills/` |
 | Cline | `~/.cline/skills/` |
