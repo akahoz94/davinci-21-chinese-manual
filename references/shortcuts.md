@@ -1,0 +1,868 @@
+# DaVinci Resolve 18 快捷键速查（自动抽取·待按需查阅）
+
+> **按键对应约定（手册原文）**：本手册以 macOS 惯例展示快捷键（Command ⌘ / Option ⌥）。
+> - Windows / Linux 用户：用 **Ctrl** 代替 Command，用 **Alt** 代替 Option。
+> - Shift、数字、字母等保持不变。
+
+> 检索建议：直接在本文件或对应篇章 `sections/*.md` 中 grep 功能关键词（如“分割”“场景”“转场”）即可定位快捷键原文。
+
+## 02_使用DaVinci_Resolve软件界面
+
+- **Shift -2到8** — — 勾选“工作区”>“显示页面导航”选项。 ｜ 在“页面导航”被隐藏的情况下，您可以使用键盘快捷方式单独访问不同的页面（Shift -2到8），
+- **Shift - 1** — 理器” ｜ （Shift - 1）和“项目设置”
+- **Shift - 9** — （Shift - 1）和“项目设置” ｜ （Shift - 9）。您也可以从DaVinci Resolve的主菜单栏中调用这些功能。
+- **Command-F** — 依次选择菜单“工作区”>“检视器模式”>“影院模式检视器” ｜ （Command-F），将当前所选“检视器”
+- **Command-F** — 依次选择“工作区”>“检视器模式”>“影院模式检视器” ｜ （Command-F），可将“检视器”设为“影院模式检
+- **Option-F** — 和“影像描摹”等任务时，您还可以使用“增强模式检视器” ｜ （Option-F）或“全屏检视器”
+- **Shift-F** — （Option-F）或“全屏检视器” ｜ （Shift-F)）模
+- **Command-F** — 作区”>“检视器模式”>“影院模式检视器” ｜ （Command-F），将“检视器”设为“影院模式检视器”，全屏显
+- **Command-Z** — — 依次选择“编辑”>“撤销” ｜ （Command-Z），撤销上一步更改。
+- **Shift-Command-Z** — — 依次选择“编辑”>“重做” ｜ （Shift-Command-Z），重做上一步操作。
+
+## 03_设置和工作流程
+
+- **Command-C** — — 要复制一个文件夹：右键点击一个文件夹，在弹出菜单中选择“复制”，或选择一个文件夹，再按下 ｜ Command-C组合键。软件会复制此文件夹中包含的所有项目。
+- **Command-S** — — 依次选择“文件”>“保存项目” ｜ （Command-S）。
+- **Command-Shift-S** — 目” ｜ （Command-Shift-S），在“将当前项目另存为”窗口中输入新项目名称，再点击“保存”。
+- **Shift-S** — （Command- ｜ Shift-S），在“将当前项目另存为”窗口中输入新项目名称，再点击“保存”。如果您选择将当前项目
+- **Command-,** — 提示：当您首次运行DaVinci Resolve时，首先会看到“项目管理器”窗口，此时按下 ｜ Command-,（逗号）组合键，将打开“偏好设置”窗口。
+- **Control Panels** — DaVinci Resolve特定的功能页面中更加高效地工作。请使用 ｜ DaVinci Control Panels Setup（DaVinci控制面板设置）应用程序
+- **Control Panels** — 121 ｜ DaVinci Control Panels Setup软件界面布局
+- **Control Panels** — Panels Setup应用程序对这些设备进行配置。 ｜ DaVinci Control Panels Setup是一个独立的应用程序，会随DaVinci Resolve自动安装。直接在DaVinci
+- **Control Panels** — Resolve中依次选择“帮助”>“DaVinci Resolve调色台设置”，或在操作系统DaVinci Resolve程序文件 ｜ 夹中选择此应用程序，都可以打开DaVinci Control Panels Setup应用程序。
+- **Control Panels** — Panels Setup应用程序图标 ｜ DaVinci Control Panels Setup
+- **Control Panels** — 软件界面布局 ｜ 启动DaVinci Control Panels Setup应用程序后，软件界面上会显示它在您的系统中自动检测到的硬
+- **Control Panels** — 何设备，软件界面上会显示文字“No DaVinci control panels found（未找到任何DaVinci控制面板）”。 ｜ 显示连接了一台DaVinci剪辑键盘的DaVinci Control Panels Setup窗口。窗
+- **Control Panels** — <!-- page 122 --> ｜ 显示未连接任何硬件的DaVinci Control Panels Setup窗口
+- **Control Panels** — 显示未连接任何硬件的DaVinci Control Panels Setup窗口 ｜ 使用DaVinci Control Panels Setup
+- **Control Panels** — 应用程序 ｜ DaVinci Control Panels Setup为您提供了一个用于连接硬件设备、更新固件和修改设置的简单界面。
+- **Control Panels** — DaVinci Control Panels Setup为您提供了一个用于连接硬件设备、更新固件和修改设置的简单界面。 ｜ DaVinci Control Panels Setup窗口中显示连接了一台Fairlight Desktop Console调音台
+- **Control Panels** — 固件 ｜ 启动后，DaVinci Control Panels Setup应用程序会自动从Blackmagic Design服务器上检查是否有
+- **Control Panels** — 以太网连接 ｜ 如果您通过以太网连接了设备，在DaVinci Control Panels Setup应用程序中配置设备之前，需要输
+- **Control Panel** — 如果您通过以太网连接了设备，在DaVinci Control Panels Setup应用程序中配置设备之前，需要输 ｜ 入设备的IP地址。请点击窗口左下角的加号“+”图标。弹出“Add DaVinci Control Panel（添加DaVinci
+- **Control Panels** — — “恢复出厂设置”：将设备恢复为默认的出厂设置。在解决故障时可能会用到此操作。 ｜ DaVinci Control Panels Setup应用程序窗口中显示连接了一台
+- **Option-R** — — 在“调色页面”和“剪辑页面”中，连续按下“Option-R”组合键，可在“无”、
+- **Command-R** — — 依次选择“调色”>“达芬奇实时调色”>“冻结” ｜ （快捷键Shift-Command-R）。
+- **Option-R** — — 依次选择“调色”>“达芬奇实时调色”>“快照” ｜ （快捷键Command-Option-R）。
+
+## 04_导入和整理媒体文件
+
+- **Command-Z** — — 依次选择“编辑”>“重做” ｜ （快捷键Shift-Command-Z），重做下一次更改。
+- **Shift-Command-O** — 依次选择“文件”>“导出”>“导出AAF，XML，DRT” ｜ （Shift-Command-O）。
+- **Shift-Command-I** — — 依次选择“文件”>“导入时间线”>“导入AAF，XML，DRT” ｜ （Shift-Command-I），再从文件系统
+- **Option-, / Option-.** — — “修剪”>“滑移音频”>“前进一帧/后退一帧”： ｜ （使用组合键“Option-.”和“Option-,”）对任何片段
+- **Option** — — “修剪”>“滑移音频”>“前进一子帧/后退一子帧”： ｜ （使用组合键“Option-右箭头”和“Option-左箭
+- **Command-Option-, / Option-.** — （使用组合键“Command- ｜ Option-.”和组合键“Command-Option-,”）对双眼立体片段中左右眼素材的相对同步状态每次
+
+## 05_快编页面
+
+- **Shift-D** — 使用“绕过调色和Fusion特效”按钮/下拉菜单可以关闭所有您可能已经在“调色页面”和/或“Fusion ｜ 页面”中应用的调色和特效，关闭它们可以提高低性能工作站的播放性能。反复点击此按钮（Shift-D）
+- **Command-Z** — — 在菜单中选择“编辑”->“重做” ｜ （快捷键Shift-Command-Z）来重做当前操作。
+- **Command-N** — （Shift- ｜ Command-N）；2，在“媒体池”中点击鼠标右键，从弹出菜单中选择“添加媒体夹”。您可以在现有的“媒
+- **Shift-Command-O** — 2 ｜ 依次选择“文件” > “导出” > “导出AAF,XML,DRT”或按(Shift-Command-O)快捷键。
+- **Shift-Command-I** — — 依次选择“文件” > “导入时间线” > “导入AAF,XML,DRT”或按(Shift-Command-I)快捷键，并在
+- **Command-W** — “DaVinci Resolve”的全套视频示波器，依次选择“工作区” > “视频示波器” > “开启” ｜ （Shift‑Command-W快捷键）。
+- **Command-D** — 片段的时长。您可以通过在“时间线”上选中一个或多个片段并依次选择“片段” > “更改片段时长” ｜ （Command-D快捷键），或右键点击一个片段并在弹出菜单中选择“更改片段时长”来打开“更改片
+- **Command-A** — — 按下“Command-A”组合键来选中所有文本并以青色高亮显示。
+- **Command-A** — — 要选择所有片段：先选中一个片段，而后进入菜单依次选择“编辑” > “全选” ｜ （Command-A）。
+- **Shift-A** — — 要取消选择“时间线”中的所有已选中的片段：单击“时间线”中任意空白区域，以取消选择所有已 ｜ 选片段，此功能快捷键为Command-Shift-A。
+- **Shift-V** — 道上，依次选择“修剪” > “选择播放头下的所有片段” ｜ （快捷键为Option-Shift-V）。
+- **Shift-A** — — 要取消选择“时间线”中的所有编辑点：按下组合键Command-Shift-A。
+- **Optimized** — — “Optimized for most sources”: 此选项为默认选中并对大多数源媒体有着不错的效果。
+
+## 06_剪辑
+
+- **Command + 1** — 功能 ｜ Command + 1
+- **Command + 2** — 媒体文件夹 ｜ Command + 2
+- **Command + 3** — 媒体片段 ｜ Command + 3
+- **Command + 4** — 源检视器 ｜ Command + 4
+- **Command + 5** — 时间线 ｜ Command + 5
+- **Command + 6** — 时间线检视器 ｜ Command + 6
+- **Command + 7** — 效果 ｜ Command + 7
+- **Command + 8** — 编辑索引 ｜ Command + 8
+- **Command + 9** — 无 ｜ Command + 9
+- **Command + N** — 打开剪辑页面，然后选择“文件” > “新建时间线” ｜ （Command + N）。
+- **Command + C / Command + V** — 选择“复制”和“粘贴”命令，即可复制和粘贴时间码值。您也可以点击时间码栏后，使用通用的复制粘 ｜ 贴快捷键命令（Command + C、Command + V）。这在跨页面场景中也同样适用。您要粘贴的时间码
+- **Shift + S** — — 选择“时间线” > “声音搓擦” ｜ （Shift + S）
+- **Option** — 同时自动选中相应的已链接的音频片段。关闭时，单击这一视频片段就不会选择其音 ｜ 频。您还可以通过按住 Option 并单击时间线中的片段，即可切换链接选择的状态。
+- **Shift + Z** — 和缩小时间线。向上滚动放大，而向下滚动缩小。您还可以使用 Command + 加号进 ｜ 行放大，使用 Command + 减号进行缩小，使用 Shift + Z 可将时间线缩放至可容下
+- **Control Room** — 显示音频表 ｜ 如果您只想查看影片声音的电平，也可以切换为显示“Control Room”的音频表，而不是调音台。出现
+- **Command + Shift + W** — — 选择“工作区” > “视频示波器” > “开/关（Command + Shift + W）”将示波器作为浮动窗口打开。
+- **Command + Z** — — 选择“编辑” > “撤销（Command + Z）”可撤销之前的更改。
+- **Shift + Command + Z** — — 选择“编辑” > “重做（Shift + Command + Z）”可重做下一个更改。
+- **Command + N** — 功能 ｜ Command + N
+- **Command + Shift + N** — 从媒体池中删除时间线 ｜ Command + Shift + N
+- **Shift + Z** — 放大时间线内容显示 ｜ Shift + Z
+- **Command + Shift + L** — 切换时间线的吸附 ｜ Command + Shift + L
+- **Command + 4** — 切换链接的片段的选择 ｜ Command + 4
+- **Command + N** — — 选择“文件” > “新建时间线（Command + N）”。
+- **Shift + Command + O** — 2 ｜ 选择“文件” > “导出” > “导出 AAF、XML、DRT（Shift + Command + O）”。
+- **Shift + Command + I** — — 选择“文件” > “导入时间线” > “导入 AAF、XML、DRT（Shift + Command + I）”，然后从文件系
+- **Shift + Z** — 为中心来进行，即使播放头位于屏幕区域之外也是如此。 ｜ 要将每个片段都在时间线中完整显示：按 Shift + Z，可切换显示比例，即按 Shift + Z 可
+- **Shift + Z** — 要将每个片段都在时间线中完整显示：按 Shift + Z，可切换显示比例，即按 Shift + Z 可 ｜ 将整个时间线完整显示，然后再按 Shift + Z 则会将时间线返回到您此前使用的任何缩
+- **Shift + Z** — 将整个时间线完整显示，然后再按 Shift + Z 则会将时间线返回到您此前使用的任何缩 ｜ 放级别上。使用此快捷键可以非常轻松地在时间线中快速跳转，您可以按下 Shift + Z，
+- **Shift + Z** — 放级别上。使用此快捷键可以非常轻松地在时间线中快速跳转，您可以按下 Shift + Z， ｜ 将播放头移动到要编辑的时间线的另一部分，然后再次按 Shift + Z 即可放大
+- **Option** — 播放头为基准缩放，变为以鼠标光标为基准来缩放时间线。这样有助于在较长的时间线中进行浏览。 ｜ 该选项启用后，按住 Option 并滚动鼠标滚轮来进行时间线缩放时，会以鼠标光标为中心来缩放。取
+- **Option** — — Option：缩放时间线。
+- **Command + A** — 按住 Command 并点选可选中多个独立片段 ｜ Command + A
+- **Option + Shift + I** — 在媒体池、源检视器或时间线中设置入点、出点 ｜ Option + Shift + I、O
+- **Command + Shift + I** — 在媒体池、源检视器或时间线中设置视频的入点、出点 ｜ Command + Shift + I、O
+- **Shift + I** — 在媒体池、源检视器或时间线中设置音频的入点、出点 ｜ Shift + I、O
+- **Option + L** — 倒放、停止、正放；本章稍后将介绍其更多用途 ｜ Option + L
+- **Option + K** — 再次播放 ｜ Option + K
+- **Command + M** — 添加标记，且不会停止播放 ｜ Command + M
+- **Shift + M** — 添加标记，在暂停播放时打开修改标记，然后可继续播放 ｜ Shift + M
+- **Option + M** — 修改标记 ｜ Option + M
+- **Option + B** — 跳转到上一个/下一个标记 ｜ Option + B
+- **Command + 1** — — 要在媒体夹列表中选取媒体夹：单击媒体池左侧的媒体夹列表中的任一媒体夹，或者在剪辑页面 ｜ 中，按 Command + 1 来激活媒体夹列表使其可被选取，然后使用上、下方向键在可用的媒体夹之
+- **Command + 1** — — 要选择单个片段：按 Command + 1 可使媒体池的媒体夹列表的选取为激活状态，并使用方向键
+- **Command + 2** — — 要选择单个片段：按 Command + 1 可使媒体池的媒体夹列表的选取为激活状态，并使用方向键 ｜ 选择并打开媒体夹。然后按 Command + 2 切换到片段浏览区域，并使用方向键在不同的片段之
+- **Command + A** — — 要在媒体池内进行全选：确保媒体池当前为激活状态，即已单击选中一个片段或在媒体池任意空 ｜ 白区域单击，然后按 Command + A 即可执行全选所有片段。
+- **Option** — 在媒体池中复制片段 ｜ 如果要在媒体池中创建片段的副本，可以按住 Option 将一个或多个片段拖动到另一个媒体夹。您也
+- **Command + 1** — 1 ｜ 如有必要，按 Command + 1 来选择媒体夹列表，然后按上下方向键选择一个媒体夹以查看其内容。
+- **Command + 2** — 2 ｜ 按 Command + 2 选择媒体池浏览器，并使用四个方向键在媒体池中的各个片段之间来回选择。
+- **Option + L** — — 再次播放：按 Option + L 立即从播放头所处位置开始播放而不会停止；例如，您需要从头快速地
+- **Option + Command** — — 上一个间隙/下一个间隙：在时间线中，如果在启用了“自动选择”控制的任一轨道的片段之间有 ｜ 间隙，则可使用 Option + Command + 分号键、Option + Command + 撇号键将播放头在前后各
+- **Shift + I / Shift + O** — — 入点/出点：Shift + I 可将播放头移动到在检视器或时间线中设置的入点处。Shift + O 则可将播放
+- **Shift + J** — 从而实现不同的速度控制 ｜ Shift + J
+- **Shift + L** — 快速地反向播放 ｜ Shift + L
+- **Shift + K** — 快速地正向播放 ｜ Shift + K
+- **Command + J** — 将播放头前移一帧 ｜ Command + J 和
+- **Command + L** — Command + J 和 ｜ Command + L
+- **Option + Command** — — 播放至出点： ｜ （默认情况下未指定快捷键） Option + Command + 正斜杠（/）。开始播放并在当前
+- **Command + M** — — 要放置标记并在回放时立即打开标记对话框并在其中输入名称或注释，按下 Command + M，
+- **Shift + M** — — 在“源检视器”或“时间线”中的任意位置选择一个标记，然后按 Shift + M。
+- **Shift + Option + I** — 记视频入点” ｜ （Shift + Option + I）/“标记音频入点”
+- **Command + Option + I** — （Shift + Option + I）/“标记音频入点” ｜ （Command + Option + I）/“标记视频出
+- **Shift + Option + O** — 点” ｜ （Shift + Option + O）/“标记音频出点”
+- **Command + Option + O** — （Shift + Option + O）/“标记音频出点” ｜ （Command + Option + O） 。
+- **Option + I / Option + O** — — 清除入点或出点：将鼠标移到媒体池中带标记的缩略图上方或媒体池的胶片条上方，或在“源检视 ｜ 器”中打开一个片段，然后按 Option + I 清除当前的入点，按 Option + O 清除当前的出点。
+- **Command + Option + X / Shift + Option + X** — — 要清除分割入点或出点：按 Shift + Option + X 键清除视频的入点和出点。按 Command + Option + X
+- **Option + X** — — 要同时清除入点和出点：将鼠标指向到媒体池中带标记的缩略图上方或媒体池的胶片条上方， ｜ 或者选中“源检视器”，然后按 Option + X。
+- **Shift + I** — — 按 Shift + I 将播放头移到当前的入点（“播放” > “前往” > “入点”）。
+- **Shift + O** — — 按 Shift + O 将播放头移到当前的出点（“播放” > “前往” > “出点”）。
+- **Shift + O** — 记）的入点和出点上，即使未启用“预览标记”也是可以的。例如，如果您在时间线中标记好了入点和出 ｜ 点，然后在“源检视器”中标记了一个片段的“入点”，则按 Shift + O（前往出点）会自动将“源检视器”播
+- **Shift + M** — — 选择“标记” > “将入点和出点转换为时长标记”。 ｜ 时长标记将会出现在“入点”和“出点”上方。要编辑其名称或注释，请双击标记，或按 Shift + M，或
+- **Option + B** — — 按 Option + B。
+- **Command + A** — — 按下 Command + A 键以选择所有文本，并以青色高亮显示。
+- **Shift + V** — 选择离播放头最近的编辑点 ｜ Shift + V
+- **Option + U** — 选择编辑点的传入，传出或居中部分 ｜ Option + U
+- **Option + Y** — “仅视频”和“仅音频”之间切换选择 ｜ Option + Y
+- **Command + Option + Y** — 选择所有轨道上位于播放头之后的片段 ｜ Command + Option + Y
+- **Command + Y** — 选择当前轨道上位于播放头之后的片段 ｜ Command + Y
+- **Option + 1** — 切换链接的片段的选择 ｜ Option + 1～8
+- **Command + Option + 1** — 将视频轨道目标控件设置到该编号所在轨道；再按一次即启用/禁用 ｜ Command + Option + 1～8
+- **Option + 1** — 将音频轨道目标控件设置到该编号所在轨道；再按一次即启用/禁用 ｜ Option + 1～8
+- **Option + Shift + 9** — 单个视频轨道的锁定切换 ｜ Option + Shift + 9
+- **Option + F1** — 所有视频轨道的锁定切换 ｜ Option + F1～F8
+- **Option + Shift + F9** — 单个音频轨道的锁定切换 ｜ Option + Shift + F9
+- **Shift + F10** — 将选定的片段从媒体池或源检视器中放置到时间线最顶层轨道 ｜ Shift + F10
+- **Shift + F11** — 将选定的片段从媒体池或源检视器中波纹覆盖到时间线 ｜ Shift + F11
+- **Shift + F12** — 将选定的片段从媒体池或源检视器中适配填充到时间线 ｜ Shift + F12
+- **Command + Z** — 将选定的片段从媒体池或源检视器中附加到时间线末端 ｜ Command + Z
+- **Command + Shift + Z** — 撤销 ｜ Command + Shift + Z
+- **Option + X** — 器将会实时显示您浏览的画面内容，以便您更仔细地查看。如果您不喜欢当前的入点和出点， ｜ 可以按 Option + X 来清除它们。
+- **Option + X** — 显示一个范围指示，显示了您已选择的片段用量。如果您不喜欢当前的入点和出点，可以按 ｜ Option + X 来清除它们。
+- **Option + X** — 那么源检视器将会实时显示您浏览的画面内容，以便您更仔细地查看。如果您不喜欢当前的 ｜ 入点和出点，可以按 Option + X 来清除它们。
+- **Option + X** — 并使用传输控件右侧的入出点按钮或按 I、O 键设置入出点。如果您不喜欢当前的入点和出点， ｜ 可以按 Option + X 来清除它们。
+- **Command + T** — 上减去余量（使用用户偏好设置的剪辑面板中的默认余量长度）。配合“添加转场” ｜ （Command + T）
+- **Command + T** — 加转场” ｜ （Command + T）。这样即可在所有被选中的片段上应用默认的转场效果。
+- **Command + 2** — 按 Command + 1 打开媒体夹列表，并使用方向键选择媒体夹（向上和向下更改选择，向左和向右 ｜ 来关闭和打开媒体夹）。然后按 Command + 2 选择片段浏览区域，使用方向键选择特定的片段。
+- **Command + Option / Command + Shift** — — 使用 Command + Option + 上/下方向键（音频）和 Command + Shift + 上/下方向键（视频）
+- **Command + Option + 1 / Option + 1** — — 使用 Option + 1～8（视频）和 Command + Option + 1～8（音频）快捷键可将视频和音频目
+- **Command + 2** — 1 ｜ 按 Command + 2 或单击鼠标以选择媒体池中的片段。
+- **Command + Option / Command + Shift** — 4 ｜ 通过点击，拖动，或使用 Command + Option、Command + Shift + 上下方向键组合快捷键，以及
+- **Command + Option + 1 / Option + 1** — 通过点击，拖动，或使用 Command + Option、Command + Shift + 上下方向键组合快捷键，以及 ｜ Option + 1～8 和 Command + Option + 1～8快捷键将视频和音频目标控件分配给您想要执行
+- **Shift + F10 / Shift + F11 / Shift + F12** — — 使用等效的键盘快捷键将所选片段添加到时间线中:插入（F9）、覆盖（F10）、替换 （F11）、叠加 ｜ （F12）、波纹覆盖 （Shift + F10）、适配填充 （Shift + F11） 、附加到时间线末端（Shift + F12）。
+- **Option + Shift + V** — “修剪” > ｜ “选择播放头下的所有片段” （Option + Shift + V）。
+- **Shift + V** — — 要选择一个片段：使用键盘，确保启用了片段所处轨道的“自动选择”，然后将播放头移至该片段， ｜ 然后按 Shift + V。
+- **Option + Y** — — 选择所有轨道上位于播放头右侧的所有片段：将播放头移动到需要选择的第一个片段，然后按 ｜ Option + Y 键（“时间线” > “向前选择片段” > “在所有轨道上向前选择片段”）即可选中时间线中
+- **Command + Y** — — 选择当前轨道上位于播放头左侧的所有片段：将播放头移动到需要选择的最后一个片段，然后按 ｜ Command + Y 键（“时间线” > “向后选择片段” > “在此轨道上向后选择片段”）即可选中时间线中
+- **Command + Option + Y** — — 选择所有轨道上位于播放头左侧的所有片段：将播放头移动到需要选择的最后一个片段，然后按 ｜ Command + Option + Y 键（“时间线” > “向后选择片段” > “在所有轨道上向后选择片段”）即可
+- **Option + E** — — Option + E：在启用了“自动选择”的最低的轨道上选择离播放头最近的视频编辑点。链接的音频
+- **Shift + E** — — Shift + E：在启用了“自动选择”的最低的轨道上选择离播放头最近的音频编辑点。链接的视频编
+- **Option + U** — — Option + U：选择编辑点后，此快捷键将会在选择视频+音频编辑点、仅选择视频或音频点之间切换。
+- **Shift + Command + A** — — 使用键盘：按 Shift + Command + A。
+- **Command + 4** — 1 ｜ 按 Command + 4激活时间线区域。
+- **Option + F1** — 按 V 键，在启用了“自动选择”的最低的轨道上选择离播放头最近的编辑点。如果各个轨道上存在 ｜ 重叠的片段，可通过 Option + F1～F8 关闭不需要选择的轨道的“自动选择”功能。使用鼠标，您可
+- **Option** — 重叠的片段，可通过 Option + F1～F8 关闭不需要选择的轨道的“自动选择”功能。使用鼠标，您可 ｜ 以通过按住 Option 并单击其“自动选择”按钮来单独启用其“自动选择”状态。
+- **Option + F9** — 以通过按住 Option 并单击其“自动选择”按钮来单独启用其“自动选择”状态。 ｜ （Option + F9 可切
+- **Option + U** — 5 ｜ 若要在视频+音频编辑点、视频或音频点之间切换，请按 Option + U。
+- **Command + Shift + A** — 执行您所需的任何操作。完成后，使用上下方向键在时间线中向后或向前跳转所选内容，或按 ｜ Command + Shift + A 取消选择。
+- **Command + Shift + A** — 那么在时间线中可能还有另一个片段被选中，且未被您注意到，此时的操作范围可能不会由“ ｜ 自动选择”来决定。按 Command + Shift + A 可取消所有选择，此时的操作应恢复正常。
+- **Option + F1** — — 要切换任何视频轨道的“自动选择”：按 Option + F1～F8 即可切换相应轨道上的“自动选择”。
+- **Option + Command + F1** — — 要切换任何音频轨道的“自动选择”：按 Option + Command + F1～F8 即可切换相应轨道上的
+- **Option + F9** — — 要切换所有视频轨道的“自动选择”：按 Option + F9。
+- **Option + Command + F9** — — 要切换所有音频轨道的“自动选择”：按 Option + Command + F9。
+- **Command + Option** — — 查找空隙：当使用 “播放” > “上一个间隙” ｜ （Command + Option + 分号）或“下一个间隙”
+- **Option** — （Command ｜ + Option + 撇号）时，将会忽略禁用了“自动选择”的轨道上的空隙。
+- **Option + Shift + 1** — — 按 Option + Shift + 1～8 可锁定或解锁轨道 V1 至 V8。
+- **Option + Shift + 9** — — 按 Option + Shift + 9 可锁定或解锁所有视频轨道。
+- **Option + Shift + F1** — — 按 Option + Shift + F1～F8 可锁定或解锁轨道 A1 至 A8。
+- **Option + Shift + F9** — — 按 Option + Shift + F9 可锁定或解锁所有音频轨道。
+- **Option + Command** — — 选择“回放” > “上一个间隙”，或按 Option + Command + 分号，即可将播放头移动到播放头
+- **Command + Option + F9 / Option + F9** — 画不同步。要避免这种情况，请按住 Shift 并单击一个视频/音频轨道的自动选择控件（或按 ｜ Option + F9 / Command + Option + F9），开关所有视频、音频轨道的自动选择，直到它们全
+- **Shift + Command + L** — — 单击链接选择按钮（或按 Shift + Command + L）。
+- **Option** — 的名称栏左侧显示一个红色的“同步偏移”标记，用时码标示出该片段的音频和视频不同步的偏移量。在 ｜ 下面的示例中，该组视频和音频片段里，视频片段通过按住 Option 并向左拖动使其产生了同步偏移。
+- **Option + Command + L** — — 要取消音频和视频彼此之间的链接：选择一个片段，然后右键单击，并从右键菜单中选择“链接” ｜ （或按 Option + Command + L）。未链接片段的片段名称之前就不会有一个链接标记。
+- **Option + Command + L** — 然后右键单击所选片段，在右键菜单中选择“链接” ｜ （或按 Option + Command + L）。在时间线中
+- **Command + D** — 切换链接的片段的选择 ｜ Command + D
+- **Command + Shift** — 更改片段时长 ｜ Command + Shift
+- **Command + Shift** — Command + Shift ｜ 按住 Command + Shift，并使用鼠标拖动片段，可使其在时间线中与
+- **Command + X** — 启用/禁用所选片段 ｜ Command + X
+- **Command + Shift + X** — 剪切所选片段并保留空隙 ｜ Command + Shift + X
+- **Command + C** — 波纹剪切所选内容;剪切后产生的空隙将被收拢。 ｜ Command + C
+- **Command + V** — 复制选定的片段 ｜ Command + V
+- **Command + Shift + V** — 粘贴片段 ｜ Command + Shift + V
+- **Option** — — 要将片段在时间线上下移动到不同到轨道，且保持横向的位置固定：在时间线中，按住 Shift ｜ 键，并将其上下拖拽。或者您也可以按住 Option 键的同时按上下箭头键来移动他们。
+- **Shift + V** — — 要在时间线中前后移动片段：要选择需要移动的片段，请点选该片段，或者使用空格键或 JKL ｜ 键将播放头移到该片段上，然后按 Shift + V 选中。随后按逗号键（向左微移1帧）或句号键（向
+- **Option / Shift + V** — — 将片段上下移动到其他轨道：要选择需要移动的片段，请点选该片段，或者使用空格键或 JKL ｜ 键将播放头移到该片段上，然后按 Shift + V 选中。按 Option + 上箭头键，将片段的视频和音
+- **Option** — 键将播放头移到该片段上，然后按 Shift + V 选中。按 Option + 上箭头键，将片段的视频和音 ｜ 频部分移至编号较大的轨道上，或按 Option + 下箭头键，将视频和音频部分移至编号较小
+- **Shift + V** — — 将播放头移动到时间线中的片段上，按 Shift + V 将其选中，然后按回车键，即可将其在源检视器
+- **Option** — 选择工具还是修剪工具。 ｜ 提示：若此时要借助鼠标在时间线中执行片段的帧匹配，请在按住 Option 键的同时在时间
+- **Command + Shift** — 交换插入编辑 ｜ 您可以在时间线中，通过按住 Command + Shift 并拖拽一个或多个选中的片段左右移动来实现交
+- **Command + Shift** — 3 ｜ 按住 Command + Shift，并向左或向右拖拽选中片段的视频或音频部分。
+- **Command + Shift** — 2 ｜ 按住 Command + Shift，并向左或向右拖拽选中片段。确保您拖拽的片段是在相同的轨道区域内
+- **Shift + UP** — — 要在调色页面中，使用 DaVinci 调色台分割片段：移动播放头至需要将片段拆开的帧，在 T 型杆 ｜ 面板中按下 Shift + UP 以及 SPLIT/UNDO。
+- **Shift + UP** — — 要在调色页面中，使用 DaVinci 调色台合并片段：移动播放头至需要将片段合并的帧，在 T 型杆面 ｜ 板中按下 Shift + UP 以及 JOIN/REDO。两个片段需为同一媒体文件，且编辑点两侧须为连续的帧。
+- **Command + X** — — 剪切一个或多个片段，留下空隙：选择要剪切的目标，随后选择“编辑” > “剪切” ｜ （Command + X）。
+- **Command + Shift + X** — 随后选择“编辑” > “波纹剪切” ｜ （Command + Shift + X）。选中的片段将会在时间线上移除，并暂
+- **Command + C** — — 复制一个或多个片段：选择要复制的目标，随后选择“编辑” > “复制” ｜ （Command + C）。选中的片
+- **Command + V** — — 粘贴一个或多个片段到相同轨道：将播放头移至需要粘贴至的帧，随后选择“编辑” > “粘贴” ｜ （Command + V）。默认情况下，各片段将会粘贴至其原本所在的轨道上。粘贴的片段将会覆盖
+- **Option** — — 粘贴一个或多个片段到其他轨道：粘贴片段到其他不同的轨道上的操作略有不同。将播放头移 ｜ 至需要粘贴至的帧，然后按住 Option 并点击需要粘贴到的轨道的任一空白区域，或按住 Option
+- **Command + V** — 并点击自动选择控件，使得仅该轨道启用自动选择，随后选择“编辑” > “粘贴” ｜ （Command + V）。
+- **Command + Shift + V** — “编辑” > “粘贴插入” ｜ （Command + Shift + V），可通过粘贴复制/剪切的片段来实现
+- **Command + C / Command + X** — 2 ｜ 按 Command + X 来剪切或 Command + C 来复制这部分片段。
+- **Option + X** — 3 ｜ 按 Option + X 清除入出点，否则您只能粘贴回这部分片段原本所在的位置。
+- **Command + C / Command + X** — 1 ｜ 按 Command + X 来剪切或 Command + C 来复制选中的片段。
+- **Option** — 在时间线中复制片段和转场 ｜ 选中片段，然后按住 Option 将片段拖到时间线中的其他位置或轨道，即可复制出一个或多个片段。当
+- **Option** — 选中片段，然后按住 Option 将片段拖到时间线中的其他位置或轨道，即可复制出一个或多个片段。当 ｜ 您使用此方法来复制片段时，您需要按住 Option 键直到您松开鼠标之后为止。
+- **Option** — 您使用此方法来复制片段时，您需要按住 Option 键直到您松开鼠标之后为止。 ｜ 单个选定的转场也可以通过按住 Option 键并拖拽来将其复制到其他编辑点上。
+- **Command + 2** — 选择媒体池的媒体夹列表 ｜ Command + 2
+- **Shift + I** — 设置入点或出点 ｜ Shift + I、O
+- **Option + I** — 将播放头移到入点或出点 ｜ Option + I、O
+- **Shift + A** — 删除入点或出点 ｜ Shift + A
+- **Option + X** — 设置匹配了时间线中当前播放头所在片段的入点和出点 ｜ Option + X
+- **Command + Shift** — 删除入出点 ｜ Command + Shift + 上、下方向键
+- **Command + Option** — 将视频轨道目标控件上移或下移到另一个轨道 ｜ Command + Option + 上、下方向键
+- **Option + 1** — 将音频轨道目标控件上移或下移到另一个轨道 ｜ Option + 1～8
+- **Command + Option + 1** — 禁用 ｜ Command + Option + 1～8
+- **Option + F1** — 禁用 ｜ Option + F1～F8
+- **Option + F9** — 切换该编号所在视频轨道的自动选择 ｜ Option + F9
+- **Option + Command + F1** — 开启或关闭所有视频轨道的自动选择 ｜ Option + Command + F1～F8
+- **Option + Command + F9** — 切换该编号所在音频轨道的自动选择 ｜ Option + Command + F9
+- **Option + Shift + Q** — 开启或关闭所有音频自动选择控件 ｜ Option + Shift + Q
+- **Shift + F10** — 功能 ｜ Shift + F10
+- **Command + Shift** — — 按 Command + Shift + 上箭头或下箭头可在不同视频轨道之间上下移动视频目标控件，或按
+- **Command + Option** — — 按 Command + Shift + 上箭头或下箭头可在不同视频轨道之间上下移动视频目标控件，或按 ｜ Command + Option + 上箭头或下箭头可在不同声音轨道之间向上或向下移动音频目标控件。
+- **Option + 1 / Option + Command + 1** — — 按 Option + 1～8 设置视频目标到第一至第八视频轨，或按 Option + Command + 1～8 则可设
+- **Option + Command + 9** — — 按 Option + Command + 9 可将音频目标设置为所有轨道。
+- **Option + 1** — — 对给定轨道重复执行“分配目标控件”操作（对于视频来说是 Option + 1～8，对于音频来说是
+- **Option + Command + 1** — — 对给定轨道重复执行“分配目标控件”操作（对于视频来说是 Option + 1～8，对于音频来说是 ｜ Option + Command + 1～8），即可打开和关闭目标轨道。
+- **Option + I / Option + O** — — 清除入点或出点：选择“时间线检视器”后，按 Option + I 清除当前的入点，或按 Option + O 清除
+- **Option + X** — — 要同时清除入点和出点：按 Option + X。
+- **Shift + O** — 的入点和出点上，即使未启用预览标记也是可以的。例如，如果您在时间线中标记好了入点和出点， ｜ 然后在“源检视器”中标记了一个片段的入点，按 Shift + O（前往出点）会自动将“源检视器”播放头移
+- **Option** — 将用作设置入点和出点的目标。如果要将片段定位到较高的轨道，请禁用下面所有时间线的“自动 ｜ 选择”控件，或者按住 Option 键并单击要定位的片段的轨道的“自动选择”控件以将其单独启用，
+- **Option + X** — 配的入点和出点 ｜ 提示：相反，要清除入点和出点，请按 Option + X。
+- **Shift + A** — 2 ｜ 按 Shift + A 键即可自动设置与选中的片段中的第一帧和最后一帧匹配的入点和出点。如果是一
+- **Shift + I** — 的入点和出点，以及源检视器中的入点自动计算出的时间线出点。 ｜ 您可以将播放头移动到预览标记所在的位置，如果预览标记是一个入点，可使用 Shift + I；如果预览
+- **Shift + O** — 您可以将播放头移动到预览标记所在的位置，如果预览标记是一个入点，可使用 Shift + I；如果预览 ｜ 标记是一个出点，则使用 Shift + O。
+- **Option + Shift + Q** — 在“编辑”菜单中的“编辑后切换到时间线” ｜ （Option + Shift + Q）命令，可让您设置 DaVinci Resolve
+- **Option + X** — 长范围。 ｜ b) 也可以清除时间线的入点和出点（按 Option + X），这样则通过播放头所处位置，及激活了目
+- **Shift + F11** — 选择“编辑” > “适配填充”、将任何片段拖到时间线检视器中的“适配填充”功能区上，或按 ｜ Shift + F11。
+- **Option + X** — 2 ｜ 单击包含了要替换片段的轨道相应的音/视频目标控件，然后按 Option + X 去除时间线中可能存
+- **Shift + F10** — 4 ｜ 请选择“编辑” > “波纹覆盖”、将片段拖到时间线检视器的“波纹覆盖”功能区中，或按 Shift + F10
+- **Shift + F10** — 3 ｜ 请选择“编辑” > “波纹覆盖”、将片段拖到时间线检视器的“波纹覆盖”功能区中，或按 Shift + F10 来
+- **Shift + F12** — 选择“编辑” > “附加到时间线尾部”、将片段拖到时间线检视器中的“附加到尾部”功能区，或按 ｜ Shift + F12。
+- **Command + Option + 1 / Option + 1** — 通过点击，拖动，或使用 Command + Option + 、Command + Shift + 上下方向键组合快捷键， ｜ 以及 Option + 1～8 和 Command + Option + 1～8 快捷键将视频和音频目标控件分配给您想要
+- **Command + M** — — 要在播放过程中放置标记并立即打开标记对话框以便在其中输入名称或注释，请选择一个或多 ｜ 个要标记的片段，播放选中部分直到找到需要标记的帧，然后按 Command + M（或按两次 M）。
+- **Shift + Tab** — 当标记对话框打开时，您可以在各单独的字段中修改其属性。要进行快速编辑，可以按 Tab 键选 ｜ 择下一个字段，也可以按 Shift + Tab 键选择前一个字段。
+- **Option + M** — — 要使用键盘删除标记，请执行以下操作：将播放头移至要删除的标记，然后按 Option + M。
+- **Shift + M** — — 左键双击标记点来编辑，或选择“修改标记” ｜ （Shift + M）。
+- **Option + F** — — 要在媒体池中找到源检视器中的片段：在源检视器中打开任何片段，并按 Option + F。
+- **Option** — 帧”操作的目标。如果您希望按照较低轨道的片段进行匹配，则可选中播放头所在的特定片段。您 ｜ 也可以禁用上方所有轨道的“自动选择”控件，或按住 Option 键并单击要定位的片段所在轨道
+- **Option + F** — 2 ｜ 按 Option + F 即可在媒体池中定位源检视器中打开的片段相对应的源素材片段。该片段在媒体
+- **Option + Shift** — — 选择“编辑” > “多机位” > “多机位” > “上一页” ｜ （Option + Shift + 左箭头）或“下一页”
+- **Option** — （Option + Shift + 左箭头）或“下一页” ｜ （Option
+- **Option** — 中心的音频/视频选择按钮来切换。您也可以选择“编辑” > “多机位” > “视频和音频” ｜ （Option +
+- **Option + Shift** — “纯视频” ｜ （Option + Shift + [），
+- **Option + Shift** — “纯音频” ｜ （Option + Shift + \）。
+- **Command + Shift** — 择了之前切的角度，并且只想切换回上一切割以来的整个片段，这一操作就非常有用。这也可 ｜ 以通过选择“编辑” > “多机位” > “上一个角度（Command + Shift + 左箭头）”或“下一个角度
+- **Command + Shift** — 以通过选择“编辑” > “多机位” > “上一个角度（Command + Shift + 左箭头）”或“下一个角度 ｜ （Command + Shift + 右箭头）”来完成。
+- **Option** — — 多机位角度按钮：源检视器中显示的每个多机位角度都是一个按钮，并在靠下的位置列出了角度 ｜ 名称。单击任何一个按钮，将剪切出一个切点并切换至所选的下一个片段，而通过 Option + 左键
+- **Option** — — 音频/视频选择按钮：单击任何一个按钮，将剪切出一个切点并切换至所选的下一个片段，而通过 ｜ Option + 左键单击则可以在不添加切点的情况下更改位于播放头的片段角度。
+- **Option** — — 多机位切换： ｜ （“片段” > “多机位切换”菜单）按住 Option 再按下 1～9 数字键可执行 切换的操作，
+- **Command + Shift** — — 上一个/下一个角度： ｜ （“编辑” > “多机位”菜单），通过按下 Command + Shift + 左箭头或右箭头
+- **Option + Shift** — — 音频/视频切换： ｜ （“编辑” > “多机位”菜单）按下 Option + Shift + [ 可设置多机位检视器以同时剪切
+- **Option / Option + Shift** — （“编辑” > “多机位”菜单）按下 Option + Shift + [ 可设置多机位检视器以同时剪切 ｜ 或切换视频和音频。按下 Option + Shift + ] 可设置多机位检视器仅剪切或切换视频。按下 Option
+- **Option + Shift** — （“编辑” > “多机位”菜单），如果在当前设置下有更多的角度可显示，通过按下 ｜ Option + Shift + 左箭头或右箭头，即可切换到上一组或下一组角度的分页。
+- **Command + Page** — 间线并查看其内容。为此，请选择“时间线” > “交换时间线和源检视器” ｜ （Command + Page Up）。
+- **Command + Page** — 这会将在源检视器打开的时间线在时间线编辑器中打开，并将打开的时间线放入源检视器打开。 ｜ 这样，在按下 Command + Page Up 再次交换源检视器和时间线编辑器的内容以准备执行下一步剪
+- **Command + L** — 选择模式，调整编辑点以及移动片段 ｜ Command + L、J
+- **Shift + V** — 选择最靠近播放头的编辑点，然后将播放头移到那里 ｜ Shift + V
+- **Shift + Q** — 屏预览画面显示。 ｜ Shift + Q
+- **Option + F1** — 切换在调整编辑点时中启用的双屏或四屏预览画面显示 ｜ Option + F1～F9
+- **Command + Option + F1** — 切换视频轨道1至9的自动选择 ｜ Command + Option + F1～F9
+- **Shift + Command** — 剪片段并留出空隙（除非您正处于“修剪”模式，否则空隙将被收拢） ｜ Shift + Command + 左、 右方括号
+- **Command + Shift + X** — 的位置修剪片段并且空隙将被收拢 ｜ Command + Shift + X
+- **Command + L** — 选择模式，调整编辑点以及移动片段。 ｜ Command + L、J
+- **Shift + V** — 选择最靠近播放头的编辑点，然后将播放头移到那里。 ｜ Shift + V
+- **Option + F1** — 画面显示。 ｜ Option + F1～F9
+- **Command + Option + F1** — 切换视频轨道1到9的“自动选择”，从而可以限制某些选择和修剪执行的操作。 ｜ Command + Option + F1～F9
+- **Option + U** — 在当前选中编辑点的传出、居中或传入部分之间切换选择。 ｜ Option + U
+- **Command + Shift** — 放头位置的，并启用了自动选择的轨道上的，所有片段的出点。 ｜ Command + Shift + [
+- **Command + Shift** — 交，并启用了自动选择的轨道上所有片段的入点。 ｜ Command + Shift + ]
+- **Shift + V** — （V）或“选择最近的片段/空隙” ｜ （Shift + V）键盘快捷键，以及
+- **Option** — 一个好处，那就是让您可以有单独的方式专门选择最接近播放头当前位置的片段入出点。这些命令默 ｜ 认情况下没有键盘快捷键，但是如果您喜欢这种工作方式，则可以使用“键盘自定义”面板（Option +
+- **Command + K** — 认情况下没有键盘快捷键，但是如果您喜欢这种工作方式，则可以使用“键盘自定义”面板（Option + ｜ Command + K）将它们分配给您选择的键位。
+- **Option** — 滑编辑 ｜ 请注意：要使用鼠标在源检视器中打开位于时间线中片段的匹配帧，请在按住 Option 键
+- **Shift + Command + X** — — 波纹剪切片段（Shift + Command + X）
+- **Command + Shift** — — 在任何模式下使用“波纹修剪开头” ｜ （Command + Shift + [）或“波纹修剪结尾”
+- **Shift + F10** — — 执行插入编辑（F9）或波纹覆盖编辑（Shift + F10）
+- **Option** — 在播放头位置修剪所有片段 ｜ 但是，如果您只想修剪轨道 V3 中的片段，则可以通过按住 Option 键单击来单独启用 V3 的
+- **Option** — 要选择一个片段的传出视频编辑点和下一片段的传入音频编辑点以准备执行分离的操作，可以按 ｜ 住 Option 键单击传出视频编辑点以非链接的方式进行选择，然后按 Command 键单击传入的音
+- **Option + U** — 2 ｜ 按 U 选择要在编辑点的哪一侧进行波纹或卷动，并可按 Option + U 选择要同时修剪视频+音频、
+- **Command + J / Command + L** — — 快速修剪：您可以选择一个或多个编辑点或片段，然后按 Command + J 或 Command + L 立即
+- **Command + J / Command + L** — 视频的回放。 ｜ 要使用 Command + J 或 Command + L 动态修剪：
+- **Shift + A** — 请注意：启用动态模式后，如果未选择任何片段或编辑点，则可以使用 JKL 播放（可按 Command ｜ + Shift + A 取消全选）。但是，如果在时间线中选择了任何内容，则 JKL 将按上述方式去修剪
+- **Option + Command + K** — 修剪哪些片段。很多这些命令默认情况下没有键盘快捷键，但是如果您喜欢这种工作方式，则可以使 ｜ 用“键盘自定义”面板（Option + Command + K）将它们分配给您选择的键位。
+- **Option + Command + K** — 修剪哪些片段。这些命令默认情况下没有键盘快捷键，但是如果您喜欢这种工作方式，则可以使用“键 ｜ 盘自定义”面板（Option + Command + K）将它们分配给您选择的键位。
+- **Option** — 在时间线上设置入点和出点，确定想要复制的音频范围。如有必要，关闭您不希望复制的，有重叠 ｜ 音频的轨道的“自动选择”控件；您可以按住 Option 并左键单击“自动选择”控件来单独启用要复
+- **Command + C** — 2 ｜ 按下 Command + C 键复制这段音频。
+- **Command + V** — 4 ｜ 按下 Command + V，将刚才复制的音频粘贴到当前位置。如果您想循环使用一段音频，您可以连
+- **Command + V** — 按下 Command + V，将刚才复制的音频粘贴到当前位置。如果您想循环使用一段音频，您可以连 ｜ 续按下 Command + V 键，重复粘贴这段音频。
+- **Option** — 视频长度调整必须是以整数帧为单位，您就无法以亚帧长度单独调整音频部分了。但您可以通过按住 ｜ Option 并单击单独选中链接的音频条目，这样您就可以在此处自由地以亚帧为单位对它进行调整。
+- **Option + Command** — — “片段” > “音频” > “将音频电平增加1分贝” ｜ （Option + Command + =）
+- **Option + Command** — — “片段” > “音频” > “将音频电平降低1分贝” ｜ （Option + Command + 减号）
+- **Option + Shift** — — “片段” > “音频” > “将音频电平增加3分贝” ｜ （Option + Shift + =）
+- **Option + Shift** — — “片段” > “音频” > “将音频电平降低3分贝” ｜ （Option + Shift + 减号）
+- **Command + X** — — 要剪切、复制和粘贴一个或多个关键帧：选择关键帧，然后使用剪切（Command + X）或复制
+- **Command + C** — — 要剪切、复制和粘贴一个或多个关键帧：选择关键帧，然后使用剪切（Command + X）或复制 ｜ （Command + C）快捷键。而后，将播放头移动到第一个已复制的关键帧开始的位置，而后按
+- **Command + V** — 下“粘贴” ｜ （Command + V）快捷键。
+- **Shift + T** — 出菜单中选择相应选项，或选择一个音频编辑点，进入菜单“时间线” > “添加纯音频转场” ｜ （Shift + T）。
+
+## 07_剪辑效果与转场
+
+- **Option** — — 参数组标题栏：左键双击任何参数组的标题栏即可折叠或打开它们。更酷的是，按住 Option 键并
+- **Command + C** — 1 ｜ 选择一个有要应用到其他片段的属性的片段，然后按 Command + C。
+- **Command + T** — — 要使用键盘添加视频+音频转场，请执行以下操作：使用选择工具选择一个或多个编辑点，或将播 ｜ 放头移到要选择的编辑点附近，然后按 V 进行选择，并按 Command + T（“时间线” > “添加转场”）
+- **Option + T / Shift + T** — — 要使用键盘添加仅视频或音频的转场，请执行以下操作：选择一个或多个编辑点，然后按 ｜ Option + T（“时间线” > “添加纯视频转场”）可只给视频添加转场，或按 Shift + T（时间线>添加
+- **Command + T** — — 要使用键盘添加具有特定对齐方式的转场，请执行以下操作：选择一个编辑点，按 U 键选择编辑 ｜ 点的开始，中心或结束位置，然后按 Command + T。将根据所选添加标准转场及其对齐方式；选
+- **Command + C** — — 右键单击要复制的转场，然后选择复制（或按 Command + C 键）。
+- **Command + V** — — 右键单击突出显示的绿色编辑点中的任何一个，然后选择“粘贴” ｜ （或按 Command + V 键）以
+- **Command + D** — — 右键单击任一转场并选择“更改转场时长”，或选择转场后按下 Command + D，并随后在对
+- **Command + T** — 如果指定的编辑点余量的时长不足于标准的转场时长，则可以尝试通过选择一个或多个编辑点并按 ｜ Command + T 或右键单击编辑点来添加转场，并在出现的菜单中使用转场选项，然后将出现一个对
+- **Option + Shift** — 还有另一种方法可以用来创建转场，即通过简单地重叠要添加转场的两个片段的开头和结尾，可以 ｜ 轻松地在进行拖放编辑时创建转场。只需同时按住 Option + Shift 键拖动片段来与另一个片段重叠
+- **Option + Shift** — — 选择片段的入点或出点，然后按住 Option + Shift 并拖动选定的编辑点，使其与要创建转场的相
+- **Option + Shift** — 邻片段重叠。 ｜ 通过按住 Option + Shift 拖动编辑点，使其在两个片段之间创建重叠的部分来创建转场
+- **Option + Shift** — — 选择片段，然后按住 Option + Shift 并拖动整个片段，使其与要创建转场的相邻片段重叠。 ｜ 通过按住 Option + Shift 拖动整个片段，使其与另一个片段之间创建重叠的部分来创建转场
+- **Option + Shift** — — 从媒体池中拖动片段时，按住 Option + Shift 键，可使其与时间线中已有的片段重叠。 ｜ 通过按住 Option + Shift 使其从媒体池中拖放到与时间线中的片段重叠来创建转场
+- **Option** — 和旋转。在调整过程中，默认会吸附到一些关键位置，例如检视器的水平或垂直居中的位置等；按 ｜ 住 Option 键则可释放吸附，从而可以自由地移动。
+- **Control Panels** — 最简单、最可靠的方法。只需使用 USB-C 电缆，将 Speed Editor 连接到电脑的 USB Type-C 端口。无 ｜ 需任何其他额外的操作。Speed Editor 将自动显示在 DaVinci Resolve 和 DaVinci Control Panels
+- **Control Panels** — Blackmagic 会不时地通过固件更新 Speed Editor 的功能。新的固件可以通过菜单“帮助” > “DaVinci ｜ 调色台设置”打开独立的 DaVinci Control Panels Setup 工具来检查和安装。要升级固件，Speed Editor
+- **Control Panels** — 3 ｜ 或打开 DaVinci Control Panels 应用，选择 Speed Editor 并点击“Factory Reset”进行重置。
+- **Option + X** — 然后，您可以在媒体池中选择一个与时间线中轨道1的片段时间码同步的片段，对应于您想要添加的角 ｜ 度，来作为一个切入点。无需设置入出点；如果有必要，您可以按 Option + X 来清除此前设置的入出点。
+- **Control Panels** — Type-C 端口。无需任何其他额外的操作。Editor Keyboards 将自动显示在 DaVinci Resolve 和 DaVinci ｜ Control Panels Setup 应用程序中，即刻可以使用。Editor Keyboards 键盘还包括两个 USB 3 Type-A
+- **Shift + R** — 有几种创建冻结帧的方法，但是最快的方法是将播放头放在要成为冻结帧的帧上，然后选择“片段” > ｜ “冻结帧”，或按 Shift + R。整个片段将成为您播放头所在帧的冻结帧。
+- **Command + R** — — 选择一个片段，然后选择“片段” > “变速工具（Command + R）”。
+- **Command + R** — 1 ｜ 选择一个片段，然后按 Command + R。
+- **Option + Command + L** — 选择“片段” > “链接片段” ｜ （Option + Command + L）。出现了链接图标后，即表明字幕片段已链
+- **Shift + Command + C** — — 选择“片段” > “显示关键帧编辑器” ｜ （Shift + Command + C）
+- **Shift + C** — — 选择“片段” > “显示曲线编辑器” ｜ （Shift + C）。
+- **Option** — — 选择菜单“标记” > “删除动态关键帧” ｜ （Option + ]）。
+- **Option** — — 音量 ｜ 例如，如果您之前调整过片段的“缩放”参数，然后通过按 Option + [ 向片段添加了一个新的关键帧，
+- **Command + X** — — 要剪切、复制和粘贴一个或多个关键帧：选择关键帧，然后使用剪切（Command + X）或复制
+- **Command + C** — — 要剪切、复制和粘贴一个或多个关键帧：选择关键帧，然后使用剪切（Command + X）或复制 ｜ （Command + C）快捷键。然后，将播放头移动到第一个希望复制的关键帧的位置，然后按粘贴
+- **Command + V** — （Command + C）快捷键。然后，将播放头移动到第一个希望复制的关键帧的位置，然后按粘贴 ｜ （Command + V）。曲线编辑器也必须打开。
+- **Option** — — 要从1条曲线中删除一个或多个控制点：选中要删除的一个或多个“关键帧”，按 Backspace 键，或 ｜ Option + ]。曲线编辑器也必须打开。
+- **Command + A** — — 要选择所有关键帧：如果“关键帧编辑器”处于打开状态并且具有焦点（通过单击其中的任意位置）， ｜ 则按 Command + A 将选择该“关键帧编辑器”中的所有关键帧。
+- **Command + C** — — 剪切或复制并粘贴一个或多个关键帧：选择关键帧，然后使用剪切（Command + X）或复制 ｜ （Command + C）快捷键。然后，将播放头移动到第一个希望复制的关键帧的位置，然后按粘贴
+
+## 08_项目的导入和套底
+
+- **Command + A** — 选择要重新套底的特定片段，或者如果要在整个时间线中重新套底所有片段而非进行单独选择， ｜ 请按 Command + A 选择时间线中的每个片段。
+- **Command + A** — 选择要重新套底的特定片段，或者要在整个时间线中重新套底所有片段而非进行单独选择，请按 ｜ Command + A 选择时间线中的每个片段。
+- **Command + Shift + I** — — 在任何页面中，选择“文件” > “导入时间线（Command + Shift + I）”。
+- **Command + Shift + I** — 导入 AAF、EDL、XML ｜ 使用“文件” > “导入时间线” > “导入 AAF、EDL、XML（Command + Shift + I）”，您可以选择一个 Pro
+
+## 09_Fusion基础知识
+
+- **Command+1** — — 点击检视器并按“Command+1”组合键将检视器中的图像调整为100%。
+- **Command+2** — — 点击检视器并按“Command+2”组合键将检视器中的图像调整为200%。
+- **Shift+V** — （矢量示波器）”和“Waveform（波形）”示波器。 ｜ “Swap（交换）”选项（“Shift+V”组合键）能让您将
+- **Option** — — 按下“Option+左括号（[）”组合键跳到左边的下一个关键帧。
+- **Options** — 导航器的大小，还可以通过按“V”键来选择显示或隐藏“Navigator（导航器）”，再或者通过鼠标右键点 ｜ 击“节点编辑器”来访问右键菜单的“Options（选项）”子菜单来选择显示或隐藏导航器。
+- **Options** — Fusion“节点编辑器”提供了多种方式和选项来帮助您完成这一操作，您可以在“节点编辑器”右键菜 ｜ 单的“Options（选项）”和“Arrange Tools（排列工具）”子菜单中找到。
+- **Options** — — “Options（选项）”菜单提供了很多其他筛选轨道和控制可以看到选项的方法。
+- **Controls / Options** — — 点击“样条曲线编辑器”的“Options（选项）”菜单，然后选择“Expose All Controls（显示所有控
+- **Commands** — 使用Fusion页面时，可以通过选择“DaVinci Resolve”>“Keyboard Customization（键盘自定义）”，然后 ｜ 将功能和工具映射到键盘快捷键上。在“Keyboard Customization（键盘自定义）”窗口的“Commands
+- **Command+Z** — — 选择“Edit（编辑）”>“Undo（撤消）” ｜ （Command+Z组合键）来撤销之前的更改。
+- **Shift+Command+Z** — — 选择“Edit（编辑）”>“Redo（重做）” ｜ （Shift+Command+Z组合键）来重做之后的更改。
+- **Option+F** — 体输入）”节点的媒体池中找到确切的片段，方法是选择这个片段，然后选择“片段”>“在媒体池中查 ｜ 找（Option+F）”。
+- **Command+C** — 提示：若要在“Fusion页面”中保留现有的工程文件，又要合并Fusion Studio中新的工程文件， ｜ 请打开Fusion Studio，在“节点编辑器”中选择所有的节点，并按“Command+C”组合键来复
+- **Command+V** — 制所选中的节点。然后，打开DaVinci Resolve，用您想要的工程文件切换到“Fusion页面”，点击 ｜ “节点编辑器”中的空白位置，接着按“Command+V”组合键来粘贴Fusion Studio的节点。继续
+- **Optimized** — — 使用DaVinci Resolve中的“Optimized Media（优化媒体）”来生成较小的媒体文件并将它写入到
+- **Option** — >“LeftView（左视图）”/“RightView（右视图）”来创建的。将会出现“Render Settings（渲染设置）”对 ｜ 话框，您可以在里面配置预览并开始渲染。也可以按住“Option”键将节点直接从“节点编辑器”拖拽
+- **Option+Shift** — 中的第7章“使用检视器”。 ｜ 提示：按住“Option+Shift”组合键将节点拖拽到检视器中将跳过渲染对话框和之前使用的设置。
+- **Options** — 2 ｜ 在“节点编辑器”右上方的“Options（选项）”菜单中，选择“Add Bookmark（添加书签）”，或按
+- **Cmd+D** — 在“节点编辑器”右上方的“Options（选项）”菜单中，选择“Add Bookmark（添加书签）”，或按 ｜ “Cmd+D”组合键。
+- **Options** — 按钮。 ｜ 前九个保存的书签都提供了键盘快捷键，并列在“Options（选项）”菜单中。它们也会在“Go To
+- **Options** — Bookmarks（跳转到书签）”对话框中列出，以及除了最初九个书签以外的所有已保存的书签。 ｜ 添加了九个书签的节点编辑器“Options（选项）”菜单
+- **Cmd+1** — 提示：通过在“节点编辑器”中点击鼠标右键，并选择“Scale（缩放）”>“Default Scale（默认缩放）” ｜ 或按“Cmd+1”组合键，可以将“节点编辑器”恢复到默认比例。
+- **Options** — 1 ｜ 在“节点编辑器”右上方的“Options（选项）”菜单中，选择“Manage Bookmarks（管理书签）”。
+- **Options** — 使用书签 ｜ 您可以通过选择“Options（选项）”菜单中列出的书签或选择“Go To Bookmarks（跳转到书签）”来打开
+- **Options** — 改变排列顺序和分配键盘快捷键 ｜ 书签按照创建的顺序出现在“Options（选项）”菜单和“Go To Bookmarks（跳转到书签）”对话框中。列出
+- **Options** — 使用底图作为书签 ｜ 添加到“节点编辑器”的“Underlay（底图）”将自动添加为书签。它们会列在“Options（选项）”菜单
+- **Options** — “Underlay（底图）”将不会显示在“Go To Bookmarks（跳转到书签）”对话框中，它们也不会出现 ｜ 在“Options（选项）”菜单中。
+- **Command+A** — — 若要在“节点编辑器”中选择所有节点，请执行以下操作：按下“Command+A”组合键。
+- **Command+Shift+A** — — 按住“Command+Shift+A”组合键取消选择所有的节点。
+- **Option** — 但是，在有多个输入可供选择并且您希望确保自己选择正确的输入，还有另一种备选方法可以将节点 ｜ 连接在一起。按住“Option”键，同时将连接线从一个节点的输出拖放到另一个节点的主体上。这将打
+- **Option** — 您断开节点上的连接线并释放鼠标按钮后才会出现。 ｜ 按住“Option”键同时将节点连接线拖放到另一个节点上，来显示节点输入菜单。
+- **Option** — 点提示。 ｜ 提示：与其记住不同的接口类型，还不如按住“Option”键并按住鼠标右键，从某个节点的输出
+- **Command+T** — — 选择某个节点并按“Command+T”组合键来反转它的输入端口。
+- **Command+C** — — 从“Edit（编辑）”菜单中选择“Edit（编辑）”>“Copy（复制）” ｜ （“Command+C”组合键）。
+- **Command+X** — — 从“Edit（编辑）”菜单中选择“Edit（编辑）”>“Cut（剪切）” ｜ （“Command+X”组合键）。
+- **Command+V** — 节点，然后选择“Edit（编辑）”>“Paste（粘贴）” ｜ （“Command+V”组合键）。
+- **Command+V** — 择“Edit（编辑）”>“Paste（粘贴）” ｜ （“Command+V”组合键）或者在“节点编辑器”中的任何位置点
+- **Command+V** — 点，然后点击“节点编辑器”中要出现粘贴节点的位置，然后选择“Edit（编辑）”>“Paste（粘贴）” ｜ （“Command+V”组合键），或在“节点编辑器”中的任何位置点击鼠标右键，然后从右键
+- **Command+C** — 选择想要复制设置的某个节点，然后从“Edit（编辑）”菜单中选择“Copy（复制）” ｜ （“Command+C”
+- **Command+C** — 1 ｜ 先选择某个要做实例的节点，然后复制它（“Command+C”组合键）。
+- **Command+Shift+V** — 右键，然后从右键菜单中选择“Paste Instance（粘贴实例）” ｜ （“Command+Shift+V”组合键）。
+- **Command+Shift+V** — — 若要在其他两个节点之间插入一个实例节点，请执行以下操作：选择要插入实例节点的上游 ｜ 节点，然后按“Command+Shift+V”组合键。或者您也可以直接在连接线上点击鼠标右键，然
+- **Command+Shift+E** — 将被自动删除。 ｜ 如果您想查看原始节点类型而不是节点名称，请按住“Command+Shift+E”组合键。
+- **Command+F** — 1 ｜ 按住“Command+F”组合键，或在“节点编辑器”的空白区域点击鼠标右键，然后在右键菜单中选
+- **Command+P** — “Find All（查找全部）”将根据搜索词选择所有节点，您可以通过按下“Bypass（绕过）” ｜ （“Command+P”快捷键）暂时禁用它们。
+- **Command+P** — — 直通： ｜ （按住“Command+P”组合键）与“检查器”中用来关闭和打开节点的开关相同。当图像数
+- **Command+L** — — 锁定： ｜ （按住“Command+L”组合键）与“检查器”中的锁定按钮相同，它可以防止在“检查器”中编
+- **Command+U** — — 更新： ｜ （按住“Command+U”组合键）默认情况下是开启状态。当启用这个选项后，对节点的所有更
+- **Options** — 节点编辑器选项 ｜ 在“节点编辑器”的空白区域点击鼠标右键，将会弹出右键菜单并找到“Options（选项）”子菜单。
+- **Options** — 在“节点编辑器”的空白区域点击鼠标右键，将会弹出右键菜单并找到“Options（选项）”子菜单。 ｜ “Options（选项）”子菜单中包含了多种选项，可以用来自定义“节点编辑器”的外观和行为。
+- **Command+G** — 鼠标右键点击其中一个选中的节点，然后从右键菜单中选择“Group（组）” ｜ （按住“Command+G”
+- **Command+E** — 折叠的组在节点树中的单个“堆叠”节点来表示。如果要修改节点组里面的任何一个节点，可以通过鼠 ｜ 标双击这个节点组，或选择节点组并按住“Command+E”组合键来打开它。
+- **Cmd+E** — 要的节点，甚至可以在打开状态下添加、插入和删除节点。当您准备再次折叠节点组的时候，请点击 ｜ 浮动窗口左上角的最小化按钮，或使用键盘快捷键（“Cmd+E”组合键）。
+- **Cmd+A** — 2 ｜ 在“节点编辑器”中选择“Color Corrector（色彩校正器）”节点，然后按“Cmd+A”并选择其余节点。
+- **Command+L** — 1349 ｜ 锁定检视器（Command+L）组合键 1350
+- **Command+1 / Command+F** — — 点击检视器并按“Command+F”组合键或按“Command+1”组合键将检视器中的图像重置适配
+- **Shift+Option** — 提示：如果您想要创建某个翻页预览，并且绕过“Render Settings（渲染设置）”对话框，只使用 ｜ 默认设置或上次所选择的设置，可以按住“Shift+Option”组合键同时将节点拖拽到检视器中。
+- **Command+K** — — 选择某个检视器并按“Command+K”组合键。
+- **Command+Option** — a) 通过拖动划像分割线的中心控制手柄来移动划像的中心。 ｜ b) 按住“Command+Option”组合键并鼠标点击检视器中的任意位置，将划像分割线跳转到这
+- **Command+Option** — 有时，您可能会放大或平移到离检视器分割线很远的地方，以至于在检视器中看不到它。 ｜ 按住“Command+Option”组合键并鼠标点击图像中的任意位置，将会导致检视器分割线跳转到鼠
+- **Shift+V** — — 按住“Shift+V”组合键。
+- **Shift+Q** — — 按“Shift+Q”组合键。
+- **Command+G** — — 若要在检视器中显示参考线，请执行以下操作：在检视器中点击鼠标右键，然后从右键菜单中选 ｜ 择“Guides（参考线）”>“Show Guides（显示参考线）”，或按“Command+G”组合键。
+- **Controls / Options** — 不变。这对于将“RoI”中所做的更改与以前的节点状态进行比较非常有用。 ｜ 提示：在检视器中点击鼠标右键并选择“Options（选项）”>“Show Controls（显示控制）”，会
+- **Options** — 3 ｜ 在检视器中点击鼠标右键，然后选择“Global Options（全局选项）”>“Buffer LUT（缓冲区LUT）”>
+- **Options** — 检视器选项菜单 ｜ 检视器的“Options（选项）”菜单包含了几种自定义检视器风格和行为的方法。其中还有很多选项在
+- **Controls** — 显示控制 ｜ 当不需要屏幕上的控制或者正妨碍到我们对图像进行计算的时候，您可以使用“Show Controls（显示
+- **Command+K** — 当不需要屏幕上的控制或者正妨碍到我们对图像进行计算的时候，您可以使用“Show Controls（显示 ｜ 控制）”选项暂时隐藏它们。还可以使用“Command+K”组合键来切换这个选项。
+- **Command+L** — “Vert Strip（竖条）”和“Horiz Strip（横条）”能让您正确显示不同格式的360º视频。 ｜ 锁定检视器（Command+L）组合键
+- **Options** — 其他检视器选项 ｜ 当您鼠标右键点击检视器中的任何地方并从常规命名的“Options（选项）”子菜单中进行选择时，还
+- **Controls** — — 鼠标右键点击“节点编辑器”中的节点或检查器标题，然后从右键菜单中选择“Mode（模式）”>“Show ｜ Controls（显示控制）”。
+- **Controls** — “Erode/Dilate（侵蚀/扩张）”和“Filter（过 ｜ 滤器）”这些节点为例，它们除了“Settings（设置）”选项卡外，在检查器的主“Controls（控制）”选项卡
+- **Options** — “检查器”中的橙色关键帧按钮显示了这一帧当中有一个关键帧 ｜ 一旦您设置过单个或多个参数的关键帧之后，如果“Show Modes/Options（显示模式/选项）”已经
+- **Control Close** — 将某个参数拾取到另一个参数 ｜ 提示：在“User Interface（用户界面）”偏好设置中禁用“Auto Control Close Tools（自动控制关
+- **Controls** — ID（更改ID）”。我们将选择“Replace（替换）”。现在我们开始编辑“Center”的输入。我们将名称更改 ｜ 为“Blur Vector”，将“Type（类型）”设置为“Point”，再将“Page（页面）”设置为“Controls”，这是控制
+- **Controls** — （类型）”设置为“Number”， ｜ “Page（页面）”设置为“Controls”。现在，在“Type（类型）”属性中，
+- **Controls** — 新的控制ID“TypeNew”。您可以将名称设置为“Type”，因为“Name（名称）”不需要是唯一的，只 ｜ 有ID需要。将“Type（类型）”设置为“Number”，将“Page（页面）”设置为“Controls”，将“Input Ctrl
+- **Options** — 一个打开或关闭所有可以使用关键帧轨道的快速方法，它 ｜ 是使用关键帧时间线“Options（选项）”菜单中的“Expand/
+- **Controls** — 是使用关键帧时间线“Options（选项）”菜单中的“Expand/ ｜ Collapse Tool Controls（展开/折叠工具控制）”命令。
+- **Command+Option** — 您必须直接点击播放头来拖动它，甚至是在时间线标尺内也是如此（鼠标点击并拖动时间线标尺中 ｜ 的任何地方来缩放时间线）。此外，您还可以通过按住“Command+Option”组合键并鼠标点击轨道
+- **Options** — “Sort（排序）”弹出菜单，能让您以各种方式对轨道进行排序或筛选。 ｜ “Options（选项）”菜单提供了很多其他筛选轨道和控制可以看到选项的方法。
+- **Options** — 时发生动画更改。如果某个参数上的轨道和样条曲线处于打开状态，那么从“关键帧编辑器” ｜ “Options
+- **Options** — 入框显示每个关键帧的当前数值，并且允许您通过输入新的数字来编辑它们。 ｜ 关键帧编辑器“Options（选项）”菜单中的“Show Values（显示值）”
+- **Options** — 若要使用某个时间线筛选器，请执行以下操作： ｜ 打开“关键帧编辑器”的“Options（选项）”菜单，然后从菜单顶部选择一项。默认的时间线筛选器包括：
+- **Options** — 我们在“Fusion Settings（Fusion设置）”窗口的“Timeline（时间线）”面板中所创建的筛选器将会出现 ｜ 在“关键帧编辑器”的“Options（选项）”菜单中。
+- **Options** — 选中的筛选 ｜ 从“关键帧编辑器”的“Options（选项）”菜单中选择“Show Only Selected Tool（只显示选中的工具）”，
+- **Shift+G** — 右键点击某个标记或在关键帧编辑器“时间标尺”内调出右键菜单，那我们可以选择“Show Marker ｜ List（显示标记列表）”，或按“Shift+G”组合键来显示“Marker List（标记列表）”对话框。
+- **Options** — 当您在时间线中拖动关键帧的时候，为了帮助精确定位关键帧以及片段的开始和结束，我们可以让它 ｜ 们对齐到某一场、某一帧或标记上。还可以通过“关键帧编辑器”右键菜单中的“Options（选项）”部分
+- **Options** — 键帧和片段边缘上来配置自动对齐，请在“关键帧编辑器”中的任何地方点击鼠标右键，然后从右键菜 ｜ 单中选择“Options（选项）”>“Autosnap Points（自动对齐点）”。这时将会显示“Autosnap Points（自动
+- **Options** — 记，那么我们在拖动时它也会对齐到到最近的那帧上。这种行为可以在“关键帧编辑器”的右键菜单 ｜ 中，通过选择“Options（选项）”>“Autosnap Markers（自动对齐标记）”子菜单进行更改。这些选项是：
+- **Options** — 一种更传统的关键帧视图是将它们看作控制点，而不是竖条，这使得大家更容易选择它们。从时间线右 ｜ 键菜单中，您可以鼠标右键点击“关键帧编辑器”中的任何地方，然后选择“Options（选项）”>“Display
+- **Options** — Point Values（显示点值）”来更改关键帧的样子。 ｜ 用于更改“Display Point Values（显示点值）”的“Options（选项）”子菜单
+- **Command+R** — 有激活的样条曲线都适配在图表内。 ｜ “Zoom to Rectangle（框选缩放）”按钮（Command+R 组合键）能让您
+- **Command+F** — — 选择“Scale（缩放）”>“Scale to Fit（自适应缩放）” ｜ （Command+F 组合键）来将所有激活的样条曲
+- **Command+R** — — 选择“Scale（缩放）”>“Scale to Rectangle（框选缩放）” ｜ （Command+R 组合键）在要居中和缩放的
+- **Shift+G** — — 在横轴上点击鼠标右键，然后选择“Show Marker List（显示标记列表）”，或按“Shift+G”组合键。
+- **Options** — 为了帮助沿横轴（时间）精确定位关键帧控制点，可以启用“样条曲线编辑器”的“Autosnap（自动对 ｜ 齐）”功能。在样条曲线上点击鼠标右键，然后选择“Options（选项）”>“Autosnap Points（自动对齐
+- **Options** — 默认情况下，新创建的标记会对齐到最近的帧。使用鼠标移动标记也能将它们对齐到当前帧。您还可 ｜ 以通过从右键菜单中选择“Options（选项）”>“Autosnap Markers（自动对齐标记）”>“None（无）”或
+- **Options** — 以通过从右键菜单中选择“Options（选项）”>“Autosnap Markers（自动对齐标记）”>“None（无）”或 ｜ 者选择“Options（选项）”>“Autosnap Markers（自动对齐标记）”>“Field（场）”来更改这行为。
+- **Command+K** — 在播放头添加关键帧 ｜ 如果您想要在当前播放头位置添加一个新的关键帧，请按键盘上的“Command+K”组合键或在图表
+- **Command+C** — 在图表的右键菜单中有两个选项可以用来复制关键帧。选择“Copy Points（复制点）” ｜ （Command+C
+- **Command+C** — 2 ｜ 在样条曲线上点击鼠标右键，并从右键菜单中选择“Copy Points（复制点）”或者按“Command+C”
+- **Command+V** — 4 ｜ 将播放头移动到要粘贴点的样条曲线区域，然后按“Command+V”组合键。
+- **Command+V** — 5 ｜ 鼠标右键点击并选择“Paste Points/Value（粘贴点/值）”或按“Command+V”组合键。
+- **Shift+S** — 这些控制手柄只能在所选中关键帧的时候才能显示。最初，这些控制手柄设置为线性，它是在关键帧 ｜ 之间创建直线变化。但是，通过鼠标右键点击任何一个控制点并选择“Smooth（圆滑）”或按“Shift+S”
+- **Options** — “样条曲线编辑器”包含了不同的方法来控制显示哪些样条曲线。这些选项中的大多数都可以在“样 ｜ 条曲线编辑器”面板位于右上角的“Options（选项）”菜单中使用。
+- **Options** — 条曲线编辑器”面板位于右上角的“Options（选项）”菜单中使用。 ｜ “Options（选项）”菜单用来控制“样条曲线编辑器”中所显示的哪些样条曲线
+- **Options** — — “Show Only Selected Tool（只显示选中的工具）”：通过只显示所选工具中的样条曲线，您可以 ｜ 在“样条曲线编辑器”中选择来限制所显示的样条曲线。选择“Options（选项）”菜单顶部的这个选
+- **Options** — “样条曲线编辑器”的默认行为是显示所有带 ｜ 有动画参数节点的样条曲线。我们可以通过启用“Options（选项）”菜单中的“Show Only Selected
+- **Controls** — — “Expose All Controls（显示所有控制）”：
+- **Options** — 间线”。 ｜ 我们所创建的每个筛选器都会列在“Options（选项）”菜单中
+- **Options** — “样条曲线编辑器”标题中项目的行为。这些状态位于“样条曲线编辑器”右上角 ｜ 的“Options（选项）”菜单中。
+- **Options** — 的“Options（选项）”菜单中。 ｜ “Options（选项）”菜单中的选择状态让选择
+- **Shift+S** — 圆滑线段通过略微延伸曲线上的方向控制手柄，提供了一个关键帧入点和出点顺滑的关键帧过渡。 ｜ 这会在通过关键帧时减慢动画的速度。若要圆滑所选的关键帧，请按“Shift+S”组合键或点击工具栏
+- **Shift+L** — 线性线段实际上采用两个控制点之间最短的线路，即一条直线。若要使所选的关键帧变成线性，请 ｜ 按“Shift+L”组合键或点击工具栏中的“Linear（线性）”按钮。
+- **Shift+B** — — 选择一组关键帧，然后按“Shift+B”组合键来启用或禁用“Shape Box（形状框）”模式。
+- **Controls** — — “Paint（画笔）”： ｜ “Stroke Controls（笔刷控制）”>“Center X/Y（中心X/Y）”可以设置动画来移动某
+- **Command+I** — 7 ｜ 完成后，我们通过在路径上选择某一个点，然后按“Command+I”组合键或点击工具栏上的“Insert
+- **Shift+S** — 3 ｜ 此时，您可以沿着样条曲线来选择任意一个控制点，然后按“Shift+S”组合键使它们变圆滑，或
+- **Shift+L** — 此时，您可以沿着样条曲线来选择任意一个控制点，然后按“Shift+S”组合键使它们变圆滑，或 ｜ 按“Shift+L”组合键使它们变成线性的。
+- **Controls** — 条曲线形状。 ｜ （对于绘画笔刷，我们首先需要通过点击“Stroke Controls（笔刷控制）”中的“Make
+- **Option** — “样条曲线编辑器”中的“Displacement（位移）”曲线 ｜ 提示：按住“Option”键，同时在检视器中点击样条曲线路径，将会向样条曲线路径上添加某
+- **Controls** — 5 ｜ 在“Page（页面）”列表中选择“Controls（控制）”。
+- **Controls** — 2 ｜ 从“Page（页面）”列表中选择“Controls（控制）”。
+- **Controls** — 把“Type（类型）”设置为“Number”， ｜ “Page（页面）”设置为“Controls（控制）”。
+- **Options** — 误。禁用此复选框将会关闭网格线的抗锯齿。若要完全关闭网格，请在三维检视器中点击鼠标右 ｜ 键，然后选择“3D Options（三维选项）”>“Grid（网格）”。
+- **Options** — 选项 ｜ “Options（选项）”参数部分包括许多设置，用来控制或者帮助“节点编辑器”中工具的布局和对齐。
+- **Options** — — 独立控制手柄：启用这个选项能让新创建的关键帧上的“In（入点）”或“Out（出点）”方向控制手 ｜ 柄独立移动，而不会影响其他关键帧。在“样条曲线编辑器”图表中通过鼠标右键点击“Options（
+- **Options** — “样条曲线编辑器”关注当前激活的工具。在“样条曲线编辑器”图表中通过鼠标右键点 ｜ 击“Options（选项）”子菜单时，也可以使用这个选项。
+- **Options** — — 自动对齐点：当在“样条曲线编辑器”中移动点的时候，这些点将对齐到场或帧上，或者可以自由 ｜ 移动。在“样条曲线编辑器”图表中通过鼠标右键点击“Options（选项）”子菜单时，也可以使用这
+- **Options** — — 参考线：当在“样条曲线编辑器”中移动点的时候，这些点也会对齐到参考线上。在“样条曲线编辑 ｜ 器”图表中通过鼠标右键点击“Options（选项）”子菜单时，也可以使用这个选项。
+- **Options** — — 自动对齐参考线：当移动或创建参考线时，这些参考线会对齐到场或帧上，或者可以自由移动。 ｜ 在“样条曲线编辑器”图表中通过鼠标右键点击“Options（选项）”子菜单时，也可以使用这个选项。
+- **Options** — — 自动缩放：在更改图表的可编辑样条曲线内容时，保持“样条曲线编辑器”的缩放不变。在“样条曲 ｜ 线编辑器”图表中通过鼠标右键点击“Options（选项）”子菜单时，也可以使用这个缩放。
+- **Control Hide** — 前激活的节点工具都会在“检查器”中关闭。禁用后，可以同时打开任意数量的工具来显示参数。 ｜ 如果启用了“Auto Control Hide（自动控制隐藏）”复选框，否则这个设置无效。
+- **Control Advance** — — 自动控制推进：如果启用了“Auto Control Advance（自动控制推进）”复选框，那么“Tab”键
+- **Control Colors** — 控制颜色 ｜ “Control Colors（控制颜色）”设置能让您决定屏幕上激活/未激活控制的颜色。
+- **Options** — 头罩选项 ｜ “Headset Options（头罩选项）”是用来选择用于查看合成图像的虚拟现实头罩类型以及360°视图
+- **Command+F** — 查器”。选中后，灰色边框线将会勾勒出这部分的轮廓。只有当区域处于激活状态时，这些部分的 ｜ 快捷键才会起作用。例如，视图中的“Command+F”组合键将缩放图像来适配视图区域；而在流
+- **Command+F** — 程视图中， ｜ “Command+F”组合键将打开查找工具对话框；在“样条曲线编辑器”中，它将会使样
+- **Option** — 并排将连接线放置在特定的节点输入上，注意输入之后如何重新排列自己，来保持节点树的整洁 ｜ 提示：如果在将连接线从某个节点拖拽到另一个节点时按住“Option”键，按住“Option”键同时
+- **Controls** — “Erode/Dilate（侵蚀/扩张）”和“Filter ｜ （过滤器）”这些节点为例，它们除了“Settings（设置）”选项卡外，在检查器的主“Controls（控制）”选
+- **Options** — “Color Curves（色彩 ｜ 曲线）”以及“Color Corrector（色彩校正器）”节点，这个节点在它“检查器”设置的“Options（选项）”面
+- **Optical** — 出、 ｜ “Optical Flow（光流）”节点或“Disparity（视差）”节点来获得辅助通道数据。
+- **Options** — <!-- page 1556 --> ｜ 提示：Z深度通道通常包含负值。如果这会导致问题，您可以从检视器的“Options（选项）”菜
+- **Controls** — Alpha通道中，从而产生交替的透明线条。关闭“Alpha通道”复选框会产生更为实体的图像，同时打 ｜ 开“Controls（控制）”选项卡（第一个选项卡）并将“Scan Lines（扫描线）”滑块拖拽到右边，将它的数
+- **Option** — 1 ｜ 按下“Option”键后拖动任意文字字母下的红点，来调整这个字符的字距，同时会限制字母向左或
+- **Option** — 母的字距或清除全部手动字距的调整，然后重新开始。 ｜ 按住“Option”键并拖拽显示的小红点，通过“Manual Kerning
+- **Option** — 起作用，我们首先要检查自己是否连接了正确的输入。 ｜ 按住“Option”键同时将节点连接线拖放到另一个节点上，来显示节点输入菜单。
+- **Option** — <!-- page 1577 --> ｜ 将节点连接在一起的另一种方法是按住“Option”键，同时将连接线从一个节点的输出拖动到另一
+- **Shift+Space** — “DeltaKeyer（Delta键控器）”节点是用于绿幕抠像的主要工具。它附加到我们的示例中所表示绿幕 ｜ 节点的输出上，即“MediaIn2（媒体输入2）”节点。选中“MediaIn2（媒体输入2）”后，按“Shift+Space”
+- **Shift+Tab** — — 按“Tab”键和“Shift+Tab”组合键会在可用的多边形折线之间循环切换。
+- **Shift+C** — 插入和修改）”模式来进一步细化遮罩。 ｜ “Click Append（点击追加）”工具栏按钮（Shift+C）
+- **Shift+C** — 1 ｜ 从工具栏中选择“Click Append（点击追加）”或按“Shift+C”组合键。
+- **Shift+I** — Modify（插入和修改）”模式。您还可以通过点击工具栏中的“Insert and Modify（插入和修改）”按钮 ｜ 或使用“Shift+I”键盘快捷键来手动切换到这个模式。这种模式使得添加额外的点和细化遮罩形状变
+- **Shift+I** — 得更容易。拖动控制点或方向控制手柄将会修改多边形折线上现有的点。 ｜ “Insert and Modify（插入和修改）”工具栏按钮（Shift+I）
+- **Shift+D** — 制一样。这种模式非常适合与数位板结合使用的，也适合在复杂形状的周围创建垃圾蒙版和效果遮罩。 ｜ “Draw Append（绘制追加）”工具栏按钮（Shift+D）
+- **Shift+M** — “Modify Only（只修改）”模式可以修改多边形折线上现有的点，但不能将新的点添加到形状中。 ｜ “Modify Only（只修改）”工具栏按钮（Shift+M）
+- **Shift+N** — “Done（完成）”模式禁止创建任何新的点，也禁止进一步修改多边形折线上任何一个现有的点。 ｜ “Done（完成）”工具栏按钮（Shift+N）
+- **Shift+O** — — 按键盘上的“Shift+O”组合键。
+- **Shift+O** — 线”>“Closed（闭合）”。 ｜ “Close（闭合）”工具栏按钮（Shift+O）
+- **Shift+S** — — 按“Shift+S”组合键。
+- **Shift+S** — — 从多边形折线的右键菜单中选择“Smooth（圆滑）”。 ｜ 工具栏中的“Smooth（圆滑）”按钮（Shift+S）
+- **Shift+L** — — 按“Shift+L”组合键。
+- **Shift+L** — — 从多边形折线的右键菜单中选择“Linear（线性）”。 ｜ 工具栏中的“Linear（线性）”按钮（Shift+L）
+- **Shift+A** — 一旦选中了外部多边形折线，您可以将任意一点从内部多边形折线中拖出，为遮罩添加一些柔和度。 ｜ 提示：按“Shift+A”组合键来选择形状上所有的点，然后按住“O”键并拖动鼠标，从内部形状上
+- **Controls** — 但创建样条曲线的各个控制点是隐藏的。若要显示控制点，我们可以打开位于“检查器”底部的“Stroke ｜ Controls（笔刷控制）”，然后点击“Make Editable（可以编辑）”按钮。
+- **Controls** — 形折线，如遮罩或运动路径。 ｜ 如果发布了运动路径，鼠标右键点击位于多边形折线笔刷“Stroke Controls（笔刷控制）”底部的“Right-
+- **Option** — 4 ｜ 按住“Option”键在检视器中要用作源的区域上面点击鼠标。此时会出现一个点，显示您正要采
+- **Option** — 7 ｜ 按住“Option”键在检视器中要用作源或偏移源帧位置的区域上面点击鼠标。
+- **Controls** — “Stroke（笔刷）”和“Polyline Stroke（多边形折线笔刷）”类型包含“Write On（书写）”控制，它位于“检 ｜ 查器”的“Stroke Controls（笔刷控制）”部分中。这些“Write On（书写）”控制可以沿着路径设置笔刷的
+- **Controls** — 这个组的屏幕控制将替换每个绘画笔刷的控制，并且“检查器”中的“修改器”选项卡将显示这个组 ｜ 的参数。通过在检查器的“修改器”选项卡中选择“Show Subgroup Controls（显示子组控制）”，仍
+- **Controls** — <!-- page 1633 --> ｜ 接下来，从“Apply Controls（应用控制）”中选择“Clone（克隆）”模式。在这个例子中，我们将在伤疤
+- **Option** — <!-- page 1634 --> ｜ 若要使用克隆笔刷，首先要按住“Option”键，然后点击图像上的某个位置，来识别克隆的源区域。
+- **Option** — 若要使用克隆笔刷，首先要按住“Option”键，然后点击图像上的某个位置，来识别克隆的源区域。 ｜ 在这个例子中，我们将从想要绘制第一个伤疤的正下方采样。在按住“Option”键加点击来对图像进
+- **Command+Z** — 设置要克隆的采样偏移（左图），拖动来绘制克隆笔刷（右图） ｜ 如果您不喜欢自己所创建的笔刷，还可以使用“Command+Z”组合键进行撤消，然后再试一次。我们
+- **Options** — 平面跟踪器的分5析按钮 ｜ 当片段跟踪时，您可以看到跟踪点标记和轨迹（如果在“检查器”的“Options（选项）”选项卡中启
+- **Shift+F** — — 按“Shift+F”组合键来适配检视器中的所有对象。
+- **Option** — 按住鼠标中键和鼠标左键并拖放来缩放检视器，或者点击鼠标中键并拖动来平移检视器，又或者 ｜ 按住“Option”键同时鼠标中键点击并拖动来旋转检视器，同时还可以移动摄像机。
+- **Option** — 直接拖动屏幕控制的红色、绿色或蓝色任意部分将变换约束到这个轴向上，或者如果拖动屏幕控制的 ｜ 中心，则可以不受约束地来应用变换。按住“Option”键并在检视器中拖动，能让您在不点击特定控制
+- **Control Visibility** — 景中其他三维对象的位置。 ｜ 当您选择了场景的“Camera3D（摄像机3D）”节点在检查器中查看它的控制时，在“Control Visibility
+- **Options** — 消失。然而，即使在您的场景中添加了灯光对象，也不会在检视器中显示灯光和阴影，除非您事先启 ｜ 用了灯光，通过鼠标右键点击检视器内的任意位置，并在右键菜单中选择“3D Options（三维选项）”
+- **Options** — 框可以将Z通道中的值设置为无穷大。否则，网格将正常提供Z通道。 ｜ 除非您在检视器中点击鼠标右键，然后在右键菜单中选择“3D Options（三维选项）”>“Show Matte
+- **Optical** — — 滚动快门（果冻效应）：基于CMOS的摄像机有时会由于快门在稍微不同的时间捕捉不同的线条 ｜ 而导致的变形。这种变形可能会给摄像机跟踪带来重大问题。有时，可以使用“Optical Flow（光
+- **Options** — 除非您有摄像机跟踪方面的经验，否则不建议选择合适的种子帧。在大多数情况下，在“Solve（解算）” ｜ 选项卡的“Solve Options（解算选项）”参数部分中，保持默认的“Auto Select Seed Frames（自动选择
+- **Optical** — 1773 ｜ “Optical Flow（光流）”工作流程 1775
+- **Optical** — — “Optical Flow（光流）”>“Optical Flow（光流）”：分析序列中相邻画面之间的运动来生成运动矢
+- **OpticalFlow** — — “OpticalFlow（光流）”节点可以生成矢量通道和反向矢量通道，然后“TimeStretcher（时间拉伸
+- **Optical** — <!-- page 1775 --> ｜ “Optical Flow（光流）”工作流程
+- **Optical** — “Optical Flow（光流）”工作流程 ｜ “Optical Flow（光流）”分析是一个非实时的过程，这取决于您的计算机性能、片段的分辨率和片段的
+- **Optical** — 析操作，要么使用渲染农场，然后将结果保存到OpenEXR序列中。 ｜ “Optical Flow（光流）”工具组是围绕
+- **Optical** — 光流 ｜ “Optical Flow（光流）”节点生成矢量和反向矢量数据。通常，为了获得最佳性能，您可以将光流输出
+- **OpticalFlow** — 或“TimeStretcher（时间拉伸器）”插值设置中启用光流模式将利用矢量和反向矢量通道。为了使光流模 ｜ 式工作，必须有一个“OpticalFlow（光流）”的上游节点来生成隐藏通道，或者有一个OpenEXR“Loader
+- **Optical** — 高级光流处理 ｜ “Optical Flow（光流）”、
+- **Optical** — “Repair Frame（修复帧）”和“Tween（补间动画）”节点还包括一个更快的 ｜ 基于GPU的光流算法。当您将“Optical Flow（光流）”、
+- **Optical** — 节点的左眼输入和右眼输入。 ｜ “Disparity（视差）”的生成和“Optical Flow（光流）”一样，计算成本很高，所以一般的想法是您可以
+- **Optical** — 半透明对象 ｜ Fusion采用“Optical Flow（光流）”和“Disparity（视差）”生成算法，假设在逐帧跟踪像素的时候，每个
+- **OpticalFlow** — 存储从当前帧到前一帧的反向光流。如果前一帧或下一帧都不存在（要么磁盘上不存在，要么“Loader ｜ （加载器）”节点的全局范围不允许“OpticalFlow（光流）”访问它们），Fusion将用零（透明的黑色）填
+
+## 10_Fusion页面特效库
+
+- **Command+G / Ctrl+G** — 用的格式。若要切换参考线的开关，请从检视器的右键菜单中选择“Guides（参考线）”>“Show Guides ｜ （显示参考线）”，或者在检视器处于激活状态时使用键盘快捷键“Command+G（macOS）”或“Ctrl+G
+- **Shift+A** — 全选 ｜ Shift+A
+- **Shift+F** — 查找点 ｜ Shift+F
+- **Shift+C** — 创建新的点 ｜ Shift+C
+- **Shift+N** — 在“无”/“选中”/“已发布”/“所有的点”上切换名称 ｜ Shift+N
+- **Shift+L** — 在“无”/“选中”/“已发布”/“所有的点”上切换位置 ｜ Shift+L
+- **Shift+P** — 发布选中的点 ｜ Shift+P
+- **Shift+U** — 取消发布选中的点 ｜ Shift+U
+- **Shift+S** — 在选中的点上创建形状 ｜ Shift+S
+- **Shift+I** — 创建图像平面并将它适配到选中的点上 ｜ Shift+I
+- **Shift+O** — 在选中的点上创建定位器 ｜ Shift+O
+- **Controls** — “Extrusion（挤压）”参数部分包含用来挤压文本和为文本创建倒角边缘的控制。 ｜ “Advanced Controls
+- **Command+C / Ctrl+C** — 这个选项卡中的编辑框是用来输入要创建的文本的地方。可以在这个框中输入任何常用的字符。常见 ｜ 的操作系统剪贴板快捷键（“Command+C”或“Ctrl+C”组合键用来复制，
+- **Command+X / Ctrl+X** — 的操作系统剪贴板快捷键（“Command+C”或“Ctrl+C”组合键用来复制， ｜ “Command+X”或“Ctrl+X”组
+- **Command+V / Ctrl+V** — 合键用来剪切， ｜ “Command+V”或“Ctrl+V”组合键用来粘贴）也可以使用；不过，鼠标右键点击编辑框
+- **Shift+S** — 平滑。样条曲线本身控制沿挤压轮廓的平滑。如果一根样条曲线线段被平滑后，例如通过使用快捷 ｜ 键“Shift+S”，法线也会得到平滑。如果控制点是线性的，那么着色边缘是清晰的。样条曲线上的第一
+- **Controls** — “Text 3D（文本3D）” ｜ “Advanced Controls（高级控制）”
+- **Optical** — 这个节点用于根据从三维渲染软件（如Arnold、Renderman或VRay）所导出的运动矢量贴图或AOV ｜ （任意输出变量）通道来创建方向模糊。您还可以使用Fusion中的“Optical Flow（光流）”节点来生成
+- **Optical** — — 矢量：绿色的输入端口也是必需的。在这里，您可以连接从三维应用程序中所渲染的运动矢量AOV， ｜ 或者从Fusion“Optical Flow（光流）”节点中所生成的EXR文件。
+- **Options** — “Ranges（范围）”、 ｜ “Options（选项）”和“Settings（设置）”。
+- **Options** — “选项”选项卡 ｜ “Options（选项）”选项卡包括一些非常重要的处理操作，其中包括在对预乘Alpha通道进行颜色校
+- **Controls** — 这个菜单可以在“文件”和“控制”之间进行切换。在“File（文件）”模式下，可以加载标准的ASC-CDL文 ｜ 件。在“Controls（控制）”模式下，可以手动调整斜率、偏移、力度和饱和度，并且可以保存CDL文件。
+- **Controls** — 具的“控制”选项卡上拥有一组相同的RGBA按钮。在这种情况下， ｜ “Settings（设置）”和“Controls（控制）”
+- **Command+T / Ctrl+T** — 字图像》ACM SIGGRAPH 计算机图形学论文集，1984，第253至259页。基本上，数学原理如下所述。 ｜ 请注意，通过交换前景与背景输入（使用“Command+T”组合键或“Ctrl+T”组合键）并选择相应的
+- **Controls** — 工具的“控制”选项卡上拥有一组相同的RGBA按钮。在这种情况下， ｜ “Settings（设置）”和“Controls（控
+- **Controls** — 具的“控制”选项卡上拥有一组类似RGBA的按钮。在这种情况下， ｜ “Settings（设置）”和“Controls（控
+- **Option** — 会选择包含在其中的所有工具，能让整个工具集进行移动、复制、传递等操作。 ｜ 若要重命名“Underlay（底图）”，请首先确保没有选择包含在底图中的节点。然后，按“Option+点击”组合
+- **Control 1** — 在下面的示例中，位于工具顶部被命名为“Light_Wrap”。 ｜ “Matte Control 1（蒙版控制1）”的模糊滑块
+- **Option** — 布线器 ｜ 若要沿连接线插入一个布线器，请在这条连接线上按“Option+点击”或“Alt+点击”组合键。然后，布线
+- **Controls** — “Advanced ｜ Controls（高级控制）”用于字距调整选项，
+- **Alt+Shift** — 框。选择任何一个字符后，按住Option键（MacOS）或Alt键（Windows），同时按向左或向右箭头键，对 ｜ 所选字符的字距进行微调。按住“Alt+Shift”
+- **Option+Shift** — 所选字符的字距进行微调。按住“Alt+Shift” ｜ （Windows）组合键或“Option+Shift”
+- **Controls** — 时按箭头键来增大移动字符的幅度。 ｜ 若要设置每个字符的位置动画，请鼠标右键点击检查器“Advanced Controls（高级控制）”中的手动
+- **Controls** — 在工具的“控制”选项卡上拥有一组相同的RGBA按钮。在这种情况下， ｜ “Settings（设置）”和“Controls
+- **Controls** — 显示视图控制 ｜ “Show View Controls（显示视图控制）”复选框用来启用/禁用在检视器中显示屏幕控制上的遮罩。
+- **Alternate** — “Fill Method（填充方法）”菜单提供了两种不同的技术，用来处理多边形折线的重叠区域。如果遮罩中 ｜ 的重叠部分导致出现不需要的洞，请尝试将这个控制的设置从“Alternate（交替绕组）”切换到“Non Zero
+- **Controls** — 这个形状的任何一个动画都会保留。若要选择外部形状，请按“Tab”键在屏幕控制之间进行切换，直 ｜ 到显示虚线轮廓，也可以使用右键菜单的“Controls（控制）”>“Outer Polygon（外部多边形）”菜单来
+- **Options** — “Alpha Multiply（Alpha相乘）”节点被放置在节点链的 ｜ 最后，来再次对Alpha通道进行预乘。如果只使用单个颜色校正节点，那么可以使用“Options（选项）”
+- **Options** — 如有必要，可以重复这个步骤来清除背景区域的噪点。 ｜ 从检视器的“Options（选项）”菜单中选择“Gain/Gamma（增益/伽马）”来增加明度或伽马，这样
+- **Options** — 5 ｜ 如果启用后，请禁用检视器“Options（选项）”菜单中的“Gain/Gamma（增益/伽马）”来返回到常
+- **Controls** — “控制”选项卡上拥有一组RGBA的按钮。 ｜ “Settings（设置）”和“Controls（控制）”选项卡中的按钮是
+- **Optical** — 速或时间减速，请改用“Time Stretcher（时间拉伸器）”节点。 ｜ 在“Flow（光流）”模式下操作时，需要“Optical Flow（光流）”数据。这个节点不会直接生成光流数据。
+- **Optical** — 在“Flow（光流）”模式下操作时，需要“Optical Flow（光流）”数据。这个节点不会直接生成光流数据。 ｜ 您必须使用“Optical Flow（光流）”节点或通过从图像中加载正向/反向矢量通道来创建它。
+- **Optical** — 如果您想要为重设时间的素材生成光流矢量通道，请在“Time Speed（时间速度）”节点之前添加一 ｜ 个“Optical Flow（光流）”节点。
+- **Optical** — — 光流：处理器最密集，但速度效果处理的最高质量方式。使用从“Optical Flow（光流）”节点预先
+- **Optical** — 化，如改变帧率，请使用“Time Speed（时间速度）”节点来代替。 ｜ 在“Flow（光流）”模式下操作时，需要“Optical Flow（光流）”数据。这个节点不能直接生成光流；您必
+- **Optical** — 在“Flow（光流）”模式下操作时，需要“Optical Flow（光流）”数据。这个节点不能直接生成光流；您必 ｜ 须在上游使用“Optical Flow（光流）”节点或通过从磁盘加载正向/反向矢量通道手动创建它。
+- **Optical** — 量通道会被消耗/破坏。如果您想要为重设时间的素材生成光流矢量通道，请在“Time Stretcher（时间 ｜ 拉伸器）”节点之前添加一个“Optical Flow（光流）”节点。
+- **Optical** — 光流节点简介 ｜ 这个节点使用“Optical Flow（光流）”算法来分析所连接到它输入的片段。把光流想象成每个像素的
+- **Optical** — Motion Blur（矢量运动模糊）”或“Vector Distort（矢量畸变）”。但是， ｜ “Optical Flow（光流）”在连接
+- **Optical** — 到“Time Stretcher（时间拉伸器）”或“Time Speed（时间速度）”节点的时候必须渲染两次。这些节点按顺 ｜ 序需要通道A.FwdVec和B.BackVec，但“Optical Flow（光流）”在处理时会生成A.BackVec和A.FwdVec。
+- **Optical** — 输入 ｜ “Optical Flow（光流）”节点包含单个橙色的图像输入端口。
+- **Optical** — — 输入：橙色的背景输入端口接收二维图像。这是您想要计算光流的图像序列。 ｜ “Optical Flow（光流）”
+- **Options** — 节点的输出包含图像通道和矢量通道。矢量通道可以通过在检视器中点击鼠标右键，然后选择 ｜ “Channel（通道）”>“Vectors（矢量）”，然后选择“Options（选项）”>“Normalize Color Range
+- **Optical** — 基本节点设置 ｜ “Optical Flow（光流）”节点分析连接到背景输入的帧数。将“Loader（加载器）”或“MediaIn（媒体输
+- **Optical** — 量通道的节点上，例如“Time Stretcher（时间拉伸器）”。 ｜ 提示：在分析“Optical Flow（光流）”矢量的时候，可以考虑在之后添加“Smooth Motion（平滑
+- **Optical** — <!-- page 2409 --> ｜ 动态生成运动矢量的“Optical Flow（光流）”。
+- **Optical** — 动态生成运动矢量的“Optical Flow（光流）”。 ｜ 另外，如果发现“Optical Flow（光流）”节点速度太慢而无法分析画面，可以考虑使用“Saver（保存器）”
+- **Optical** — 节点将它渲染成OpenEXR格式。然后将渲染好的EXR文件导入进来，作为嵌入矢量通道的新图像来使用。 ｜ 通过“Saver（保存器）”节点渲染出来的“Optical Flow（光流）”节点。
+- **Optical** — 检查器 ｜ “Optical Flow（光流）”高级控制
+- **Optical** — “控制”选项卡（高级） ｜ 当您将“Optical Flow（光流）”、
+- **Optical** — “Advanced ｜ （高级）”参数部分可以调整“Optical Flow（光流）”矢量的计算。这默认设置是一个很好的标准。
+- **Optical** — 性瑕疵的帧数。它需要三个帧数：修复的这帧和两个相邻的帧数。由于“Repair Frame（修复帧）”节点 ｜ 本身可以计算光流，因此它生成运动矢量通道不需要“Optical Flow（光流）”节点。但是，这会使它的
+- **Optical** — “Repair Frame（修复帧）”不会传递通道，而是在计算完成后破坏任何一个辅助通道。 ｜ 有关控制和设置信息，请参阅“Optical Flow（光流）”节点。
+- **Optical** — “控制”选项卡 ｜ “控制”选项卡包含如何修复帧的相关选项。它还包括用来调整光流分析的控制，与“Optical Flow
+- **Optical** — 光流选项 ｜ 这些设置是调整光流分析。请参阅本章前面关于“Optical Flow（光流）”节点的经典控制和高级控制
+- **Optical** — — 输入：橙色的图像输入端口接收一个二维图像。这是您想要计算平滑运动的图像序列。这个图像必 ｜ 须具有预先计算的矢量通道和反向矢量通道，这些通道要么是从“Optical Flow（光流）”节点中生
+- **Optical** — 节点的输出。然后可以使用“Smooth Motion（平滑运动）”节点来平滑这些通道或AO通道。 ｜ “Smooth Motion（平滑运动）”节点从“Optical Flow（光流）”节点中使用矢量通道和反向矢量通道。
+- **Optical** — 向矢量辅助通道。由于“Tween（补间动画）”节点会手动生成光流，因此不需要在“Tween（补间动画）” ｜ 节点之前添加“Optical Flow（光流）”节点。生成的光流会被丢弃，并且不会存储在输出的画面当中。
+- **Optical** — 噪点的图像的时候遇到了麻烦，提前去除某些噪点也会有所帮助。 ｜ “Tween（补间动画）”会破坏任何一个输入的辅助通道。有关控制和设置信息，请参阅“Optical Flow
+- **Optical** — “控制”选项卡包含如何在帧数之间补间动画的相关选项。它还包括用来调整光流分析的控制， ｜ 与“Optical Flow（光流）”节点中的那些控制相同。
+- **Optical** — r ｜ 通用“Optical Flow（光流）”设置选项卡
+- **Optical** — “设置”选项卡 ｜ “检查器”中的“Settings（设置）”选项卡可以在“Optical Flow（光流）”类别中的每个工具上找到。
+- **Controls** — 笔刷控制 ｜ “Stroke Controls（笔刷控制）”包含了调整整个绘制笔刷以及随时对它进行控制的参数。
+- **Controls** — 而无需在修改器中创建一个庞大的列表堆栈。 ｜ 每个“Paint（画笔）”修改器笔刷都包含“Brush Controls（画笔控制）”、
+- **Controls** — 每个“Paint（画笔）”修改器笔刷都包含“Brush Controls（画笔控制）”、 ｜ “Apply Controls（应用控制）”
+- **Controls** — “Apply Controls（应用控制）” ｜ 和“Stroke Controls（笔刷控制）”，这些控制与检查器主控制选项卡中的控制相同。
+- **Option** — 克隆的同时： ｜ 按住“Option+点击”组合键或“Alt+点击”组合键，可以设置克隆源的位置。笔刷从选中的位置开
+- **Option** — 方向键更改克隆源的位置；您还可以拖拽十字准线和调整角度控制或大小滑块。 ｜ “Option+左箭头/右箭头”组合键或“Alt+左箭头/右箭头”组合键来更改克隆源的角度。
+- **Option** — “Option+左箭头/右箭头”组合键或“Alt+左箭头/右箭头”组合键来更改克隆源的角度。 ｜ “Option+上箭头/下箭头”组合键或“Alt+上箭头/下箭头”组合键来更改克隆源的大小。
+- **Shift+Command / Shift+Ctrl** — “Option+上箭头/下箭头”组合键或“Alt+上箭头/下箭头”组合键来更改克隆源的大小。 ｜ “Shift+Command”组合键或“Shift+Ctrl”组合键可以与上面的操作一起使用，进行较大或
+- **Controls** — “颜色”控制 ｜ “Color Controls（颜色控制）”是选择由发射器所生成粒子的颜色和Alpha值。
+- **Controls** — 常在工具的“控制”选项卡上拥有一组相同的RGBA按钮。在这种情况下， ｜ “Settings（设置）”和“Controls
+- **Optimized** — 或双眼竞争，从而会破坏立体效果。 ｜ “Optimized（优化）”方式是与“Color（彩色）”方式相同的方式
+- **Optimized** — — Dubois：具有相当深的颜色图像可以产生“Half-color（半色）”、 ｜ “Color（彩色）”和“Optimized（优化）”
+- **Options** — 现其他数据，必须通过标准化方式将它转换为适合于显示0-1范围的数据。若要执行这个操 ｜ 作，请在检视器中点击鼠标右键，然后选择“Options（选项）”>“Show Full Color Range（显
+- **Options** — 图案放大后的视图，来帮助精确定位图案。当松开鼠标按键后，这个缩略图就会消失。您可以在“检查器” ｜ 的“Options（选项）”选项卡中调整放大系数。
+- **Options** — “显示选项”选项卡 ｜ “Display Options（显示选项）”选项卡能让您自定义在检视器中屏幕控制的样子。
+- **Shift+D** — 使图像变暗 ｜ 在“Track（跟踪）”模式下使图像变暗，以便更好地查看检视器中的控制和跟踪点。按键盘快捷键“Shift+D”
+- **Options** — 自动跟踪默认值 ｜ 为自动生成的跟踪点设置自定义前缀名称和/或颜色。当“Options（选项）”选项卡中的“Track Colors
+- **Options** — — 一个“Renderer 3D（渲染器3D）”，它是设置匹配输入的素材。 ｜ 可以在“Export Options（导出选项）”选项卡中启用/禁用单个节点的导出。
+- **Options** — 屏幕上筛选 ｜ 在“Options（选项）”选项卡下，将轨迹长度设置为20。这将在+-20帧轨迹的素材上显示每个跟踪点。
+- **Command+G / Ctrl+G** — 切换参考线的开关，请从检视器的右键菜单中选择“Guides（参考线）”>“Show Guides（显示参考线）”， ｜ 或者在检视器处于激活状态时使用键盘快捷键“Command+G（macOS）”或“Ctrl+G（Windows）”组合键。
+- **Controls** — “控制”选项卡 ｜ “Controls（控制）”选项卡包含了一些最基本的摄像机设置，其中包括摄像机的裁剪平面、焦距和胶
+- **Optical** — 在下面的示例中， ｜ “MediaIn1（媒体输入1）”节点使用“Optical Flow（光流）”节点来生成矢量通道，然
+- **Optical** — “Vector Distort（矢量畸变）”节点依赖于具有矢量通道的图像或 ｜ “Optical Flow（光流）”节点来生成它们。
+- **Shift+S** — — 若要使控制点变圆滑，请选择它们并按“Shift+S”组合键。然后可以使用控制手柄来进一步修改
+- **Shift+L** — — 若要使控制点变线性，请选择它们并按“Shift+L”组合键。这些操作还可以使用右键菜单来执行。
+- **Control Change** — “Note（音符）”、 ｜ “Control Change（控制更改）”、
+- **Control Change** — <!-- page 2755 --> ｜ 控制编号（仅限“Control Change（控制更改）”模式）
+
+## 11_调色页面
+
+- **Command-Z** — — 在菜单中选择“编辑”>“重做” ｜ （快捷键Shift-Command-Z）来重做当前操作。
+- **Command-D** — 提示：如果您要向客户展示调色前后的效果对比，还可以采用一种更有效的方式，选中要进 ｜ 行开/关的一个或多个特定的节点，再按下“Command-D”快捷键，即可启用/禁用所选节点。
+- **Shift+Z** — — 从检视器左上角的下拉菜单中选择“100%（实际大小）”，或使用快捷键Option+Shift+Z。
+- **Option-Command-G** — — 进入菜单“显示”>“静帧”>“抓取静帧” ｜ （Option-Command-G）。
+- **Command-W** — — 选择菜单“显示”>“静帧”>“播放静帧” ｜ （Command-W），或在“检视器”中点击鼠标右键，选择
+- **Option** — 对角线划像：让您可以通过可调整的对角线边界比较划像的两半。拖动指针可以重新 ｜ 定位划像向左和向右。按住 Option 键并拖动指针以圆形移动，可以将划像的边界旋转
+- **Option-W** — — 反转划像：反转划像的每一半（快捷键：Option-W）。
+- **Command-Option** — 当前片段时，保持当前片段和选做划像对比的“时间线片段”之间的偏移量。启用该选项后，当您更改 ｜ 片段选择时，系统始终能保持时间线划像片段和当前片段之间的偏移量。点击“Command-Option-
+- **Command-Option** — 片段选择时，系统始终能保持时间线划像片段和当前片段之间的偏移量。点击“Command-Option- ｜ 右箭头”组合键，可以向前步进“时间线参考片段”，点击“Command-Option-左箭头”组合键，
+- **Option-Command-W** — — 使用“Option-Command-W”键，切换启用/关闭“分屏”。
+- **Shift-W** — — 选择菜单“工作区”>“视频示波器”>“开启/关闭” ｜ （快捷键Command-Shift-W），将视频示波器打
+- **Shift-Command-1** — 出提示信息，显示其“轨道名称”。通过单击轨道编号，您可以启用或禁用该轨道及其上的所有片段， ｜ 这与使用“时间线”菜单中的“启用/禁用视频轨道”子命令（Shift-Command-1至9）具有相同效果。
+- **Option** — “迷你时间线”上该“轨道编号”将变灰。 ｜ 在“迷你时间线”上的某个“轨道编号”上使用“Option+单击”，该“轨道编号”变红，可以在不禁用项
+- **Option-Shift-H** — — “突出显示黑/白”：在键盘上按下“Option-Shift-H”组合键，可以查看所谓“高反差突出显示，
+- **Shift-H** — — 在“显示”>“突出显示”子菜单中选择1个选项； ｜ “Shift-H”组合键选择默认“突出显示”功能。
+- **Option-Shift-H** — — 选择菜单“显示”>“突出显示”>“以黑白方式突出显示” ｜ （组合键“Option-Shift-H”）。
+- **Option** — “拾取器减”：从键控区域中移除一个颜色区域。同时，也可以通过按住 ｜ Option键来实现这个功能。
+- **Option-H** — — “仅在用户界面开启”：在外部监视器上隐藏“窗口边框”，仅在“检视器”中显示“窗口边框”。 ｜ 使用“Option-H”组合键切换以上3种模式。
+- **Command-T** — — “正向跟踪” ｜ （Command-T）：从“播放头”当前位置的帧开始向前跟踪1个特征上放置的“窗口”，
+- **Option-T** — — “向后跟踪” ｜ （Option-T）：从“播放头”当前位置的帧开始向后跟踪1个特征上放置的“窗口”，在片
+- **Command-Option-T** — — “停止跟踪” ｜ （Command-Option-T）：终止任何跟踪操作。您可以用它来结束一个耗时过长的错
+- **Option-Command-G** — — 进入菜单“调色”>“静帧”>“抓取静帧” ｜ （Option-Command-G）。
+- **Option-Command-N** — — 从“调色”>“静帧”菜单中，您可以选择“下一个静帧” ｜ （Option-Command-N）或“上一个静
+- **Option-Command-B** — 帧” ｜ （Option-Command-B）来在画廊中切换静帧。然后，您可以使用“开/关”
+- **Command-W** — （Option-Command-B）来在画廊中切换静帧。然后，您可以使用“开/关” ｜ （Command-W）快
+- **Option-W** — — 如果您想反转划像方向，可以在“检视器”的选项菜单中选择“反转划像” ｜ （Option-W）。
+- **Option-1** — — 选择菜单“调色”>“记忆”>“保存记忆A-H” ｜ （Option-1-8）。
+- **Command-1** — — 选择菜单“调色”>“记忆”>“加载记忆A-H” ｜ （Command-1-8）。
+- **Command-N** — 进入“剪辑页面”，选择菜单“文件”>“新建时间线” ｜ （Command-N）。
+- **Command-Y** — — 选择菜单“调色”>“调色版本”>“添加” ｜ （Command-Y）。
+- **Option-1** — 选择菜单“调色”>“记忆”>“保存记忆A” ｜ （Option-1）。当然，您也可以保存到其他记忆，本例中保存
+- **Command-U** — 选择菜单“调色”>“调色版本”>“默认” ｜ （Command-U）。
+- **Command-1** — 选择菜单“调色”>“记忆”>“加载记忆A” ｜ （Command-1）将保存的记忆作为“默认版本”。
+- **Command-U** — — 选择菜单“调色”>“调色版本”>“默认” ｜ （Command-U）。
+- **Shift-Option-V** — 顶部菜单的“编辑”>“粘贴值” ｜ （Shift-Option-V）命令允许您仅将特定参数的值粘贴到另一个片段的
+- **Shift-Option-V** — 选择“编辑”>“粘贴值” ｜ （Shift-Option-V）来粘贴该值。
+- **Option-Shift-P** — 选择菜单“调色”>“预览记忆” ｜ （Option-Shift-P）。
+- **Command-1** — — 选择菜单“记忆”>“加载记忆A-H” ｜ （Command-1-8）。
+- **Option-Shift-P** — — 如果对效果不满意，请再次选择菜单“调色”>“预览记忆” ｜ （Option-Shift-P），将片段返回至原
+- **Command-C** — — 选中1个要复制源节点，选择菜单“编辑”>“复制” ｜ （Command-C）。而后，在当前调色中或另一个
+- **Command-V** — 辑”>“粘贴” ｜ （Command-V），粘贴已复制的设置。粘贴的节点设置将覆盖该节点上原有的设置。
+- **Option-V** — 您可以使用菜单“编辑”>“粘贴属性” ｜ （Option-V）
+- **Option-Shift** — — 选择菜单“调色”>“节点”>“上一个节点” ｜ （Option-Shift-分号）或“调色”>“节点”>“下一个节点”
+- **Option-Shift** — （Option-Shift-分号）或“调色”>“节点”>“下一个节点” ｜ （Option-Shift-撇号）。这样，将最后1个节点环出到第一个节点，或者相反。
+- **Command-D** — — 选中1个节点，选择菜单“调色”>“节点”>“启用/禁用已选节点” ｜ （Command-D）。
+- **Option-D** — — 选择菜单“调色”>“节点”>“启用/禁用所有节点” ｜ （Option-D），同时启用或禁用所有节点。
+- **Command-home** — — “重置调色并保留节点”：按下Shift-Command-home组合键。
+- **Option-Shift-P** — — “预览记忆”：在当前片段上预览任意一个已保存的调色记忆的效果。先选择菜单“调色”>“预览记忆” ｜ （Option-Shift-P），而后在“画廊”
+- **Option-Shift-O** — “原始记忆” ｜ （Option-Shift-O）。如果您在进行了一系列调色操作之后又感到不满意，可以使用此命
+- **Option-C** — — “添加带有圆形窗口的串行节点”：Option-C
+- **Option-Q** — — “添加带有四边形窗口的串行节点”：Option-Q
+- **Option-G** — — “添加带有多边形窗口的串行节点”：Option-G
+- **Option-B** — — “添加带有曲线窗口的串行节点”：Option-B
+- **Shift-H** — 请启用“突出显示” ｜ （Shift-H组合键，或者在DaVinci Resolve Mini调色台上的“HILITE”按钮，
+- **Option-O** — — 选择菜单“节点”>“添加外部节点” ｜ （Option-O）。
+- **Option-Y** — 器节点” ｜ （Option-Y）。出现1个“分离器”节点和1个“结合器”节点，分别连接到3个“校正器”节点，
+- **Option-Y** — 选择菜单“调色”>“节点”>“添加分离器/结合器节点” ｜ （Option-Y），在“节点编辑器”中添加1个预
+- **Option-L** — 在菜单中选择“节点”>“添加图层节点” ｜ （Option-L）。
+- **Option** — — 将“播放头”移动到想要删除的“关键帧”上，选择“标记”>“删除关键帧” ｜ （Option-]）。系统会删除“播
+- **Command-C** — 选中1个要复制关键帧的源节点，选择菜单“编辑”>“复制” ｜ （Command-C）。
+- **Command-V** — — 选中另一个要粘贴关键帧的目标节点，选择菜单“编辑”>“粘贴” ｜ （Command-V）。
+- **Option-V** — — 如果您只想复制特定关键帧轨道的关键帧信息，可以选择“编辑”>“粘贴属性” ｜ （Option-V），
+- **Shift Down / Shift Up** — Shift键使用规则 ｜ 在介绍实体按键操作之前，有必要了解一下左右面板上的2个键。它们是“Shift Up”和“Shift Down”
+- **Shift Up** — 例如，在“T型推杆面板”上， ｜ “Shift Up”键旁边是“Base Mem”键。
+- **Shift Down** — — Shift Down+ADJ WINDOW（调整“窗口”）：仅将RGB色彩平衡复位为默认制动状态。
+- **Shift Up** — — Shift Up+CURSOR（显示）：此组合键更改主显示器上的光标视图。。用户可以更改光标显示方式，
+- **Shift Down / Shift Up** — — “Shift Up”：Shift Up\Shift Down按键，用来选择相应的那些含有两种以上功能的按键。此操作
+- **Shift Down** — — “Enable/Disable All “启用/禁用所有节点” ｜ （Shift Down Disable Current）”：此键可以启⽤或禁⽤
+- **Shift UP** — “录机采集”和“静帧”按键位于“搜索转盘面板”的左上⽅。这些按键与磁带录机采集控制以及抓取和 ｜ 选择“静帧”有关。这⾥还有⼀个Undo和Redo按键，Shift UP和⼀个Save按键。
+- **Shift Down** — — “Rec”： ｜ （Shift Down Render下档键+RENDER）此键尚未指派功能。
+- **Shift Down** — — “MODE（模式）”： ｜ （Shift Down Highlight下档键+HILIET）⽤于将突出显示模式从灰⾊切换为⾼
+- **Shift Down** — — “STEP REV KYFRM（跳到上一关键帧）”： ｜ （Shift Down Step Reverse下档+STEP REV）此键用来
+- **Shift Down** — — “STEP FWD KYFRM（跳到下一关键帧）”： ｜ （Shift Down Step Forward 下档键+STEP FWD）此键
+- **Command-S** — 项目，效果与按下 ｜ Command-S相同
+- **Control Panel** — 请参阅本章后面的“使用 ｜ Advanced Control Panel
+
+## 12_调色页面效果
+
+- **Shift-F** — 全屏检视器”模式时，此面板仍然可见。选择菜单“工作区”>“检视器模式” ｜ “页面全屏检视器”Shift-F），
+
+## 13_Resolve_FX_概览
+
+- **Option** — — 减去：在初始的限定范围中删除颜色区域；也可以通过按住 Option 键来使用。
+- **Option** — 如有必要，您可以使用“添加/减去”工具在颜色选区中添加或减去特定区域。或者，在选择默认“拾取” ｜ 工具时，按住 Shift 键添加颜色区域的选择，或按住 Option 键减去。
+- **Option** — 要应用“坏点修复”滤镜来解决坏点问题，请确保在“检视器”中启用了 OFX 屏上控制项，依次用鼠标 ｜ 点击每个要解决的坏点，在上面放置补丁。您可以放置任意数量的补丁，并没有限制。按住 Option 并
+- **Option** — 如果您不小心将跟踪器放置在错误的区域，可以拖拽内框的任何位置将其移动到需要的位置，或按 ｜ 住 Option 键单击，删除此跟踪器。
+- **Option** — 您可以通过手动拖动当前点（或按住 Command 并拖选点周围的区域来选择并移动多个点），或单击 ｜ 某个区域来放置新点来手动调整网格。按住 Option 键单击一个点会将其从网格中删除。如果柔性的
+- **Option** — 可以添加四个图钉来实现特定的透视变形。 ｜ 提示：您可以按住 Option 并单击某个图钉将其删除，或者使用“重置画布”按钮删除所有图钉。
+- **Command + C** — 适配布局中的第一个贴片。现在是时候将此效果应用到接下来的两个片段了（不要忘了底部片段将 ｜ 用作背景，因此不需要应用此效果）。选择时间线中应用了本效果的顶部片段，然后按 Command + C
+- **Option + V** — 用作背景，因此不需要应用此效果）。选择时间线中应用了本效果的顶部片段，然后按 Command + C ｜ 将其复制。然后，选择接下来的两个片段，右键单击其中一个，选择“粘贴属性”(Option + V)。当“粘贴
+
+## 14_Fairlight
+
+- **Command-Option** — 要使用鼠标滚轮缩放音频波形高度： ｜ 按下“Command-Option”组合键，上下滚动鼠标滚轮，即可更改所有“轨道”中的所有音频波形的高度。
+- **Option** — 时，请选择“自定义”。 ｜ 提示：您还可以按下Option键，调整所有所选“轨道”的高度，或使用Command-Option组合键，
+- **Command-Z** — — 依次选择“编辑”>“重做” ｜ （快捷键Shift-Command-Z），在下一次更改中重复上一次的操作。
+- **Option** — 提示：您可以把一条“总线”快速地分配到任何所选“轨道编组”或分配到所有“轨道”，请在分 ｜ 配时按住Option键（全选）或按住Command-Option键。
+- **Shift-Z** — 完成“总线”分配后，点击“关闭”按钮，关闭此窗口。 ｜ 备注：在“总线分配”窗口仍打开时，您可以分别使用Command-Z和Command-Shift-Z组
+- **Control Room** — — “Control Room Monitor Direct（控制室监听直接输出）”：监听系统的直接输出层，路由在选听
+- **Shift-J** — 在软件可支持的正向播放速度范围中切换。 ｜ Shift-J
+- **Shift-L** — <!-- page 3592 --> ｜ Shift-L
+- **Option** — 都是将“播放头”从一个编辑点移动到另一个编辑点。 ｜ 然而，在“Fairlight页面”中按住Command+Option，再点击箭头键，可在片段、
+- **Command-Option** — 移动所选片段 ｜ 使用组合键“Command-Option-左箭头”和“Command-Option-右箭头”，在“时间线”上向左和向右
+- **Command-Option** — 移动“轨道”选择 ｜ 使用“Command-Option-向上箭头”和“Command-Option-向下箭头”组合键时，可上下移动，以选
+- **Control-Option** — — 将“所选状态”移动到更高或更低的“轨道”上：按下“Control-Option-向上箭头”或“Control-Option-
+- **Control-Option** — 向下箭头”组合键，将所选状态移动到上方的一条“轨道” ｜ （“Control-Option-向上箭头”）或下方的
+- **Control-Option** — 一条“轨道” ｜ （“Control-Option-向下箭头”）。如果同时选择了多条“轨道”，这些所选“轨道”将作为
+- **Control-Option** — （“Control-Option-向下箭头”）。如果同时选择了多条“轨道”，这些所选“轨道”将作为 ｜ 一个整体移动；例如，选择“轨道A2”和“轨道A3”，再按下“Control-Option-向下箭头”，将导致选
+- **Option+I** — — 按下“Option+I”组合键，清除当前“入点”。
+- **Option+O** — — 按下“Option+O”组合键，清除当前“出点”。
+- **Option+X** — — 按下“Option+X”组合键，同时清除当前“入点”和“出点”。
+- **Command+B** — （反斜杠）组合键。 ｜ b) 依次选择“时间线”>“刀片工具”或按下“Command+B”组合键。
+- **Shift-Command-T** — 依次选择“修剪”>“修剪到所选” ｜ （Shift-Command-T），同时修剪一个或多个所选片段之外部分的头
+- **Control-Option** — 要使用“播放头”选择片段，请首先选择包含您想要复制或剪切的那个片段所在的“轨道”。如果 ｜ 已经选择了一条或多条“轨道”，您可以使用“Control-Option-向上箭头”或“Control-Option-向
+- **Command-X** — 4 ｜ 确保“播放头”位于您想依据该帧来移动片段的那一部分波形之上，按下“Command-X”组合键剪切
+- **Command-C** — 确保“播放头”位于您想依据该帧来移动片段的那一部分波形之上，按下“Command-X”组合键剪切 ｜ 该片段，或“Command-C”组合键复制该片段（也可右键点击一个片段，选择“复制”或“剪切”命令）。
+- **Control-Option** — 动“播放头”就可以为“已剪切”或“已复制”的片段重新确定在“轨道”上的位置。 ｜ b) 如果您想把“已剪切”或“已复制”的片段移动到另一条“轨道”上，可以使用“Control-Option-
+- **Command-V** — 6 ｜ 将片段定位到您所需要的位置之后，按下“Command-V”组合键，将片段粘贴到您所选择的位
+- **Control-Option** — 选择包含您想要“复制”或“剪切”的片段的“轨道”。如果已经选择了一条或多条“轨道”，您可以使 ｜ 用“Control-Option-向上箭头或向下箭头”组合键快捷方式，将“轨道”的所选状态向上或向下移
+- **Control-Option** — 就可以为“已剪切”或“已复制”的片段重新确定在“轨道”上的位置。 ｜ b) 如果您想把“已剪切”或“已复制”的片段移动到另一条“轨道”上，可以使用“Control-Option-
+- **Shift-T** — “添加纯音频转场” ｜ （Shift-T）。
+- **Option** — — “参数组标题栏”：双击某个参数组的标题栏，可以展开或关闭这个参数组面板。更方便的是，按住 ｜ Option键双击任意一个参数组的标题栏，可以同时打开或关闭所有参数组的面板。
+- **Command-Shift** — — “独听安全”：Command-Shift-点击一个“独听”按钮，将其置入“独听安全”模式（启用后
+- **Option** — — 撤销（按下“Undo+Option”按钮以“重做”）
+- **Command-F** — 以全屏方式监看视频画面会非常方便。请依次选择“工作区”>“检视器模式”>“影院模式检视器” ｜ （Command-F），将“Fairlight页面”的“检视器”设置为“影院模式”。
+- **Control Panels** — 另外， ｜ “Desktop Console”的固件更新也需要通过DaVinci Control Panels Setup工具软件来
+- **Command-A** — 您可以在“索引-轨道”面板中选择一条“轨道”，再依次选择“编辑”>“全选”，或在计算机键盘上 ｜ 按下“Command-A”，以全选“轨道”。
+- **Option-X** — 备注：如果您已经在“时间线”中打了入点和出点，可以使用搜索轮扩展“所选范围”。在计算机 ｜ 键盘上按下“Option-X”组合键，清除入点和出点（所选范围）。
+- **Shift + CTL** — — “Head Shape（头部形状）”：按住“Shift + CTL”组合键，显示“Head Shape（头部形状）”菜单选项。
+- **Control Panels** — 在有些DaVinci Resolve升级版本（如17.2.1）上使用“Fairlight Desktop Console”的改进功能时需要进 ｜ 行固件升级。首次使用DaVinci Control Panels Setup（面板设置）工具时，您需要自定义安装最新版本
+- **Control Panels** — 2 ｜ 打开DaVinci Control Panels Setup（面板设置）工具。
+- **Control Panels** — 打开DaVinci Control Panels Setup（面板设置）工具。 ｜ DaVinci Control Panels Setup（面板设置）工具
+- **Control Panels** — 3 ｜ 在DaVinci Control Panels Setup软件窗口中，选择“Fairlight Desktop Console”。
+- **Control Panels** — 8 ｜ 请关闭DaVinci Control Panels Setup应用程序。
+- **Control Room** — 按顺时针方向介绍“音频编辑器”的面板 ｜ “音频编辑器”面板右上角是“Monitor（监听）”控制，其中包括了“Control Room（控制室监听）”
+- **Option** — — “Rewind/Jump Back（快退/向后跳）”：此键的功能可以是“快退”或“向后跳”。您可以将键功能 ｜ 在“Setup mode（设置模式）”和“Editor Setup Option（编辑器设置选项）”之间切换。
+- **Option** — — “Fast Forward/Jump Forward（快进/向前跳）”：此键具有“快进”和“向前跳”两个功能。您可 ｜ 以在“Setup mode（设置模式）”和“Editor Setup Option（编辑器设置选项）”按键中切换此键的
+- **Control+Zoom** — — 保持按住“Control+Zoom”键，显示“缩放”菜单选项键的第二功能，包括以下选项：
+- **Options** — “Call Follows（调用跟随）”菜单 ｜ 键提供了五个“Call Options（调用选项）”键，您可以单独或联合使用这些键，决定哪条“轨道”或
+- **Alt Source** — — “Alt Source（可选信号源）”：使用此键在“主混音系统总线”和最近使用的所选替换信号源之间切
+- **Control+Menu** — — “Record（记录）”：按下并保持按住此按键，再按下一个带编号的“Macro（宏命令）”按键，开始 ｜ 记录。按下“Control+Menu”键，停止记录。在记录一个宏命令时，
+- **Alt Source** — 带有“相位”、 ｜ “主混音/控制室扬声器选择”和“Alt Source（交替监听源）”按键位于搜索轮的旁边
+- **Control Panels** — 3924 ｜ DaVinci Control Panels Setup应用程序
+- **Control Panels** — 您可以使用随DaVinci Resolve软件一同安装的两个工具软件，为您的录音棚配置“Fairlight调音台”。 ｜ 这两个工具分别是Fairlight Studio Utility和DaVinci Control Panels Setup Utility。
+- **Control Panels** — 如果只需要在DaVinci Resolve连接一个面板，如“Fairlight Desktop Console桌面音频控制台” ｜ 或“Fairlight桌面型音频编辑器”，您只需要使用DaVinci Control Panels Setup Utility控制面板
+- **Control Panels** — 面板型控制台。如果一个DaVinci Resolve软件更新中包含了一个控制面板固件更新，软件会在启 ｜ 动时通知您，并指导您通过DaVinci Control Panels Setup Utility应用程序为每个面板执行更新。
+- **Control Panels** — 随屏幕提示进行操作。当安装程序到达“Installation Type（安装类型）”页面时，请选择自定义安装 ｜ 方式，确保在自定义安装选项中选择了DaVinci Control Panels应用程序。
+- **Control Panels** — 安装DaVinci Control Panels应用程序
+- **Control Panels** — 安装DaVinci Control Panels应用程序 ｜ DaVinci Control Panels Setup和Fairlight Studio Utility应用程序已安装
+- **Control Panels** — 当您安装了一个新版本的DaVinci Resolve后，软件也许会提示您更新面板固件。在DaVinci ｜ Control Panels应用程序中更新每个控制面板的固件，请在主页分别选择各个面板，再点
+- **Control Panels** — 击“升级”按钮，跟随提示升级每个面板。 ｜ DaVinci Control Panels Setup应用程序
+- **Control Panels** — DaVinci Control Panels Setup应用程序 ｜ DaVinci Control Panels Setup应用程序可通过USB或以太网（使用DHCP）连接到Fairlight面板。如
+- **Control Panels** — 绍更改网络设置的方法。 ｜ 在为录音棚配置“Fairlight调音台”时，第一个步骤就是使用DaVinci Control Panels Setup应用程序
+- **Control Panels** — 1 ｜ 请启动DaVinci Control Panels Setup应用程序。
+- **Control Panels** — 复选框，可以文本显示方式识别每个模块化面板。面板中会进行相应功能显示。 ｜ DaVinci Control Panels Setup应用程序中包含如下这些控制项：
+- **Control Panels** — 更改网络设置 ｜ 如果您需要手动更改各个模块的网络设置，可以在DaVinci Control Panels Setup应用程序的“网络”
+- **Control Panels** — <!-- page 3928 --> ｜ 备注：关于DaVinci Control Panels Setup应用程序的详细信息，请阅读第5章, “DaVinci控制
+- **Control Setup** — 面板调音台后，您可以对其命名，并将其作为一个单独的录音棚单元添加到DaVinci Resolve系统中。 ｜ 在DaVinci Control Setup应用程序中建立了Fairlight面板后，请使用Fairlight Studio Utility应用程序
+- **Control Panel** — 安装了多台录音棚调音台，可以通过名称识别不同的调音台。 ｜ 在DaVinci Control Panel Setup控制面板设置应用程序中为各个面板输入自定义名称，可用于
+- **Control Panels** — 关于软件设置和安装的详细信息，请参阅“Fairlight调音台组装指南手册”。DaVinci Resolve ｜ 17.2.1需要进行一次固件升级，才能使用每个模块化面板。关于通过Fairlight Control Panels
+- **Control Extension** — 处理通道控制扩展” ｜ （In-Line Channel Control Extension）按钮上和“通道控制液晶显示屏”上的相应
+- **Control+CHAN** — “CHAN/U3（通道/用户3）”：按下此按钮，将通道控制显示模式更改为“通道模式”。在“ ｜ 通道模式”下，通道控制按钮和旋钮单独控制一个通道的参数。使用“Control+CHAN”组
+- **Option** — “ALT（第二功能）”：这是调用第二功能的修改器按键之一，功能与计算机键盘上 ｜ 的“ALT”或“Option”键相同。使用功能切换按钮和其他按钮的组合，进入显示按钮的第
+- **Command+Option** — “Safe（独听安全）”：按下此按钮进入“独听安全”模式，相当于在“Fairlight页面”的 ｜ 某个通道上按住“Command+Option”组合键，再点击“SOLO”按钮。启用了“独听安
+- **Control+6** — “6/LOCK”：单独按下此按键，选择“推子设置6”，与“Bank”修改器按键组合使用时， ｜ 选择“推子设置12”。按住“Control+6/LOCK”按键，进入锁定设置状态。此状态启用时，
+- **Control+6** — 亮起，表明该通道具有一个隔离的（锁定）的推子。您在每个推子面板中最多可以锁定/ ｜ 隔离十二个推子。要解锁推子，请保持按住“Control+6/LOCK”组合键，并取消锁存绿色
+- **Control Panels** — 在有些DaVinci Resolve升级版本（如17.2.1）上应用Fairlight面板的提升配置时需要进行固件升级。使 ｜ 用DaVinci Control Panels Setup应用程序，只需花费几分钟，用户即可以对所有的“Fairlight调音台”
+- **Control Panels** — 9 ｜ 完成对所有面板的升级后，请关闭DaVinci Control Panels Setup应用程序。
+- **Control Panels** — 10 打开DaVinci Resolve。 ｜ 备注：首次使用DaVinci Control Panels Setup应用程序时，您需要自定义安装最新版本的
+- **Control Panels** — 备注：首次使用DaVinci Control Panels Setup应用程序时，您需要自定义安装最新版本的 ｜ DaVinci Resolve，并在安装程序的自定义设置中勾选安装DaVinci Control Panels控制面板
+
+## 15_交付
+
+- **Shift-Command-O** — 依次选择“文件”>“导出”>“时间线” ｜ （Shift-Command-O）。
+- **Command-O** — 1 ｜ 要导出当前“时间线”，请依次选择“文件”>“导出”>“时间线”或按下Shift-Command-O组合键，再
+
