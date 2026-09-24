@@ -64,10 +64,10 @@ agent_created: true
 **① 对话框里跟我问答时 —— 优先检索范围是那份 PDF 的蒸馏内容。**
 即：`DaVinci Resolve 21.1 官方参考手册（4351 页）`（汉化原文 @谜一样的剪辑师、收集整合 @一个成熟的剪辑猿）蒸馏出的全文（已内联进 `手册浏览器.html`，纯文本版在「达芬奇中文操作手册」skill 的 `21.1原文检索.txt`）。
 回答**操作 / 功能类问题，以这份 21.1 手册的说法为准**；**查不到时，明说"手册未覆盖"，然后联网搜索再给答案**，不要凭空编造或擅自用不可靠来源替代。
-联网可拉取的权威 / 高质来源（优先级从高到低）：
-- 达芬奇官方社区内容（Blackmagic Design 官方论坛 / 帮助文档）
-- B站：**春星开讲、HOMEBOY 影像学院、马泽法尔**
-- YouTube：**Casey Faris、SamResolve、Jason Yadlovsk、Cullen Kelly、Kevin Stratvert、GFXMentor、Cameratim、SUALVI、Ben Claremont、Alli and Will、SkillsFactory**
+联网搜索**不分优先级、可同时并发检索**以下来源：
+- 通用来源：达芬奇官方社区（Blackmagic Design 官方论坛 / 帮助文档）、B站、微信公众号、YouTube。
+- **中文内容优先检索**：春星开讲、HOMEBOY 影像学院、马泽法尔。
+- **英文内容优先检索（YouTube）**：Casey Faris、SamResolve、Jason Yadlovsk、Cullen Kelly、Kevin Stratvert、GFXMentor、Cameratim、SUALVI、Ben Claremont、Alli and Will、SkillsFactory。
 
 **② 快捷键素材、内置插件中英对照 —— 这些是已经做好的成型素材，直接引用、不要重造。**
 
