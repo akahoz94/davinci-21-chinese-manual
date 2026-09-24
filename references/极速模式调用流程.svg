@@ -1,6 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 680" width="680" height="680" role="img">
-<title>达芬奇21中文操作手册 极速模式调用流程</title>
-<desc>从用户提问到组答案再到答后必问的极速模式路由：开发类优先官方开发文档 tab；非开发先查结构化数据（快捷键/高频速查=普通操作/插件对照），命中即答，未命中降级全文检索。</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 850" width="680" height="850" role="img">
+<title>达芬奇21中文操作手册 调用流程（极速默认 + 非极速触发）</title>
+<desc>极速模式为默认：开发类优先官方开发文档 tab；非开发先查结构化数据（快捷键/高频速查=普通操作/插件对照），命中即答，未命中降级全文检索。非极速模式为触发式：仅当用户明确深度对话或多次追问时，改走全文检索深度精读 + 联网搜索双重比对，给最精确解读。</desc>
 <defs>
 <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
 <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -27,6 +27,9 @@
 <line x1="340" y1="536" x2="340" y2="566"/>
 <line x1="420" y1="600" x2="470" y2="600"/>
 <line x1="340" y1="634" x2="340" y2="662"/>
+<line x1="340" y1="766" x2="340" y2="786"/>
+<line x1="220" y1="815" x2="243" y2="815"/>
+<line x1="435" y1="815" x2="458" y2="815"/>
 </g>
 <g>
 <rect x="230" y="20" width="220" height="56" rx="12" fill="#EEEDFE" stroke="#534AB7" stroke-width="1"/>
@@ -91,4 +94,24 @@
 <text x="448" y="588" text-anchor="middle">确认</text>
 <text x="322" y="676" text-anchor="middle">否 → 结束</text>
 </g>
+<!-- 分隔线 + 非极速标题 -->
+<line x1="40" y1="700" x2="640" y2="700" stroke="#94a3b8" stroke-width="1" stroke-dasharray="6 4"/>
+<text x="340" y="692" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="600" fill="#475569">非极速模式（深度解读 · 触发式 · 非默认）</text>
+<text x="340" y="716" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#64748b">仅当用户明确要深度对话 / 多次追问（≥2 轮）时触发</text>
+<!-- 非极速触发节点 -->
+<rect x="240" y="726" width="200" height="40" rx="10" fill="#FBEAF0" stroke="#993556" stroke-width="1"/>
+<text x="340" y="746" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="13" font-weight="500" fill="#72243E">触发：深度对话 / 多次追问</text>
+<!-- 非极速三栏 -->
+<rect x="30" y="786" width="190" height="58" rx="10" fill="#FBEAF0" stroke="#993556" stroke-width="1"/>
+<text x="125" y="806" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" font-weight="500" fill="#72243E">全文检索 tab</text>
+<text x="125" y="824" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="11" fill="#993556">深度精读 ±50~100 行</text>
+<text x="125" y="839" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="10" fill="#993556">（可切中·英）</text>
+<rect x="245" y="786" width="190" height="58" rx="10" fill="#FBEAF0" stroke="#993556" stroke-width="1"/>
+<text x="340" y="806" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" font-weight="500" fill="#72243E">联网搜索</text>
+<text x="340" y="824" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="11" fill="#993556">+ 双重比对</text>
+<text x="340" y="839" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="10" fill="#993556">手册×网络交叉验证</text>
+<rect x="460" y="786" width="190" height="58" rx="10" fill="#EAF3DE" stroke="#3B6D11" stroke-width="1"/>
+<text x="555" y="806" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="12" font-weight="500" fill="#27500A">最精确回答</text>
+<text x="555" y="824" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="11" fill="#3B6D11">讲透原理/边界</text>
+<text x="555" y="839" text-anchor="middle" dominant-baseline="central" font-family="sans-serif" font-size="10" fill="#3B6D11">/多方案</text>
 </svg>
