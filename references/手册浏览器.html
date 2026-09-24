@@ -35,18 +35,26 @@
   .count{color:var(--dim);font-size:12px}
   .item{padding:11px 14px;border:1px solid var(--line);border-radius:8px;margin-bottom:8px;background:var(--panel)}
   .item:hover{border-color:var(--accent2)}
+  /* 两列网格：左列定宽，保证各行键位 / 页码纵向对齐 */
+  .item.g2{display:grid;grid-template-columns:240px 1fr;gap:2px 16px;align-items:start}
+  .item.g2.pgv{grid-template-columns:78px 1fr}
+  .cell-l{min-width:0;overflow-wrap:anywhere}
+  .cell-r{min-width:0}
   .k{display:inline-block;background:var(--panel2);border:1px solid var(--line);
-    color:var(--accent);padding:2px 9px;border-radius:6px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;margin-right:10px}
+    color:var(--accent);padding:2px 9px;border-radius:6px;font-family:ui-monospace,Menlo,Consolas,monospace;
+    font-size:12.5px;line-height:1.5;margin:0;max-width:100%}
   .sec{color:var(--accent2);font-size:12px;margin-left:6px}
   .desc{color:var(--fg)}
-  .pgnum{color:var(--accent2);font-weight:600;margin-right:8px}
+  .pgnum{color:var(--accent2);font-weight:600;font-variant-numeric:tabular-nums;
+    display:inline-block;min-width:62px;text-align:right}
   .snip{color:var(--dim)}
   .snip mark{background:rgba(255,122,69,.35);color:#fff;padding:0 2px;border-radius:3px}
   .pagebox{white-space:pre-wrap;background:var(--panel);border:1px solid var(--line);
     border-radius:8px;padding:16px;max-height:70vh;overflow:auto;font-size:13.5px;line-height:1.8}
-  table{width:100%;border-collapse:collapse;font-size:13.5px}
-  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
-  th{background:var(--panel2);color:var(--dim);font-weight:600;position:sticky;top:0}
+  table{width:100%;border-collapse:collapse;font-size:13.5px;table-layout:fixed}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top;overflow-wrap:anywhere}
+  th{background:var(--panel2);color:var(--dim);font-weight:600;position:sticky;top:0;
+    box-shadow:inset 0 -1px 0 var(--line)}
   td.zh{color:var(--accent)}
   .tag{font-size:11px;padding:2px 8px;border-radius:20px;white-space:nowrap}
   .tag.studio{background:rgba(255,183,77,.15);color:var(--studio);border:1px solid rgba(255,183,77,.4)}
@@ -61,7 +69,7 @@
   .qr-table th{background:var(--panel2);color:var(--dim);font-weight:700;
     text-align:left;padding:10px 14px;font-size:13px}
   .qr-table td{padding:10px 14px;border-top:1px solid var(--line);vertical-align:top}
-  .qr-table td.op{font-weight:700;min-width:180px}
+  .qr-table td.op{font-weight:700}
   .qr-table td.mac,.qr-table td.win{font-family:ui-monospace,Menlo,Consolas,monospace;
     color:var(--purple);font-weight:600}
   .qr-table td.desc{color:var(--dim);font-size:13px}
@@ -167,7 +175,8 @@ try {
     var rows=D.shortcuts.filter(function(r){return (!sec||r.sec===sec)&&(!q||(r.key||'').toLowerCase().indexOf(q)>=0||(r.desc||'').toLowerCase().indexOf(q)>=0);});
     document.getElementById('sc-c').textContent='命中 '+rows.length+' 条';
     list.innerHTML=rows.slice(0,400).map(function(r){
-      return '<div class="item"><span class="k">'+esc(r.key)+'</span><span class="sec">'+esc(r.sec)+'</span><div class="desc">'+esc(r.desc)+'</div></div>';
+      return '<div class="item g2"><span class="cell-l"><span class="k">'+esc(r.key)+'</span></span>'+
+        '<span class="cell-r"><span class="sec">'+esc(r.sec)+'</span><div class="desc">'+esc(r.desc)+'</div></span></div>';
     }).join('') || '<div class="hint">无匹配结果。</div>';
   }
   document.getElementById('sc-q').oninput=renderShortcuts;
@@ -191,7 +200,7 @@ try {
     var h='';
     for(var g in groups){
       h+='<h3 class="sec">'+esc(g)+' <span class="cnt">'+groups[g].length+'</span></h3>';
-      h+='<table class="qr-table"><thead><tr><th>操作</th><th>Mac</th><th>Win</th><th>说明</th></tr></thead><tbody>'+
+      h+='<table class="qr-table"><colgroup><col style="width:20%"><col style="width:18%"><col style="width:18%"><col style="width:44%"></colgroup><thead><tr><th>操作</th><th>Mac</th><th>Win</th><th>说明</th></tr></thead><tbody>'+
         groups[g].map(function(r){
           return '<tr><td class="op">'+esc(r.op)+'</td><td class="mac">'+kb(r.mac)+'</td><td class="win">'+kb(r.win)+'</td><td class="desc">'+(esc(r.desc)||'—')+'</td></tr>';
         }).join('')+'</tbody></table>';
@@ -227,7 +236,7 @@ try {
       var seg=esc(r.snip.slice(a,b));
       var re=new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'$&')+')','gi');
       seg=seg.replace(re,'<mark>$1</mark>');
-      return '<div class="item" data-n="'+r.n+'" style="cursor:pointer"><span class="pgnum">P'+r.n+'</span><span class="snip">'+seg+'</span></div>';
+      return '<div class="item g2 pgv" data-n="'+r.n+'" style="cursor:pointer"><span class="cell-l pgnum">P'+r.n+'</span><span class="cell-r snip">'+seg+'</span></div>';
     }).join('') || '<div class="hint">未找到，换关键词试试。</div>';
     list.querySelectorAll('.item').forEach(function(el){el.onclick=function(){showPage(+el.dataset.n);};});
   }
@@ -269,7 +278,7 @@ try {
     var h='';
     for(var g in groups){
       h+='<div class="cat-h">'+esc(g)+' <span style="color:var(--dim);font-weight:400">('+groups[g].length+')</span></div>';
-      h+='<table><thead><tr><th>英文名称</th><th>中文名称</th><th>版本</th></tr></thead><tbody>'+
+      h+='<table class="pl-table"><colgroup><col style="width:38%"><col style="width:30%"><col style="width:150px"></colgroup><thead><tr><th>英文名称</th><th>中文名称</th><th>版本</th></tr></thead><tbody>'+
         groups[g].map(function(r){
           var isStudio=r.ver.indexOf('Studio')>=0;
           var tag=isStudio?'<span class="tag studio">Studio 专属</span>':'<span class="tag free">免费/Studio</span>';
