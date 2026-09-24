@@ -33,14 +33,14 @@ agent_created: true
 ## 技能定位与歧义裁决
 
 - **本 skill 是达芬奇操作的官方逻辑知识库**：后续接入达芬奇 MCP 时，所有回答与操作以 21.1 手册的官方操作逻辑为准，确保精确。
-- **双源裁决**：嵌入内容以 **V2 汉化（2026 年 9 月）** 为主；当汉化表述模糊、漏译或与操作逻辑冲突时，**以 Blackmagic Design 英文原版 21.1 Reference Manual 为准**（英文原版不内置浏览器，需要时由助手调阅原始 PDF 比对）。
+- **双源裁决**：嵌入内容以 **V2 汉化（2026 年 9 月）** 为主；当汉化表述模糊、漏译或与操作逻辑冲突时，**以 Blackmagic Design 英文原版 21.1 Reference Manual 为准**。英文原版已随本 skill 打包，无需用户本机有 PDF：① 浏览器「功能检索」tab 顶部可切 **English（原版）** 直接对照阅读；② agent 检索歧义时 `Grep references/21.1英文原文检索.txt`（4351 页英文纯文本，带页码）。
 - 版本基准统一标注 **21.1**。
 
 ## 答后必问（每次回答都要做）
 
 **每次回答的最后一行必须询问是否调用手册浏览器**，用户确认前绝不使用 `present_files`。固定写法：
 
-> 要打开手册浏览器自查吗？（快捷键 / 高频速查 / 全文检索 / 插件中英对照 四个 tab）
+> 要打开手册浏览器自查吗？（快捷键 / 高频速查 / 全文检索(中·英) / 插件中英对照 / 官方开发文档 五个 tab）
 
 用户回答"要 / 打开 / 调出来"等肯定指令后，才用 `present_files` 打开 `references/手册浏览器.html`。用户明确说"浏览器在哪/调取出来"这类直接指令时，等同于已确认，可直接打开。
 
@@ -48,21 +48,23 @@ agent_created: true
 
 | 文件 | 内容 | 用途 |
 |------|------|------|
-| `手册浏览器.html` | **自包含可视化浏览器**（单文件、离线） | 四个 tab：快捷键速查 / 高频速查(Mac↔Win) / 功能检索(21.1 全文) / 内置插件中英对比。用 `present_files` 打开给用户浏览自查 |
+| `手册浏览器.html` | **自包含可视化浏览器**（单文件、离线） | 五个 tab：快捷键速查 / 高频速查(Mac↔Win) / **功能检索(21.1 全文，可切中文/English 原版对照)** / 内置插件中英对比 / **官方开发文档蒸馏**。用 `present_files` 打开给用户浏览自查 |
+| `21.1原文检索.txt` | 21.1 手册**中文**全文纯文本（4351 页，带页码标记） | agent 检索操作/功能类问题的主源；"功能检索" tab 的中文底稿 |
+| `21.1英文原文检索.txt` | 21.1 手册**英文原版**全文纯文本（4351 页，带页码标记） | 汉化歧义 / 漏译 / 冲突时 `Grep` 此处以英文原版为准；浏览器"功能检索"切 English 的底稿 |
 | `shortcuts.md` | 快捷键速查，**818 条 / 14 模块**（已做好的原版素材，直接沿用） | 快捷键类问题优先 `Grep` 这里 |
 | `quickref.json` / `高频速查.md` | **高频操作速查卡，42 条 / 6 类**（播放导航 / 选择工具 / 剪辑修剪 / 入出点转场 / 标记源素材 / 调色页面），每条含 Mac 与 Win 两列 | 问「最常用 / 高频操作」时优先查这里，比 818 条全表更聚焦 |
 | `Resolve_FX中英对照.md` | Resolve FX 特效中英对照，**77 条 / 13 类** | 问 Resolve FX 插件中文名、分类、是否 Studio 专属时检索 |
 | `Fairlight音频插件.md` | Fairlight 内置音频插件中英对照，**32 条 / 12 类** | 问 Fairlight 音频插件中文名、是否 Studio 专属时检索 |
-| `官方开发文档蒸馏.md` | 官方开发/技术文档蒸馏（来自本机 `Support/Developer` + `Support/Technical Documentation`，基准 21.1） | 问**脚本 API / Python·Lua 控制 / MCP 接入 / OpenFX·DCTL·插件 / 节点图·调色·渲染自动化 / 工作流集成**时优先检索 |
+| `官方开发文档蒸馏.md` | 官方开发/技术文档蒸馏（已内联进浏览器"官方开发文档" tab；来源本机 `Support/Developer` + `Support/Technical Documentation`，基准 21.1） | 问**脚本 API / Python·Lua 控制 / MCP 接入 / OpenFX·DCTL·插件 / 节点图·调色·渲染自动化 / 工作流集成**时优先检索（浏览器 tab 或本文件皆可） |
 
-> 功能检索的全文（21.1 手册 4351 页）已内联进 `手册浏览器.html`。如需对原文做**深度逐页精读**，可用本 skill 的 `references/21.1原文检索.txt`（4351 页纯文本，带页码标记）。
+> 功能检索的全文（21.1 手册 4351 页，含**中文汉化 + 英文原版**）已内联进 `手册浏览器.html`（可在 tab 内切语言）。如需对原文做**深度逐页精读**，中文用 `references/21.1原文检索.txt`、英文原版用 `references/21.1英文原文检索.txt`（均 4351 页纯文本，带页码标记）。
 
 ## 数据源约定（重要）
 
 **三条边界，别混**：
 
 **① 对话框里跟我问答时 —— 优先检索范围是那份 PDF 的蒸馏内容。**
-即：`DaVinci Resolve 21.1 官方参考手册（4351 页）`（汉化原文 @谜一样的剪辑师、收集整合 @一个成熟的剪辑猿）蒸馏出的全文（已内联进 `手册浏览器.html`，纯文本版在本 skill 的 `references/21.1原文检索.txt`）。
+即：`DaVinci Resolve 21.1 官方参考手册（4351 页）`（汉化原文 @谜一样的剪辑师、收集整合 @一个成熟的剪辑猿；英文原版 Blackmagic Design）蒸馏出的全文（已内联进 `手册浏览器.html`，浏览器内可切中/英；纯文本版在本 skill 的 `references/21.1原文检索.txt` 与 `references/21.1英文原文检索.txt`）。
 回答**操作 / 功能类问题，以这份 21.1 手册的说法为准**；**查不到时，明说"手册未覆盖"，然后联网搜索再给答案**，不要凭空编造或擅自用不可靠来源替代。
 联网搜索**不分优先级、可同时并发检索**以下来源：
 - 通用来源：达芬奇官方社区（Blackmagic Design 官方论坛 / 帮助文档）、B站、微信公众号、YouTube。
@@ -84,9 +86,19 @@ agent_created: true
 
 1. **快捷键问题**（"分割素材快捷键是什么""场景切割怎么触发"）→ `Grep references/shortcuts.md`；按 `## 模块` 定位，条目格式 `- **按键** — 描述`。
 2. **插件 / 效果中英名、是否 Studio 专属**（"Color Space Transform 中文叫什么""降噪是免费还是 Studio"）→ `Grep references/Resolve_FX中英对照.md` 与 `references/Fairlight音频插件.md`。
-3. **功能 / 操作 / 某面板在哪、怎么用**（"多机位怎么剪""Magic Mask 在哪""IntelliScript 怎么用"）→ `Grep references/21.1原文检索.txt`（本 skill 内，4351 页纯文本带页码），命中后只读命中处 ±30 行即答，在**对话框直接给答案**（步骤 1/2/3 + 快捷键高亮）。**不要一上来就打开 HTML**。
-4. **开发 / 脚本 / MCP / 插件类问题**（"怎么用 Python 建项目""TimelineItem 怎么变速""怎么写 DCTL""MCP 怎么控制 Resolve"）→ **优先 `Grep references/官方开发文档蒸馏.md`**（已蒸馏官方 API 签名与约定）。这套比手册正文更贴近实际接口。
-5. **用户已确认要看浏览器**（或明确下令"调出来/在哪"）→ 才用 `present_files` 打开 `references/手册浏览器.html`；打开后一句话说明四个 tab 即可，不再重复正文内容。
+3. **功能 / 操作 / 某面板在哪、怎么用**（"多机位怎么剪""Magic Mask 在哪""IntelliScript 怎么用"）→ `Grep references/21.1原文检索.txt`（本 skill 内，4351 页纯文本带页码）；汉化有歧义 / 漏译时改 `Grep references/21.1英文原文检索.txt` 取英文原版。命中后只读命中处 ±30 行即答，在**对话框直接给答案**（步骤 1/2/3 + 快捷键高亮）。**不要一上来就打开 HTML**。
+4. **开发 / 脚本 / MCP / 插件类问题**（"怎么用 Python 建项目""TimelineItem 怎么变速""怎么写 DCTL""MCP 怎么控制 Resolve"）→ **优先 `Grep references/官方开发文档蒸馏.md`**（已蒸馏官方 API 签名与约定；也可开浏览器"官方开发文档" tab）。这套比手册正文更贴近实际接口。
+5. **用户已确认要看浏览器**（或明确下令"调出来/在哪"）→ 才用 `present_files` 打开 `references/手册浏览器.html`；打开后一句话说明五个 tab（快捷键 / 高频速查 / 全文检索[可切中·英] / 插件中英对照 / 官方开发文档）即可，不再重复正文内容。
+
+## 官方文档本地优先（用户本机装了达芬奇时）
+
+**原则**：开发 / 脚本 / API / 插件 / 调色节点 / 工作流集成类问题，若用户本机已安装 DaVinci Resolve，**优先直接读取其实时官方文档目录**，而非只用本 skill 蒸馏的 `官方开发文档蒸馏.md`（蒸馏稿是便携兜底，可能与用户实际版本有偏差）。
+
+**自动探测路径**（先 `Bash`/`PowerShell` 探测存在性，命中即用，不命中回退蒸馏稿）：
+- **Windows**：`C:\ProgramData\Blackmagic Design\DaVinci Resolve\Support`（技术文档）+ `C:\ProgramData\Blackmagic Design\DaVinci Resolve\Support\Developer`（开发文档：Scripting / Workflow Integrations / OpenFX / CodecPlugin / DaVinciCTL / Fusion Fuse / OGraf / LUT / Templates）。
+- **macOS**：`/Library/Application Support/Blackmagic Design/DaVinci Resolve/Support` 与 `~/Library/Application Support/Blackmagic Design/DaVinci Resolve/Support`（同结构；Mac 下文件夹命名仍为 `Blackmagic Design-DaVinci Resolve-Support` 体系）。
+
+**用法**：探测到后用 `Grep` / `Read` 直接查该目录下的 README、`.pyi`、`.md`、示例与 `Technical Documentation/`（Remote Panel、用户配置目录）。`官方开发文档蒸馏.md` 的"对象模型 + 方法签名索引 + 易踩坑约定 + 最小示例"可与之交叉验证，但以用户本机实时文档为准。
 
 ## 回答规范
 
