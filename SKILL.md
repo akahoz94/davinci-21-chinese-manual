@@ -117,6 +117,8 @@ agent_created: true
 
 ## 检索路由（按问题类型）
 
+> 以下路由即 **极速模式（默认）** 的取数逻辑——无需用户要求即生效。只有在用户明确要深度对话 / 多次追问（≥2 轮）触发 **非极速模式** 时，才改走「非极速模式」节的「全文检索深度精读 + 联网双重比对」路径。
+
 1. **快捷键问题**（"分割素材快捷键是什么""场景切割怎么触发"）→ `Grep references/shortcuts.md`；按 `## 模块` 定位，条目格式 `- **按键** — 描述`。
 2. **插件 / 效果中英名、是否 Studio 专属**（"Color Space Transform 中文叫什么""降噪是免费还是 Studio"）→ `Grep references/Resolve_FX中英对照.md` 与 `references/Fairlight音频插件.md`。
 3. **简单操作问询（"怎么变速""怎么重置参数""某功能在哪"等怎么XXX 类）** → 先 `Grep references/高频速查.md` 或 `references/quickref.json`（42 条聚焦常用操作，命中即答、不碰大文件）；未命中再 `Grep references/21.1原文检索.txt`（本 skill 内，4351 页纯文本带页码）；汉化有歧义 / 漏译时改 `Grep references/21.1英文原文检索.txt` 取英文原版。命中后只读命中处 ±30 行即答，在**对话框直接给答案**（步骤 1/2/3 + 快捷键高亮）。**不要一上来就打开 HTML**。
