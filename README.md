@@ -187,10 +187,12 @@ AI：（调出 手册浏览器.html，定位到「功能检索」tab）
     ├── quickref.json         # 高频速查卡数据（42 条 / 6 类）
     ├── 高频速查.md           # 高频速查卡纯文本源（Mac / Win 对照表）
     ├── Resolve_FX中英对照.md  # Resolve FX 特效中英对照（77 条）
-    └── Fairlight音频插件.md   # Fairlight 音频插件中英对照（32 条）
+    ├── Fairlight音频插件.md   # Fairlight 音频插件中英对照（32 条）
+    ├── 21.1原文检索.txt       # 21.1 手册全文纯文本（4351 页，带页码标记，agent 检索用）
+    └── 官方开发文档蒸馏.md     # 官方开发/技术文档蒸馏（Scripting API / Workflow Integrations / 技术文档）
 ```
 
-> 注：`manual_text.json`（21.1 全文 4351 页原文）已内联进 `手册浏览器.html`，无需单独下载。如需对原文做**深度逐页精读**，可参考同名归档 skill「达芬奇中文操作手册」里的 `21.1原文检索.txt`。
+> 注：`manual_text.json`（21.1 全文 4351 页原文）已内联进 `手册浏览器.html`，无需单独下载。如需对原文做**深度逐页精读**，可用本 skill 的 `references/21.1原文检索.txt`（4351 页纯文本，带页码标记，已随本 skill 打包，无需依赖归档 skill）。
 
 ---
 
