@@ -193,9 +193,8 @@ AI：（调出 手册浏览器.html，定位到「功能检索」tab）
 ├── SKILL.md                  # AI 检索路由与回答规范（frontmatter 触发词 + 数据资产 + 行为约定）
 ├── README.md                # 本文件（详细使用说明）
 ├── LICENSE                  # MIT 开源协议（含英文原版版权声明）
-├── references/
-└── tools/                   # 版本升级工具：build_manual.py（抽 PDF→txt/json）、validate.py（校验浏览器 DATA）
-    ├── 手册浏览器.html        # 自包含可视化浏览器（离线，约 17 MB，五 tab 内联）
+└── references/
+    ├── 手册浏览器.html        # 自包含可视化浏览器（离线，五 tab 内联）
     ├── shortcuts.md          # 快捷键速查纯文本源（818 条，按 14 模块）
     ├── quickref.json         # 高频速查卡数据（42 条 / 6 类）
     ├── 高频速查.md           # 高频速查卡纯文本源（Mac / Win 对照表）
