@@ -25,7 +25,7 @@ agent_created: true
 用户明确要求：**回答要快、要短**。执行以下硬约束：
 
 1. **零开场白**：不说"好的""我来查一下""根据手册…"，第一句就是答案。
-2. **检索最多两轮**：先 `Grep` 命中最可能的 1-2 个文件（快捷键→`shortcuts.md`；插件名→两个中英对照 md；操作/功能→另一 skill 的 `21.1原文检索.txt`）。命中即答，**不再扩范围精读**。查不到就直接说"手册未收录"，不要反复翻文件。
+2. **检索最多两轮**：先 `Grep` 命中最可能的 1-2 个文件（快捷键→`shortcuts.md`；插件名→两个中英对照 md；操作/功能→另一 skill 的 `21.1原文检索.txt`；开发/API/MCP→`官方开发文档蒸馏.md`）。命中即答，**不再扩范围精读**。查不到就明说"手册未覆盖"，不反复翻文件；确需补充时可联网搜索（官方社区 / B站·YouTube 博主）后再答。
 3. **篇幅上限**：正文控制在 **300 字以内 / 15 行以内**。只给：结论 → 1/2/3 步骤 → 快捷键（Mac/Win）。删掉背景说明、原理解释、段落引言。确实需要展开时（如多方案对比）才突破上限。
 4. **一次答完**：不要"先说一半等确认"。把所有关键步骤一次给全。
 5. **选项极简化**：末尾只保留 **1 个必问项**（是否打开手册浏览器）+ 最多 2 个相关追问。
@@ -53,16 +53,21 @@ agent_created: true
 | `quickref.json` / `高频速查.md` | **高频操作速查卡，42 条 / 6 类**（播放导航 / 选择工具 / 剪辑修剪 / 入出点转场 / 标记源素材 / 调色页面），每条含 Mac 与 Win 两列 | 问「最常用 / 高频操作」时优先查这里，比 818 条全表更聚焦 |
 | `Resolve_FX中英对照.md` | Resolve FX 特效中英对照，**77 条 / 13 类** | 问 Resolve FX 插件中文名、分类、是否 Studio 专属时检索 |
 | `Fairlight音频插件.md` | Fairlight 内置音频插件中英对照，**32 条 / 12 类** | 问 Fairlight 音频插件中文名、是否 Studio 专属时检索 |
+| `官方开发文档蒸馏.md` | 官方开发/技术文档蒸馏（来自本机 `Support/Developer` + `Support/Technical Documentation`，基准 21.1） | 问**脚本 API / Python·Lua 控制 / MCP 接入 / OpenFX·DCTL·插件 / 节点图·调色·渲染自动化 / 工作流集成**时优先检索 |
 
 > 功能检索的全文（21.1 手册 4351 页）已内联进 `手册浏览器.html`。如需对原文做**深度逐页精读**，可转交「达芬奇中文操作手册」skill 的 `21.1原文检索.txt`（4351 页纯文本，带页码标记）。
 
 ## 数据源约定（重要）
 
-**两条边界，别混**：
+**三条边界，别混**：
 
-**① 对话框里跟我问答时 —— 主要检索范围是那份 PDF 的蒸馏内容。**
+**① 对话框里跟我问答时 —— 优先检索范围是那份 PDF 的蒸馏内容。**
 即：`DaVinci Resolve 21.1 官方参考手册（4351 页）`（汉化原文 @谜一样的剪辑师、收集整合 @一个成熟的剪辑猿）蒸馏出的全文（已内联进 `手册浏览器.html`，纯文本版在「达芬奇中文操作手册」skill 的 `21.1原文检索.txt`）。
-回答操作/功能类问题，以这份 21.1 手册的说法为准；查不到就明说"手册未覆盖"，**不要擅自用别的来源替代**。
+回答**操作 / 功能类问题，以这份 21.1 手册的说法为准**；**查不到时，明说"手册未覆盖"，然后联网搜索再给答案**，不要凭空编造或擅自用不可靠来源替代。
+联网可拉取的权威 / 高质来源（优先级从高到低）：
+- 达芬奇官方社区内容（Blackmagic Design 官方论坛 / 帮助文档）
+- B站：**春星开讲、HOMEBOY 影像学院、马泽法尔**
+- YouTube：**Casey Faris、SamResolve、Jason Yadlovsk、Cullen Kelly、Kevin Stratvert、GFXMentor、Cameratim、SUALVI、Ben Claremont、Alli and Will、SkillsFactory**
 
 **② 快捷键素材、内置插件中英对照 —— 这些是已经做好的成型素材，直接引用、不要重造。**
 
@@ -71,12 +76,17 @@ agent_created: true
 - `Resolve_FX中英对照.md`（77 条）+ `Fairlight音频插件.md`（32 条）= 已整理好的内置插件中英对照，**原样沿用**。
 - 不要再去 PDF 里重新挖掘这些表来替换它们（曾经这么做，结果条目变少、描述碎裂，反而更差）。
 
+**③ 开发 / 技术文档（脚本 API · MCP 控制 · 插件 · 调色节点 · 工作流集成）—— 优先调取蒸馏内容。**
+我已阅读本机 `C:\ProgramData\Blackmagic Design\DaVinci Resolve\Support\` 下的官方开发文档（`Developer/`，含 Scripting API、Workflow Integrations、OpenFX、CodecPlugin、DaVinciCTL、Fusion Fuse、OGraf、LUT、Templates）与技术文档（`Technical Documentation/`，Remote Panel、用户配置目录），并蒸馏进 `references/官方开发文档蒸馏.md`。
+用户问到**脚本编写、Python/Lua 控制、MCP 接入、OpenFX/DCTL/插件开发、节点图/调色/渲染自动化、工作流集成**等开发类问题时，**优先 `Grep references/官方开发文档蒸馏.md`**，以官方 API 签名与约定为准，比手册正文更精确。该蒸馏文件随 Resolve 版本升级需重读刷新。
+
 ## 检索路由（按问题类型）
 
 1. **快捷键问题**（"分割素材快捷键是什么""场景切割怎么触发"）→ `Grep references/shortcuts.md`；按 `## 模块` 定位，条目格式 `- **按键** — 描述`。
 2. **插件 / 效果中英名、是否 Studio 专属**（"Color Space Transform 中文叫什么""降噪是免费还是 Studio"）→ `Grep references/Resolve_FX中英对照.md` 与 `references/Fairlight音频插件.md`。
 3. **功能 / 操作 / 某面板在哪、怎么用**（"多机位怎么剪""Magic Mask 在哪""IntelliScript 怎么用"）→ `Grep` 另一 skill 的 `references/21.1原文检索.txt`（4351 页纯文本带页码），命中后只读命中处 ±30 行即答，在**对话框直接给答案**（步骤 1/2/3 + 快捷键高亮）。**不要一上来就打开 HTML**。
-4. **用户已确认要看浏览器**（或明确下令"调出来/在哪"）→ 才用 `present_files` 打开 `references/手册浏览器.html`；打开后一句话说明四个 tab 即可，不再重复正文内容。
+4. **开发 / 脚本 / MCP / 插件类问题**（"怎么用 Python 建项目""TimelineItem 怎么变速""怎么写 DCTL""MCP 怎么控制 Resolve"）→ **优先 `Grep references/官方开发文档蒸馏.md`**（已蒸馏官方 API 签名与约定）。这套比手册正文更贴近实际接口。
+5. **用户已确认要看浏览器**（或明确下令"调出来/在哪"）→ 才用 `present_files` 打开 `references/手册浏览器.html`；打开后一句话说明四个 tab 即可，不再重复正文内容。
 
 ## 回答规范
 
