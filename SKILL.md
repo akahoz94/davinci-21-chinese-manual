@@ -79,7 +79,7 @@ agent_created: true
 - 不要再去 PDF 里重新挖掘这些表来替换它们（曾经这么做，结果条目变少、描述碎裂，反而更差）。
 
 **③ 开发 / 技术文档（脚本 API · MCP 控制 · 插件 · 调色节点 · 工作流集成）—— 优先调取蒸馏内容。**
-我已阅读本机 `C:\ProgramData\Blackmagic Design\DaVinci Resolve\Support\` 下的官方开发文档（`Developer/`，含 Scripting API、Workflow Integrations、OpenFX、CodecPlugin、DaVinciCTL、Fusion Fuse、OGraf、LUT、Templates）与技术文档（`Technical Documentation/`，Remote Panel、用户配置目录），并蒸馏进 `references/官方开发文档蒸馏.md`。
+官方开发文档来自 DaVinci Resolve 安装目录下的 `Support\`（Windows：`C:\ProgramData\Blackmagic Design\DaVinci Resolve\Support`；macOS：`/Library/Application Support/Blackmagic Design/DaVinci Resolve/Support`），涵盖 `Developer/`（Scripting API、Workflow Integrations、OpenFX、CodecPlugin、DaVinciCTL、Fusion Fuse、OGraf、LUT、Templates）与 `Technical Documentation/`（Remote Panel、用户配置目录），已蒸馏进 `references/官方开发文档蒸馏.md`。
 用户问到**脚本编写、Python/Lua 控制、MCP 接入、OpenFX/DCTL/插件开发、节点图/调色/渲染自动化、工作流集成**等开发类问题时，**优先 `Grep references/官方开发文档蒸馏.md`**，以官方 API 签名与约定为准，比手册正文更精确。该蒸馏文件随 Resolve 版本升级需重读刷新。
 
 ## 检索路由（按问题类型）
@@ -90,15 +90,18 @@ agent_created: true
 4. **开发 / 脚本 / MCP / 插件类问题**（"怎么用 Python 建项目""TimelineItem 怎么变速""怎么写 DCTL""MCP 怎么控制 Resolve"）→ **优先 `Grep references/官方开发文档蒸馏.md`**（已蒸馏官方 API 签名与约定；也可开浏览器"官方开发文档" tab）。这套比手册正文更贴近实际接口。
 5. **用户已确认要看浏览器**（或明确下令"调出来/在哪"）→ 才用 `present_files` 打开 `references/手册浏览器.html`；打开后一句话说明五个 tab（快捷键 / 高频速查 / 全文检索[可切中·英] / 插件中英对照 / 官方开发文档）即可，不再重复正文内容。
 
-## 官方文档本地优先（用户本机装了达芬奇时）
+## 官方文档：蒸馏优先，歧义再读本机实时文档
 
-**原则**：开发 / 脚本 / API / 插件 / 调色节点 / 工作流集成类问题，若用户本机已安装 DaVinci Resolve，**优先直接读取其实时官方文档目录**，而非只用本 skill 蒸馏的 `官方开发文档蒸馏.md`（蒸馏稿是便携兜底，可能与用户实际版本有偏差）。
+**原则**：开发 / 脚本 / API / 插件 / 调色节点 / 工作流集成类问题，**先 `Grep references/官方开发文档蒸馏.md`**（已蒸馏官方 API 签名与约定，随包即用、版本稳定）；**仅当蒸馏稿表述模糊、与用户实际版本冲突、或需确认最新 API 时**，才去读用户本机实时官方文档目录。
 
-**自动探测路径**（先 `Bash`/`PowerShell` 探测存在性，命中即用，不命中回退蒸馏稿）：
-- **Windows**：`C:\ProgramData\Blackmagic Design\DaVinci Resolve\Support`（技术文档）+ `C:\ProgramData\Blackmagic Design\DaVinci Resolve\Support\Developer`（开发文档：Scripting / Workflow Integrations / OpenFX / CodecPlugin / DaVinciCTL / Fusion Fuse / OGraf / LUT / Templates）。
-- **macOS**：`/Library/Application Support/Blackmagic Design/DaVinci Resolve/Support` 与 `~/Library/Application Support/Blackmagic Design/DaVinci Resolve/Support`（同结构；Mac 下文件夹命名仍为 `Blackmagic Design-DaVinci Resolve-Support` 体系）。
+**本机实时文档目录（歧义核实用，非默认路径）**：
+- **Windows**：`C:\ProgramData\Blackmagic Design\DaVinci Resolve\Support`（技术文档）+ `…\Support\Developer`（Scripting / Workflow Integrations / OpenFX / CodecPlugin / DaVinciCTL / Fusion Fuse / OGraf / LUT / Templates）。
+- **macOS**：`/Library/Application Support/Blackmagic Design/DaVinci Resolve/Support` 与 `~/Library/Application Support/Blackmagic Design/DaVinci Resolve/Support`（同结构）。
 
-**用法**：探测到后用 `Grep` / `Read` 直接查该目录下的 README、`.pyi`、`.md`、示例与 `Technical Documentation/`（Remote Panel、用户配置目录）。`官方开发文档蒸馏.md` 的"对象模型 + 方法签名索引 + 易踩坑约定 + 最小示例"可与之交叉验证，但以用户本机实时文档为准。
+**用法**：
+- 用 `Bash`/`PowerShell` 探测目录存在性；**首次探测后缓存结论**（命中 / 未安装），同一会话不要每问必探。
+- 命中后用 `Grep` / `Read` 查其下 README、`.pyi`、`.md`、示例与 `Technical Documentation/`（Remote Panel、用户配置目录），与蒸馏稿交叉验证。
+- 受「极速模式」约束：仅在开发类问题且蒸馏稿确有歧义时，才突破两轮检索去读本机文档，避免无谓开销。
 
 ## 回答规范
 

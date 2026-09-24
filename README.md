@@ -74,7 +74,7 @@
 
 ```bash
 # 方式一：git clone（推荐，方便后续更新）
-git clone https://github.com/akahoz94/davinci-21-chinese-manual.git \
+git clone <本仓库的 Git 地址> \
   "$HOME/.workbuddy/skills/达芬奇21中文操作手册"
 
 # 方式二：下载 ZIP 后解压 / 直接复制目录
@@ -181,8 +181,9 @@ AI：（调出 手册浏览器.html，定位到「功能检索」tab）
 达芬奇21中文操作手册/
 ├── SKILL.md                  # AI 检索路由与回答规范（frontmatter 触发词 + 数据资产 + 行为约定）
 ├── README.md                # 本文件（详细使用说明）
-├── LICENSE                  # MIT 开源协议
-└── references/
+├── LICENSE                  # MIT 开源协议（含英文原版版权声明）
+├── references/
+└── tools/                   # 版本升级工具：build_manual.py（抽 PDF→txt/json）、validate.py（校验浏览器 DATA）
     ├── 手册浏览器.html        # 自包含可视化浏览器（离线，约 17 MB，五 tab 内联）
     ├── shortcuts.md          # 快捷键速查纯文本源（818 条，按 14 模块）
     ├── quickref.json         # 高频速查卡数据（42 条 / 6 类）
@@ -191,10 +192,11 @@ AI：（调出 手册浏览器.html，定位到「功能检索」tab）
     ├── Fairlight音频插件.md   # Fairlight 音频插件中英对照（32 条）
     ├── 21.1原文检索.txt       # 21.1 手册中文汉化全文纯文本（4351 页，带页码，agent 检索主源）
     ├── 21.1英文原文检索.txt   # 21.1 手册英文原版全文纯文本（4351 页，带页码，歧义裁决权威源）
-    └── 官方开发文档蒸馏.md     # 官方开发/技术文档蒸馏（Scripting API / Workflow Integrations / 技术文档）
+    ├── 官方开发文档蒸馏.md     # 官方开发/技术文档蒸馏（Scripting API / Workflow Integrations / 技术文档）
+    └── mcp-接入示例.md         # 达芬奇 MCP 接入方案（Scripting API 包装为 MCP tool + 配置骨架）
 ```
 
-> 注：21.1 手册全文（**中文汉化 + 英文原版**，各 4351 页）已内联进 `手册浏览器.html` 的「功能检索」tab（顶部可切语言），无需单独下载、也无需依赖任何 PDF。如需对原文做**深度逐页精读**，可用 `references/21.1原文检索.txt`（中文）与 `references/21.1英文原文检索.txt`（英文），均已随本 skill 打包。若用户本机已安装达芬奇，官方文档以其实时目录为准（见 SKILL.md「官方文档本地优先」）。
+> 注：21.1 手册全文（**中文汉化 + 英文原版**，各 4351 页）已内联进 `手册浏览器.html` 的「功能检索」tab（顶部可切语言），无需单独下载、也无需依赖任何 PDF。如需对原文做**深度逐页精读**，可用 `references/21.1原文检索.txt`（中文）与 `references/21.1英文原文检索.txt`（英文），均已随本 skill 打包。英文原版版权归 Blackmagic Design 所有，本 skill 仅作离线查阅 / 歧义对照。开发类问题 AI 优先检索 `官方开发文档蒸馏.md`，仅在歧义时参阅用户本机实时官方文档（见 SKILL.md）。
 
 ---
 
@@ -206,6 +208,7 @@ AI：（调出 手册浏览器.html，定位到「功能检索」tab）
   - 原文汉化：**@谜一样的剪辑师**
   - 收集整合：**@一个成熟的剪辑猿**
 - DaVinci Resolve 是 Blackmagic Design 的商标，相关手册版权归原厂所有；本仓库仅做汉化内容的整理与检索工具化，不替代官方手册。
+- **英文原版全文**（`21.1英文原文检索.txt` 及浏览器内 English 对照）版权归 **Blackmagic Design** 所有，本 skill 仅作**离线查阅 / 歧义对照**用途随包附带，不构成再授权；如用于商业分发，请另行取得 Blackmagic Design 授权。
 
 ### 数据来源的两条边界
 
@@ -240,7 +243,7 @@ A：会随官方手册版本推进更新。关注 GitHub 仓库的 Release / 提
 
 ## 九、更新与贡献
 
-- **Star / Watch** 仓库获取更新：<https://github.com/akahoz94/davinci-21-chinese-manual>
+- **获取更新**：关注本仓库的 Release / 提交记录；用 `git pull` 即可更新本地 skill。
 - **更新本地 skill**：
 
 ```bash
