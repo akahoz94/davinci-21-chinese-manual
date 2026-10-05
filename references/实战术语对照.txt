@@ -111,3 +111,7 @@ Ducking⇥闪避（音乐让位对白）⇥§七7.2
 Level Automation⇥电平自动化写入⇥§七7.1 P3972
 Envelope⇥包络 / 自动化曲线⇥§七7.1
 Audio Track Category⇥轨道类别（对白/音乐/音效）⇥§七7.2
+智能重构图⇥Smart Reframe（竖屏自动重构图）⇥§五5.1
+Smart Reframe⇥智能重构图⇥§五5.1
+TimelineItem 速度⇥TimelineItem SetSpeed⇥官方开发文档蒸馏:TimelineItem
+TimelineItem⇥时间线片段对象⇥官方开发文档蒸馏:TimelineItem
