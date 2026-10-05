@@ -98,3 +98,16 @@ Pitch Shift⇥音高变调⇥§七7.2
 Audio Pitch⇥音高变调⇥§七7.2
 调色学习⇥零基础调色入门⇥§二 §四
 一级校色学习⇥一级校色实操⇥§二2.4
+动态处理⇥动态处理（压缩/扩展）⇥§七7.2 P3938
+Compressor⇥压缩器⇥§七7.2 P3938
+Expander⇥扩展器⇥§七7.2
+Audio Normalization⇥音频正规化⇥§七7.2
+Loudness⇥响度 / 目标响度电平 LUFS⇥§七7.2 P3968
+LUFS⇥目标响度电平（LUFS）⇥§七7.2 P3968
+VCA Fader⇥VCA 推子（多轨总控）⇥§七7.1 P3963
+AI Audio Assistant⇥AI 音频助手（自动平衡对白/闪避/响度）⇥§七7.2 P3969
+De-ess⇥去齿音⇥§七7.2
+Ducking⇥闪避（音乐让位对白）⇥§七7.2
+Level Automation⇥电平自动化写入⇥§七7.1 P3972
+Envelope⇥包络 / 自动化曲线⇥§七7.1
+Audio Track Category⇥轨道类别（对白/音乐/音效）⇥§七7.2
