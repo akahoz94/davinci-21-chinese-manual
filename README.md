@@ -9,17 +9,23 @@
 
 数据来自 **DaVinci Resolve 21.1 官方参考手册（V2 汉化，2026 年 9 月）**（4351 页）。汉化有歧义/缺失时以 Blackmagic Design 英文原版 21.1 Reference Manual 为准。
 
-> 📌 当前版本：**v2.10.1**（首次引导跨会话只弹一次 + 双触发源升级判定 + 三层词典命中率 100%）
+> 📌 当前版本：**v2.14**（宣传图出 PC 横版 16:9 / 移动竖版 9:16 两版排版，成品像素严格精确）
 > 📖 版本演进：**[CHANGELOG.md](CHANGELOG.md)** ｜ 🧠 使用思路：**[使用思路.md](使用思路.md)**
 
 ---
 
 <p align="center">
-  <img src="宣传页1.png" alt="达芬奇21中文操作手册 · 宣传页第 1 页（解决什么问题 / 命中率实测 / 三态递进 / 六个 tab）" width="880">
+  <img src="宣传页横版.png" alt="达芬奇21中文操作手册 · 宣传图（三态递进检索 / 命中率实测 / 六个 tab / 运行逻辑流程图）" width="900">
 </p>
+
+<details>
+<summary>📱 手机上放大看 —— 竖版 9:16（1080×1920，内容同上）</summary>
+
 <p align="center">
-  <img src="宣传页2.png" alt="达芬奇21中文操作手册 · 宣传页第 2 页（运行逻辑流程图 / 开源插件分类 / 实战讲师蒸馏 / 21.1 脚本 API 要点）" width="880">
+  <img src="宣传页竖版.png" alt="达芬奇21中文操作手册 · 宣传图竖版" width="440">
 </p>
+
+</details>
 
 ---
 
@@ -58,7 +64,7 @@ node scripts/check-first-run.js --mark  # 展示引导后才标记
 
 <img src="references/flow-overview.png" width="680" alt="达芬奇21中文操作手册 · 运行逻辑速览（首次判定 + 双触发源三态递进）">
 
-> 完整六阶段流程图见**下方宣传页第 2 页**。矢量源文件：[`flow-overview.svg`](references/flow-overview.svg)｜[`flow-detailed.svg`](references/flow-detailed.svg)
+> 完整六阶段流程图见**顶部宣传图右栏**。矢量源文件：[`flow-overview.svg`](references/flow-overview.svg)｜[`flow-detailed.svg`](references/flow-detailed.svg)
 
 
 ---
@@ -142,13 +148,13 @@ node scripts/check-first-run.js --mark  # 展示引导后才标记
 ├── 使用思路.md                   # 使用思路梳理 + 设计决策理由 + 自我审计记录
 ├── CHANGELOG.md                  # 版本演进
 ├── README.md
-├── 宣传页1.png / 宣传页2.png      # 宣传图第1/2 页（1000px 宽，README 展示用）
-├── 宣传页1.html / 宣传页2.html    # 宣传图构建源（改这个再重新截图）
+├── 宣传页横版.png / 宣传页竖版.png # 宣传图成品：PC 1920×1080（16:9）/ 移动 1080×1920（9:16）
+├── 宣传页横版.html / 宣传页竖版.html # 宣传图构建源（改这个再重新截图）
 └── references/
     ├── 手册浏览器.html            # 六 tab 单文件离线浏览器（17.5MB）
     ├── flow-overview.svg           # 运行逻辑速览图（矢量 680×780，首次激活展示）
     ├── flow-overview.png           # 同上 PNG 版（GitHub 展示用）
-    ├── flow-detailed.svg          # 完整流程图（矢量 680×1330，六阶段，见宣传页第 2 页）
+    ├── flow-detailed.svg          # 完整流程图（矢量 680×1330，六阶段，见宣传图右栏）
     ├── flow-detailed.png          # 同上 PNG 版
     │
     ├── # 归一化词典（检索前必过）
@@ -191,24 +197,26 @@ node scripts/check-first-run.js --mark  # 展示引导后才标记
 
 ### 重新生成宣传图
 
-改完 `宣传页N.html` 后重新截图（需本机已装 Chrome）：
+改完宣传页 HTML 后重新截图（需本机已装 Chrome）：
 
 ```bash
-node scripts/shot-promo.js 宣传页1.html 宣传页1.png
-node scripts/shot-promo.js 宣传页2.html 宣传页2.png
+node scripts/shot-promo.js 宣传页横版.html 宣传页横版.png
+node scripts/shot-promo.js 宣传页竖版.html 宣传页竖版.png
 ```
 
 | 参数 | 说明 |
 |---|---|
 | 第 1 参 | 源 HTML（相对 skill 根目录） |
 | 第 2 参 | 输出 PNG；省略则与 HTML 同名 |
-| 第 3 参 | 视口宽度（可选，默认读 HTML 实际宽度） |
+| 第 3 参 | 视口宽度（可选，默认读 `body` 实际宽度） |
+| 第 4 参 | 视口高度（可选，默认读 `body` 实际高度） |
 
 - **路径自动推断**（基于脚本自身位置），从任何目录运行都可以；也可用 `SKILL_ROOT` 环境变量指定根目录。
 - Chrome 路径自动探测多平台；非默认安装位置可用 `CHROME=/path/to/chrome` 指定。
 - 脚本会**等所有嵌入图加载完再截图**，并报告有无加载失败的图。
 - 宣传图必须是 **PNG** —— GitHub 图片代理（camo）不渲染 SVG。
-- 宣传图分两页（第 1 页概览 + 核心数据，第 2 页流程图 + 明细），避免单图过长。
+- 同一份内容出**两版排版**：横版给 PC / README，竖版给手机与社媒。README 只嵌横版，竖版收在折叠块里，避免两张大图重复占位。
+- **尺寸是硬指标**：两个 HTML 都用 `body{width;height;overflow:hidden}` 定死 1920×1080 / 1080×1920，脚本默认按 `body` 实际高度截图（**不加余量**），成品像素必须正好是 3840×2160 / 2160×3840。改动后请用 PIL 复核真实像素，别只看脚本打印的 CSS 值。
 
 ### 更新插件数据源
 见 [使用思路.md · 维护指引](使用思路.md)。
