@@ -1,0 +1,92 @@
+# 中英术语对照表（英→中，Grep 友好：英文⇥中文⇥所在章节）
+# 用途：用户用中文问、或直接丢英文术语进来时，先 Grep 本表拿到「中文说法 + 章节号」，再 Read 油管笔记对应小节。
+# 格式：英文原词⇥中文译名/别名⇥章节
+
+ACES⇥ACES（学院色彩系统）⇥§二2.2
+RCM⇥Resolve 色彩管理 / RCM v2⇥§二2.2 §四4.2
+RCM v2⇥Resolve 色彩管理 v2⇥§二2.2
+Display-Referred⇥显示参考⇥§二2.1
+Scene-Referred⇥场景参考⇥§二2.1
+Color Management⇥色彩管理⇥§二2.1 §四4.2 §六6.2
+Creative Look Development⇥创意风格开发⇥§二2.3
+Look⇥风格化调色 / Look 开发⇥§二2.3
+Scopes⇥示波器⇥§二2.4 §四4.6
+waveform⇥波形图⇥§二2.4
+vectorscope⇥矢量示波器⇥§二2.4
+parade⇥分量图 / RGB  parade⇥§二2.4
+histogram⇥直方图⇥§二2.4
+primary correction⇥一级校色⇥§二2.4
+Color Space Transform⇥色彩空间变换 CST⇥§四4.5
+CST⇥色彩空间变换⇥§四4.5
+DRT⇥达芬奇调色仪 DRT⇥§四4.5
+D-Log⇥大疆 D-Log⇥§四4.4
+D-Log M⇥大疆 D-Log M 模式⇥§四4.4
+DJI LUTs⇥大疆 LUT⇥§四4.4
+Dehancer⇥Dehancer 胶片模拟插件⇥§四4.4
+texture pop⇥纹理凸起 / 质感增强⇥§四4.4
+Film Look Creator⇥胶片风格创作器⇥§四4.4
+Halation⇥光晕效果⇥§四4.4
+Color Page⇥调色页面 Color 页⇥§三3.1
+Cut Page⇥剪辑页面 Cut 页⇥§三3.1
+Edit Page⇥编辑页面 Edit 页⇥§三3.1
+Media Page⇥媒体页面 Media 页⇥§三3.1
+Deliver Page⇥交付页面 Deliver 页⇥§三3.1
+Fairlight Page⇥音频页面 Fairlight 页⇥§三3.1
+Fusion Page⇥特效页面 Fusion 页⇥§三3.1
+Node⇥节点⇥§二2.4 §四4.3
+Node Graph⇥节点图⇥§四4.3
+Fixed Node Tree⇥固定节点树⇥§四4.3
+Group⇥节点组 / 分组⇥§四4.1
+Ripple⇥连锁 ripple 改动⇥§四4.1
+Balance⇥平衡（首镜定 look）⇥§四4.1
+Trim Pass⇥trim 调整 / 裁切通道⇥§二2.5 §六6.2
+Dolby Vision⇥杜比视界⇥§二2.5
+HDR⇥高动态范围 HDR⇥§二2.5
+HDR10+⇥HDR10+⇥§二2.5
+HDR Vivid⇥HDR Vivid⇥§二2.5
+output gamut limit⇥输出色域限制⇥§二2.1
+input color space⇥输入色彩空间⇥§二2.2
+timeline color space⇥时间线色彩空间⇥§二2.1
+Magic Mask⇥智能遮罩 / 魔术蒙版⇥§五5.2
+Keyframes⇥关键帧⇥§五5.1
+No Keyframes⇥免关键帧⇥§五5.1
+Fusion Zero to Hero⇥Fusion 从零到大师⇥§三3.2
+groundcontrol.film⇥groundcontrol 免费资源站⇥§三3.3
+Beginners Tutorial⇥新手教程⇥§六6.1
+Premiere⇥Pr  premiere⇥§六6.1
+FCP⇥Final Cut Pro⇥§六6.1
+Avid⇥Avid⇥§六6.1
+Krokodove⇥Krokodove 形状工具⇥§六6.3
+OpenPBR⇥OpenPBR 材质着色器⇥§六6.3
+Macro Editor⇥宏编辑器⇥§六6.3
+Fairlight Audio Guide⇥Fairlight 音频指南⇥§七7.1
+Fairlight From Scratch⇥Fairlight 从零开始⇥§七7.1
+Complete Fairlight Audio Course⇥Fairlight 完整音频课程⇥§七7.1
+Dialogue Leveler⇥对白均衡器⇥§七7.2
+Foley⇥拟音 / 音效设计⇥§七7.2
+Balance Audio Levels⇥平衡音频电平⇥§七7.2
+Loudness⇥响度⇥§七7.2
+Fairlight VFX⇥Fairlight 视觉效果⇥§七7.2
+ADR⇥对白重录 ADR⇥§七7.2
+DCTL⇥DCTL 调色插件⇥§八
+OFX⇥OFX 插件⇥§八
+OGraf⇥OGraf 字幕图形⇥§八
+LUT⇥LUT 查色表⇥§四4.4
+Scopes Reading⇥示波器读法⇥§四4.6
+Color Match⇥色彩匹配 / 镜头匹配⇥§四4.1
+Primary⇥一级调色⇥§二2.4
+Secondary⇥二级调色⇥§二2.4
+Power Window⇥窗口 / 蒙版⇥§二2.4
+Tracker⇥跟踪器⇥§二2.4
+Film Look⇥胶片风格⇥§四4.4
+Mixing⇥混音⇥§七7.1 §七7.2
+Audio Mixing⇥音频混音⇥§七7.1
+Mastering⇥母带处理⇥§七7.2
+Compression⇥压缩器⇥§七7.2
+EQ⇥均衡器 EQ⇥§七7.2
+De-noise⇥降噪⇥§七7.2
+Voice Isolation⇥语音隔离⇥§七7.2
+Audio Track⇥音频轨道⇥§七7.1
+Bus⇥总线 Bus 路由⇥§七7.1
+Automation⇥自动化写入 / 自动化参数⇥§七7.1
+Voiceover⇥旁白 / 人声录制⇥§七7.2
