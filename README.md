@@ -202,14 +202,24 @@ node scripts/check-first-run.js --mark  # 展示引导后才标记
 
 ### 重新生成宣传图
 
+改完 `宣传页N.html` 后重新截图（需本机已装 Chrome）：
+
 ```bash
-# 改宣传页N.html 后重新截图（无头 Chrome，自动等图片加载完）
 node scripts/shot-promo.js 宣传页1.html 宣传页1.png
 node scripts/shot-promo.js 宣传页2.html 宣传页2.png
 ```
 
-> 宣传图必须是 **PNG** —— GitHub 图片代理（camo）不渲染 SVG。
-> 宣传图分两页（第 1 页概览+ 核心数据，第 2 页流程图 + 明细），避免单图过长。
+| 参数 | 说明 |
+|---|---|
+| 第 1 参 | 源 HTML（相对 skill 根目录） |
+| 第 2 参 | 输出 PNG；省略则与 HTML 同名 |
+| 第 3 参 | 视口宽度（可选，默认读 HTML 实际宽度） |
+
+- **路径自动推断**（基于脚本自身位置），从任何目录运行都可以；也可用 `SKILL_ROOT` 环境变量指定根目录。
+- Chrome 路径自动探测多平台；非默认安装位置可用 `CHROME=/path/to/chrome` 指定。
+- 脚本会**等所有嵌入图加载完再截图**，并报告有无加载失败的图。
+- 宣传图必须是 **PNG** —— GitHub 图片代理（camo）不渲染 SVG。
+- 宣传图分两页（第 1 页概览 + 核心数据，第 2 页流程图 + 明细），避免单图过长。
 
 ### 更新插件数据源
 见 [使用思路.md · 维护指引](使用思路.md)。
