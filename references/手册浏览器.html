@@ -154,6 +154,16 @@
     padding:3px 9px;border-radius:6px;text-decoration:none;white-space:nowrap;display:inline-block}
   .gh-act a:hover{border-color:var(--accent);color:var(--accent)}
   .gh-path{font-family:ui-monospace,Consolas,monospace;font-size:11.5px;color:var(--dim)}
+
+  /* 开源插件：在线更新 */
+  #v-gh #gh-sync{background:var(--panel2);color:var(--fg);border:1px solid var(--line);
+    padding:9px 14px;border-radius:8px;cursor:pointer;font-size:13.5px;white-space:nowrap}
+  #v-gh #gh-sync:hover{border-color:var(--accent);color:var(--accent)}
+  #v-gh #gh-sync:disabled{opacity:.55;cursor:progress}
+  #v-gh #gh-state{font-size:12.5px;color:var(--dim);white-space:nowrap}
+  #v-gh #gh-state.ok{color:var(--free)}
+  #v-gh #gh-state.err{color:#f85149}
+  #v-gh #gh-state.busy{color:var(--studio)}
 </style>
 </head>
 <body>
@@ -225,7 +235,7 @@
   </section>
   <!-- 开源插件（GitHub） -->
   <section class="view" id="v-gh">
-    <div class="bar">
+  <div class="bar">
       <input id="gh-q" placeholder="搜索开源插件，如：抠像、字幕、调色、降噪、MCP、转场、BRAW">
       <select id="gh-type"><option value="">全部分类</option></select>
       <select id="gh-plat"><option value="">全部平台</option></select>
@@ -233,11 +243,13 @@
         <option value="stars">按 Star 排序</option>
         <option value="name">按名称排序</option>
       </select>
+      <button id="gh-sync" title="从 GitHub 拉取最新插件数据">⟳ 在线更新</button>
+      <span id="gh-state"></span>
     </div>
     <div class="hint">
       GitHub 上与达芬奇工作流相关的<b>免费开源</b>插件 / 工具 / DCTL。共 <span id="gh-total"></span> 项 ·
-      数据源 <a href="https://github.com/akahoz94/hoz-davinci-plugins" target="_blank" style="color:var(--accent2)">akahoz94/hoz-davinci-plugins</a>
-      （快照 2026-10-05）· 在线可搜 <a href="https://hoz.jianjimi.cn/" target="_blank" style="color:var(--accent2)">hoz.jianjimi.cn</a>（支持中文/平台/分类筛选）
+      （快照 2026-10-05）· 在线可搜 <a href="https://hoz.jianjimi.cn/" target="_blank" style="color:var(--accent2)">hoz.jianjimi.cn</a>
+      内置 <b>离线可用</b>；点「⟳ 在线更新」可从 GitHub 拉最新数据并缓存到本地。<br>数据源 <a href="https://github.com/akahoz94/hoz-davinci-plugins" target="_blank" style="color:var(--accent2)">akahoz94/hoz-davinci-plugins</a> · 在线可搜 <a href="https://hoz.jianjimi.cn/" target="_blank" style="color:var(--accent2)">hoz.jianjimi.cn</a>
     </div>
     <div class="hint" style="color:var(--studio)">
       ⚠️ Star 数为采集时快照，不代表活跃度。安装前请到源仓库读 README / Issue 确认兼容 <b>21.1</b>，并<b>先备份工程与数据库</b>。
@@ -414,6 +426,102 @@ function fillGhCats(){
   Object.keys(ps).sort().forEach(function(p){ ghPlat.add(new Option(p,p)); });
   document.getElementById('gh-total').textContent = GH_DATA.length;
 }
+/* ===== 开源插件：在线更新（离线内置 + 可从 GitHub 拉最新） ===== */
+var GH_SOURCES = [
+  'https://raw.githubusercontent.com/akahoz94/hoz-davinci-plugins/main/index.html',
+  'https://cdn.jsdelivr.net/gh/akahoz94/hoz-davinci-plugins@main/index.html'
+];
+var GH_CACHE_KEY = 'gh_plugins_cache_v1';
+var GH_ORIGIN_COUNT = GH_DATA.length;
+
+function ghSetState(msg, cls) {
+  var el = document.getElementById('gh-state');
+  if (!el) return;
+  el.textContent = msg || '';
+  el.className = cls || '';
+}
+
+/** 从远程 index.html 里解析出 DATA 数组（复用其字段结构） */
+function parseGhIndex(text) {
+  var m = text.match(/const\s+DATA\s*=\s*(\[.*?\]);/s);
+  if (!m) return null;
+  var arr = JSON.parse(m[1]);
+  var TYPE_CN = { 'AI':'AI / 工作流', 'DCTL':'DCTL（调色）', 'OFX':'OFX（特效）',
+    'Fusion':'Fusion（模板/宏）', 'Encoder':'编码器', 'Script':'脚本 / MCP / 工具' };
+  return arr.map(function (r) {
+    var w = String(r.win || 'y');
+    var plat = '通用';
+    if (w !== 'y') {
+      var ps = [];
+      if (w.indexOf('win') >= 0) ps.push('Win');
+      if (w.indexOf('mac') >= 0 || w.indexOf('osx') >= 0) ps.push('Mac');
+      if (w.indexOf('lin') >= 0) ps.push('Linux');
+      plat = ps.length ? ps.join(' ') : '通用';
+    }
+    return {
+      full: r.full, url: r.url, desc: r.desc,
+      typecn: TYPE_CN[r.type] || r.type, plat: plat,
+      lang: r.lang || '-', stars: Number(r.stars) || 0
+    };
+  });
+}
+
+function ghFillCats() {
+  var ts = {}, ps = {};
+  GH_DATA.forEach(function (p) { ts[p.typecn] = 1; ps[p.plat] = 1; });
+  ghType.innerHTML = '<option value="">全部分类</option>';
+  ghPlat.innerHTML = '<option value="">全部平台</option>';
+  Object.keys(ts).sort().forEach(function (t) { ghType.add(new Option(t, t)); });
+  Object.keys(ps).sort().forEach(function (p) { ghPlat.add(new Option(p, p)); });
+  document.getElementById('gh-total').textContent = GH_DATA.length;
+}
+
+/** 拉取最新数据并应用；成功后写入 localStorage 缓存 */
+function ghSync(manual) {
+  var btn = document.getElementById('gh-sync');
+  btn.disabled = true;
+  ghSetState('拉取中…', 'busy');
+  var i = 0;
+  function tryNext() {
+    if (i >= GH_SOURCES.length) {
+      btn.disabled = false;
+      ghSetState('更新失败：网络不通或源不可达（当前仍用离线内置数据）', 'err');
+      return;
+    }
+    var url = GH_SOURCES[i++];
+    var ctl = typeof AbortController !== 'undefined' ? new AbortController() : null;
+    var timer = setTimeout(function () { if (ctl) ctl.abort(); }, 12000);
+    fetch(url, ctl ? { signal: ctl.signal } : undefined)
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.text(); })
+      .then(function (t) {
+        clearTimeout(timer);
+        var arr = parseGhIndex(t);
+        if (!arr || !arr.length) throw new Error('解析失败');
+        GH_DATA = arr;
+        try { localStorage.setItem(GH_CACHE_KEY, JSON.stringify({ at: new Date().toISOString(), data: arr })); } catch (e) {}
+        ghFillCats();
+        renderGh();
+        var d = arr.length - GH_ORIGIN_COUNT;
+        ghSetState('已更新到 ' + arr.length + ' 项' + (d ? '（' + (d > 0 ? '+' : '') + d + '）' : '') + ' · ' + new Date().toLocaleString('zh-CN', { hour12: false }).slice(0, 16), 'ok');
+        btn.disabled = false;
+      })
+      .catch(function () { clearTimeout(timer); tryNext(); });
+  }
+  tryNext();
+}
+
+/** 启动时若有缓存则优先用缓存（离线也能拿到上次更新的数据） */
+function ghLoadCache() {
+  try {
+    var raw = localStorage.getItem(GH_CACHE_KEY);
+    if (!raw) return false;
+    var o = JSON.parse(raw);
+    if (!o || !o.data || !o.data.length) return false;
+    GH_DATA = o.data;
+    return true;
+  } catch (e) { return false; }
+}
+
 function renderGh(){
   var q=document.getElementById('gh-q').value.trim().toLowerCase();
   var t=ghType.value, pl=ghPlat.value;
@@ -447,7 +555,10 @@ function renderGh(){
 });
 
   fillCats();renderPlugins();
-  fillGhCats();renderGh();
+  var ghCached = ghLoadCache();
+  ghFillCats();renderGh();
+  if (ghCached) ghSetState('已载入本地缓存（点 ⟳ 可拉最新）', '');
+  (function(){var b=document.getElementById('gh-sync');if(b)b.addEventListener('click',function(){ghSync(true);});})();
   // ---- 官方开发文档 ----
   var devBody=document.getElementById('dev-body');
   devBody.innerHTML=D.devdoc||'';

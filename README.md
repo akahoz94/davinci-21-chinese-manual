@@ -54,23 +54,12 @@ node scripts/check-first-run.js --mark  # 展示引导后才标记
 - 状态文件：`~/.workbuddy/skills/.state/达芬奇21中文操作手册.json`（**在 git 仓库外**，skill 更新/重装/clone 都不丢）
 - 边界：文件删除 / JSON 损坏 → 恢复首次；目录只读 → 引导照常展示但不阻塞问答
 
-### 阶段 1~6 · 三态递进
-
-### 运行逻辑速览（首次调用时展示）
+### 阶段 1~6 · 三态递进（运行逻辑速览）
 
 <img src="references/flow-overview.png" width="680" alt="达芬奇21中文操作手册 · 运行逻辑速览（首次判定 + 双触发源三态递进）">
 
-<sub>矢量 SVG（680×780），可点击放大 · 源文件 <code>references/flow-overview.svg</code></sub>
+> 完整六阶段流程图见**下方宣传页第 2 页**。矢量源文件：[`flow-overview.svg`](references/flow-overview.svg)｜[`flow-detailed.svg`](references/flow-detailed.svg)
 
-> 上面是 PNG 渲染版（GitHub 图片代理不支持 SVG，故仓库同时提供 PNG）。**矢量 SVG 源文件**：[`references/flow-overview.svg`](references/flow-overview.svg) —— 可无限放大、可用浏览器直接打开。
-
-### 完整流程图（含检索路由与决策细节）
-
-<img src="references/flow-detailed.png" width="680" alt="达芬奇21中文操作手册 · 完整调用流程（六阶段：首次判定→归一化→L1→升级判定→L2→L3→回写）">
-
-<sub>矢量 SVG（680×1330），可点击放大 · 源文件 <code>references/flow-detailed.svg</code></sub>
-
-> 矢量 SVG 源文件：[`references/flow-detailed.svg`](references/flow-detailed.svg)
 
 ---
 
@@ -157,10 +146,10 @@ node scripts/check-first-run.js --mark  # 展示引导后才标记
 ├── 宣传页1.html / 宣传页2.html    # 宣传图构建源（改这个再重新截图）
 └── references/
     ├── 手册浏览器.html            # 六 tab 单文件离线浏览器（17.5MB）
-    ├── flow-overview.svg           # 运行逻辑速览图（矢量，680×780，首次调用展示）
-    ├── flow-overview.png           # 同上PNG 版（GitHub 展示用）
-    ├── flow-detailed.svg          # 完整调用流程图（矢量，680×1330，六阶段）
-    ├── flow-detailed.png          # 同上 PNG 版（GitHub 展示用）
+    ├── flow-overview.svg           # 运行逻辑速览图（矢量 680×780，首次激活展示）
+    ├── flow-overview.png           # 同上 PNG 版（GitHub 展示用）
+    ├── flow-detailed.svg          # 完整流程图（矢量 680×1330，六阶段，见宣传页第 2 页）
+    ├── flow-detailed.png          # 同上 PNG 版
     │
     ├── # 归一化词典（检索前必过）
     ├── 小白现象词典.txt            # 白话现象 → 规范术语（108 条）
