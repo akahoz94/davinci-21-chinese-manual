@@ -56,7 +56,17 @@
 
 **为什么 L1 坚决不联网**：本地 Grep 约 250~310ms、返回 KB 级；联网 3~15 秒、返回几十 KB 且可能不通。**联网是「查不到时的兜底」，不是加速手段。**
 
-📊 完整流程图（680×1252 SVG）：`references/极速模式调用流程.svg`
+### 运行逻辑速览（首次调用时展示）
+
+<img src="references/flow-overview.svg" width="680" alt="达芬奇21中文操作手册 · 运行逻辑速览（L1→L2→L3 三态递进）">
+
+<sub>矢量 SVG（680×700），可点击放大 · 源文件 `references/flow-overview.svg`</sub>
+
+### 完整流程图（含检索路由与决策细节）
+
+<img src="references/flow-detailed.svg" width="680" alt="达芬奇21中文操作手册 · 三态递进完整调用流程">
+
+<sub>矢量 SVG（680×1252），可点击放大 · 源文件 `references/flow-detailed.svg`</sub>
 
 ---
 
@@ -136,7 +146,8 @@
 ├── 宣传页.png
 └── references/
     ├── 手册浏览器.html            # 六 tab 单文件离线浏览器（17.5MB）
-    ├── 极速模式调用流程.svg        # 三态递进流程图（680×1252）
+    ├── flow-overview.svg           # 运行逻辑速览图（680×700，首次调用展示）
+    ├── flow-detailed.svg          # 三态递进完整流程图（680×1252）
     │
     ├── # 归一化词典（检索前必过）
     ├── 小白现象词典.txt            # 白话现象 → 规范术语（~90 条）
