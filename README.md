@@ -20,7 +20,7 @@
 |---|---|
 | 📴 **完全离线** | 单文件浏览器 17.5MB 自包含；skill 全量本地蒸馏，**默认不联网** |
 | ⚡ **三态递进** | L1 极速（本地 ≤2 轮 Grep，~300ms）→ L2 深读（联网双重比对）→ L3 兜底（明说未覆盖） |
-| 🎯 **面向小白** | 三层问句归一化词典，**真实白话问句命中率 98%** |
+| 🎯 **面向小白** | 三层问句归一化词典，**真实白话问句命中率 100%**（38/38） |
 | 🔌 **169 项开源插件** | GitHub 免费开源 DCTL/OFX/Fuse/VST3 + 四类安装路径表 |
 | 📚 **六 tab 浏览器** | 快捷键 / 高频速查 / 全文检索(中·英) / 插件中英对照 / 开源插件 / 开发文档 |
 | 📖 **4351 页全文** | 可搜索、可切中文汉化 ⇄ English 原版对照 |
@@ -49,15 +49,19 @@ node scripts/check-first-run.js --mark  # 展示引导后才标记
 
 ### 运行逻辑速览（首次调用时展示）
 
-<img src="references/flow-overview.svg" width="680" alt="达芬奇21中文操作手册 · 运行逻辑速览（L1→L2→L3 三态递进）">
+<img src="references/flow-overview.png" width="680" alt="达芬奇21中文操作手册 · 运行逻辑速览（首次判定 + 双触发源三态递进）">
 
-<sub>矢量 SVG（680×780），可点击放大 · 源文件 `references/flow-overview.svg`</sub>
+<sub>矢量 SVG（680×780），可点击放大 · 源文件 <code>references/flow-overview.svg</code></sub>
+
+> 上面是 PNG 渲染版（GitHub 图片代理不支持 SVG，故仓库同时提供 PNG）。**矢量 SVG 源文件**：[`references/flow-overview.svg`](references/flow-overview.svg) —— 可无限放大、可用浏览器直接打开。
 
 ### 完整流程图（含检索路由与决策细节）
 
-<img src="references/flow-detailed.svg" width="680" alt="达芬奇21中文操作手册 · 三态递进完整调用流程">
+<img src="references/flow-detailed.png" width="680" alt="达芬奇21中文操作手册 · 完整调用流程（六阶段：首次判定→归一化→L1→升级判定→L2→L3→回写）">
 
-<sub>矢量 SVG（680×1330），可点击放大 · 源文件 `references/flow-detailed.svg`</sub>
+<sub>矢量 SVG（680×1330），可点击放大 · 源文件 <code>references/flow-detailed.svg</code></sub>
+
+> 矢量 SVG 源文件：[`references/flow-detailed.svg`](references/flow-detailed.svg)
 
 ---
 
@@ -78,9 +82,9 @@ node scripts/check-first-run.js --mark  # 展示引导后才标记
 
 | 层 | 文件 | 解决什么 | 例 |
 |---|---|---|---|
-| ① | `小白现象词典.txt`（~90） | **只说现象、描述不清** | 「一会大一会小」⇥ 动态处理/压缩器<br>「灰扑扑」⇥ 一级校色/对比度 |
-| ② | `口语问句映射.txt`（~150） | **动词短语命中不了名词索引** | 「怎么导出」⇥ Deliver<br>「怎么混音」⇥ 音频 |
-| ③ | `实战术语对照.txt`（100） | **英文术语没中文化** | `texture pop` ⇥ 纹理凸起 |
+| ① | `小白现象词典.txt`（106） | **只说现象、描述不清** | 「一会大一会小」⇥ 动态处理/压缩器<br>「灰扑扑」⇥ 一级校色/对比度 |
+| ② | `口语问句映射.txt`（197） | **动词短语命中不了名词索引** | 「怎么导出」⇥ Deliver<br>「怎么混音」⇥ 音频 |
+| ③ | `实战术语对照.txt`（112） | **英文术语没中文化** | `texture pop` ⇥ 纹理凸起 |
 
 含一组**「需澄清」条目**（"就那样""不知道怎么说"）→ 命中即反问用户，不硬答不联网。
 
@@ -143,14 +147,16 @@ node scripts/check-first-run.js --mark  # 展示引导后才标记
 ├── 宣传页.png
 └── references/
     ├── 手册浏览器.html            # 六 tab 单文件离线浏览器（17.5MB）
-    ├── flow-overview.svg           # 运行逻辑速览图（680×780，首次调用展示）
-    ├── flow-detailed.svg          # 完整调用流程图（680×1330，六阶段）
+    ├── flow-overview.svg           # 运行逻辑速览图（矢量，680×780，首次调用展示）
+    ├── flow-overview.png           # 同上PNG 版（GitHub 展示用）
+    ├── flow-detailed.svg          # 完整调用流程图（矢量，680×1330，六阶段）
+    ├── flow-detailed.png          # 同上 PNG 版（GitHub 展示用）
     │
     ├── # 归一化词典（检索前必过）
-    ├── 小白现象词典.txt            # 白话现象 → 规范术语（~90 条）
-    ├── 口语问句映射.txt            # 口语问句 → 核心检索词（~150 条）
-    ├── 实战术语对照.txt            # 中英术语 → 章节（100 条）
-    ├── 实战路由表.txt              # 中文关键词 → 章节（21 条）
+    ├── 小白现象词典.txt            # 白话现象 → 规范术语（106 条）
+    ├── 口语问句映射.txt            # 口语问句 → 核心检索词（197 条）
+    ├── 实战术语对照.txt            # 中英术语 → 章节（112 条）
+    ├── 实战路由表.txt              # 中文关键词 → 章节（75 条）
     │
     ├── # 结构化数据（Grep 优先）
     ├── 高频速查.md / quickref.json # 128 条 / 13 类
