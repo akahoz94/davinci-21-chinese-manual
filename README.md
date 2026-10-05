@@ -14,6 +14,15 @@
 
 ---
 
+<p align="center">
+  <img src="宣传页1.png" alt="达芬奇21中文操作手册 · 宣传页第 1 页（解决什么问题 / 命中率实测 / 三态递进 / 六个 tab）" width="880">
+</p>
+<p align="center">
+  <img src="宣传页2.png" alt="达芬奇21中文操作手册 · 宣传页第 2 页（运行逻辑流程图 / 开源插件分类 / 实战讲师蒸馏 / 21.1 脚本 API 要点）" width="880">
+</p>
+
+---
+
 ## 核心特性
 
 | | |
@@ -144,8 +153,8 @@ node scripts/check-first-run.js --mark  # 展示引导后才标记
 ├── 使用思路.md                   # 使用思路梳理 + 设计决策理由 + 自我审计记录
 ├── CHANGELOG.md                  # 版本演进
 ├── README.md
-├── 宣传页.png                   # 宣传长图（1000×3754，README 展示用）
-├── 宣传页.html                  # 宣传页构建源（改这个再重新截图）
+├── 宣传页1.png / 宣传页2.png      # 宣传图第1/2 页（1000px 宽，README 展示用）
+├── 宣传页1.html / 宣传页2.html    # 宣传图构建源（改这个再重新截图）
 └── references/
     ├── 手册浏览器.html            # 六 tab 单文件离线浏览器（17.5MB）
     ├── flow-overview.svg           # 运行逻辑速览图（矢量，680×780，首次调用展示）
@@ -194,11 +203,13 @@ node scripts/check-first-run.js --mark  # 展示引导后才标记
 ### 重新生成宣传图
 
 ```bash
-# 改宣传页.html 后重新截图（无头 Chrome，需等图片加载完）
-node scripts/shot-promo.js 宣传页.html 宣传页.png
+# 改宣传页N.html 后重新截图（无头 Chrome，自动等图片加载完）
+node scripts/shot-promo.js 宣传页1.html 宣传页1.png
+node scripts/shot-promo.js 宣传页2.html 宣传页2.png
 ```
 
 > 宣传图必须是 **PNG** —— GitHub 图片代理（camo）不渲染 SVG。
+> 宣传图分两页（第 1 页概览+ 核心数据，第 2 页流程图 + 明细），避免单图过长。
 
 ### 更新插件数据源
 见 [使用思路.md · 维护指引](使用思路.md)。

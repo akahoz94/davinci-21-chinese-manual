@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>达芬奇 21 中文操作手册 · 第 1 页</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{width:1000px;font-family:"Source Han Sans SC","Noto Sans SC","Microsoft YaHei",sans-serif;
+    background:#fff;color:#1f2328;line-height:1.65}
+  .hd{background:linear-gradient(135deg,#0b1220,#1a2740);color:#fff;padding:38px 44px 32px;position:relative}
+  .hd h1{font-size:33px;font-weight:700;letter-spacing:.5px}
+  .hd h1 .v{color:#ff7a45}
+  .hd .sub{margin-top:9px;font-size:14.5px;color:#c9d1d9}
+  .hd .tags{margin-top:15px;display:flex;gap:8px;flex-wrap:wrap}
+  .hd .tag{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);
+    color:#e6edf3;font-size:12.5px;padding:3px 11px;border-radius:20px}
+  .hd .attr{margin-top:13px;font-size:12.5px;color:#8b949e}
+  .pg{position:absolute;right:44px;top:38px;font-size:12.5px;color:#c9d1d9;
+    background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:3px 12px;border-radius:20px}
+
+  .sec{padding:26px 44px 0}
+  .sec h2{font-size:19px;font-weight:700;margin-bottom:14px;padding-bottom:8px;
+    border-bottom:2px solid #e6edf3;display:flex;align-items:center;gap:9px}
+  .sec h2 .n{background:#0969da;color:#fff;font-size:12px;font-weight:700;width:23px;height:23px;
+    border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex:0 0 23px}
+
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th{background:#f6f8fa;text-align:left;padding:9px 11px;border-bottom:1px solid #d0d7de;
+    font-size:12.5px;color:#656d76;font-weight:600}
+  td{padding:8.5px 11px;border-bottom:1px solid #eaeef2}
+  tr:last-child td{border-bottom:none}
+  .mono{font-family:ui-monospace,Consolas,monospace;font-size:12.5px;color:#0969da}
+  .ok{color:#1a7f37;font-weight:600}
+  .n{color:#656d76}
+
+  .states{display:flex;gap:11px}
+  .st{flex:1;border-radius:9px;padding:14px 15px;border:1.5px solid}
+  .st .h{font-size:14.5px;font-weight:700;margin-bottom:7px}
+  .st .b{font-size:12.5px;line-height:1.75}
+  .s1{border-color:#0969da;background:#ddf4ff}.s1 .h{color:#0969da}
+  .s2{border-color:#bf8700;background:#fff8c5}.s2 .h{color:#bf8700}
+  .s3{border-color:#cf222e;background:#ffebe9}.s3 .h{color:#cf222e}
+
+  .ft{margin-top:26px;background:#f6f8fa;border-top:1px solid #d0d7de;padding:20px 44px 24px}
+  .ft .repo{font-family:ui-monospace,Consolas,monospace;font-size:14px;color:#0969da;
+    background:#fff;border:1px solid #d0d7de;border-radius:7px;padding:10px 14px;display:inline-block}
+  .ft .note{font-size:12px;color:#656d76;margin-top:11px;line-height:1.8}
+</style>
+</head>
+<body>
+
+<div class="hd">
+  <span class="pg">1 / 2</span>
+  <h1>达芬奇 <span class="v">21</span> 中文操作手册</h1>
+  <div class="sub">离线自包含 · AI 检索 Skill + 可视化浏览器 · 白话问句命中率 100%</div>
+  <div class="tags">
+    <span class="tag">4351 页手册全文</span>
+    <span class="tag">六 tab 浏览器</span>
+    <span class="tag">三层问句归一化</span>
+    <span class="tag">169 项开源插件</span>
+    <span class="tag">默认不联网</span>
+  </div>
+  <div class="attr">原文汉化 @谜一样的剪辑师 ｜ 收集整合 @一个成熟的剪辑猿 ｜ MIT</div>
+</div>
+
+<div class="sec">
+  <h2><span class="n">1</span>解决什么问题</h2>
+  <table>
+    <tr><td width="26%"><b>AI 答不上来</b></td><td>资产是「名词索引」，提问是「动词 + 白话」→ 整句检索全部落空</td></tr>
+    <tr><td><b>检索慢</b></td><td>单行索引一次吐 71 万字符，模型要逐字吞 → 改每词一行后 463 字符（<b>-99.9%</b>）</td></tr>
+    <tr><td><b>提问描述不清</b></td><td>「一会大一会小」「灰扑扑」「不知道怎么说」→ 三层词典翻译成规范术语，命中即反问澄清</td></tr>
+    <tr><td><b>不知道用啥插件</b></td><td>收录 GitHub 上真实存在的 169 项免费开源插件 + 四类安装路径表</td></tr>
+  </table>
+</div>
+
+<div class="sec">
+  <h2><span class="n">2</span>命中率实测（真实问句回归）</h2>
+  <table>
+    <tr><th>测试集</th><th>归一化前</th><th>归一化后</th><th style="width:70px">结果</th></tr>
+    <tr><td>规范术语问句（37 条）</td><td>61.5%</td><td>100%（37/37）</td><td class="ok">✓</td></tr>
+    <tr><td>真实小白白话（38 条）</td><td>39.5%</td><td>100%（38/38）</td><td class="ok">✓</td></tr>
+    <tr><td>真实使用主题（<span class="mono">recentTopics</span>）</td><td>—</td><td>100%（持续累积）</td><td class="ok">✓</td></tr>
+  </table>
+  <div style="margin-top:10px;font-size:12.5px;color:#656d76">
+    三层归一化词典：<span class="mono">小白现象 108</span> · <span class="mono">口语问句 212</span> ·
+    <span class="mono">中英术语 113</span> · <span class="mono">实战路由 21</span>　合计 <b>454 条</b>
+  </div>
+</div>
+
+<div class="sec">
+  <h2><span class="n">3</span>三态递进（本地查得到就用本地）</h2>
+  <div class="states">
+    <div class="st s1">
+      <div class="h">L1 极速（默认）</div>
+      <div class="b">· 本地 Grep ≤2 轮<br>· <b>禁止联网</b><br>· ≤300 字 / 15 行<br>· 约 250~310ms</div>
+    </div>
+    <div class="st s2">
+      <div class="h">L2 深读（自动升级）</div>
+      <div class="b">· 本地答不上来<br>· 或明确要深入<br>· 全文精读 + 联网比对<br>· 篇幅放宽</div>
+    </div>
+    <div class="st s3">
+      <div class="h">L3 兜底</div>
+      <div class="b">· 联网后仍不确定<br>· 明说「手册未覆盖」<br>· 标注「外部说法」<br>· 给可执行试错步骤</div>
+    </div>
+  </div>
+  <div style="margin-top:11px;font-size:12.5px;color:#656d76">
+    <b>升级判定</b>用双触发源：<b>A</b> 本地答不上来（两轮未命中 / 只给参数给不出原理）｜<b>B</b> 明确要深入（详细讲讲 / 为什么 / 对比一下）
+  </div>
+</div>
+
+<div class="sec">
+  <h2><span class="n">4</span>离线浏览器六个 tab</h2>
+  <table>
+    <tr><th>tab</th><th>内容</th><th style="width:24%">数据量</th></tr>
+    <tr><td>⌨ 快捷键速查</td><td>按模块分组，搜索 + 筛选，Mac/Win 双写</td><td class="n">818 条 / 14 模块</td></tr>
+    <tr><td>⚡ 高频速查</td><td>最常用操作，Mac / Win 双列对照</td><td class="n">128 条 / 13 类</td></tr>
+    <tr><td>🔍 功能检索</td><td>21.1 全文搜索，<b>可切中文汉化 / English 原版对照</b></td><td class="n">4351 页 × 中英</td></tr>
+    <tr><td>🧩 内置插件中英对比</td><td>Resolve FX + Fairlight 音频插件，标「是否 Studio 专属」</td><td class="n">109 条</td></tr>
+    <tr><td>🧬 开源插件</td><td>GitHub 免费开源插件，搜索 / 分类 / 平台 / Star 排序</td><td class="n"><b>169 项</b></td></tr>
+    <tr><td>🛠 官方开发文档</td><td>Scripting API · MCP · Workflow Integration，表格化 + 折叠</td><td class="n">62 类 / 410 方法</td></tr>
+  </table>
+</div>
+
+<div class="ft">
+  <div class="repo">github.com/akahoz94/davinci-21-chinese-manual</div>
+  <div class="note">
+    数据来源：DaVinci Resolve 21.1 官方参考手册（V2 汉化，2026 年 9 月），汉化歧义以 Blackmagic 英文原版为准。<br>
+    插件清单由 AI 辅助整理自 GitHub 公开仓库，不代表任何背书；安装前请读源仓库 README / Issue 确认兼容版本，并备份好工程文件与数据库。多数 MCP / 脚本类工具需 Studio 版。<br>
+    <b>→ 第 2 页</b>：运行逻辑完整流程图 · 开源插件分类明细 · 实战讲师蒸馏
+  </div>
+</div>
+
+</body>
+</html>
