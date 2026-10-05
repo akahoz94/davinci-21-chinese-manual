@@ -141,28 +141,15 @@ node <skill目录>/scripts/check-first-run.js --mark     # 展示引导后才标
 
 > 功能检索的全文（21.1 手册 4351 页，含**中文汉化 + 英文原版**）已内联进 `手册浏览器.html`（可在 tab 内切语言）。如需对原文做**深度逐页精读**，中文用 `references/21.1原文检索.txt`、英文原版用 `references/21.1英文原文检索.txt`（均 4351 页纯文本，带页码标记）。
 
-## 数据源约定（重要）
+## 数据源约定
 
 **三条边界，别混**：
 
-**① 对话框里跟我问答时 —— 优先检索范围是那份 PDF 的蒸馏内容。**
-即：`DaVinci Resolve 21.1 官方参考手册（4351 页）`（汉化原文 @谜一样的剪辑师、收集整合 @一个成熟的剪辑猿；英文原版 Blackmagic Design）蒸馏出的全文（已内联进 `手册浏览器.html`，浏览器内可切中/英；纯文本版在本 skill 的 `references/21.1原文检索.txt` 与 `references/21.1英文原文检索.txt`）。
-回答**操作 / 功能类问题，以这份 21.1 手册的说法为准**；**查不到时，明说"手册未覆盖"，然后联网搜索再给答案**，不要凭空编造或擅自用不可靠来源替代。
-联网搜索**不分优先级、可同时并发检索**以下来源：
-- 通用来源：达芬奇官方社区（Blackmagic Design 官方论坛 / 帮助文档）、B站、微信公众号、YouTube。
-- **中文内容**：B站 / 微信公众号 / 论坛（**按需联网检索，未做离线蒸馏**；实战要点已改用下方六位 YouTube 讲师蒸馏）。
-- **英文内容优先检索（YouTube）**：Cullen Kelly（色彩科学）、Casey Faris（全链路零基础）、Darren Mostyn（广播调色）、MrAlexTech（Fusion·快速技巧）、Team 2 Films（系统课·转软件）、Jason Yadlovski（Fairlight 音频）。六位博主已蒸馏进 `references/实战技巧蒸馏-油管博主.md`，优先 `Grep` 该文件定位「找谁、哪期」。
+**① 操作 / 功能类 → 以 21.1 手册蒸馏为准**（`21.1原文检索.txt` + 英文原版）。**查不到就明说"手册未覆盖"，然后联网再答**——不凭空编造。联网来源优先级：达芬奇官方社区/帮助文档 > 中文（B站/公众号）> 英文（YouTube 六位讲师，已蒸馏）。
 
-**② 快捷键素材、内置插件中英对照 —— 这些是已经做好的成型素材，直接引用、不要重造。**
+**② 快捷键 / 高频速查 / 内置插件中英对照 → 原样沿用成品**（`shortcuts.md` / 两份对照表 / `quickref.json`），**不要回 PDF 重挖**（曾这么做，条目变少、描述碎裂，反而更差）。
 
-- `shortcuts.md`（818 条 / 14 模块）= 已整理好的快捷键素材，**原样沿用**。
-- `quickref.json` / `高频速查.md`（128 条 / 13 类）= 已整理好的高频速查卡，**原样沿用**。
-- `Resolve_FX中英对照.md`（77 条）+ `Fairlight音频插件.md`（32 条）= 已整理好的内置插件中英对照，**原样沿用**。
-- 不要再去 PDF 里重新挖掘这些表来替换它们（曾经这么做，结果条目变少、描述碎裂，反而更差）。
-
-**③ 开发 / 技术文档（脚本 API · MCP 控制 · 插件 · 调色节点 · 工作流集成）—— 优先调取蒸馏内容。**
-官方开发文档来自 DaVinci Resolve 安装目录下的 `Support\`（Windows：`C:\ProgramData\Blackmagic Design\DaVinci Resolve\Support`；macOS：`/Library/Application Support/Blackmagic Design/DaVinci Resolve/Support`），涵盖 `Developer/`（Scripting API、Workflow Integrations、OpenFX、CodecPlugin、DaVinciCTL、Fusion Fuse、OGraf、LUT、Templates）与 `Technical Documentation/`（Remote Panel、用户配置目录），已蒸馏进 `references/官方开发文档蒸馏.md`。
-用户问到**脚本编写、Python/Lua 控制、MCP 接入、OpenFX/DCTL/插件开发、节点图/调色/渲染自动化、工作流集成**等开发类问题时，**优先 `Grep references/官方开发文档蒸馏.md`**，以官方 API 签名与约定为准，比手册正文更精确。该蒸馏文件随 Resolve 版本升级需重读刷新。
+**③ 开发 / 脚本 / API / MCP / 插件 / 调色节点 / 工作流集成 → 以 `官方开发文档蒸馏.md` 为准**（比手册正文更贴近实际接口），仅在表述模糊或与本机版本冲突时读本机 `Support/Developer/` 实时文档。
 
 ## 检索路由（按问题类型）
 

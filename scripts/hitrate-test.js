@@ -49,6 +49,17 @@ const spoken = loadDict('口语问句映射.txt');  // ②
 const termEn = loadDict('实战术语对照.txt');  // ③
 const routeCn = loadDict('实战路由表.txt');  // ③
 
+// ---------- 真实用户问句（来自状态文件 recentTopics） ----------
+const STATE_DIR = path.join(os.homedir(), '.workbuddy', 'skills', '.state');
+const STATE_FILE = path.join(STATE_DIR, '达芬奇21中文操作手册.json');
+let realTopics = [];
+try {
+  if (fs.existsSync(STATE_FILE)) {
+    const st = JSON.parse(fs.readFileSync(STATE_FILE, 'utf-8'));
+    if (Array.isArray(st.recentTopics)) realTopics = st.recentTopics;
+  }
+} catch (e) { /* 状态损坏不影响测试 */ }
+
 // ---------- 待查资产 ----------
 const ASSETS = [
   '高频速查.md', 'shortcuts.md', 'quickref.json',
@@ -199,6 +210,30 @@ const b = run('B 小白白话问句', SET_B);
 console.log('\n' + '='.repeat(60));
 const all = a.ok + b.ok, tot = a.total + b.total;
 console.log(`总计: ${all}/${tot} = ${(all / tot * 100).toFixed(1)}%`);
+// ---------- 真实问句覆盖检查 ----------
+if (realTopics.length) {
+  const rows = realTopics.map(t => ({ t, r: resolve(String(t).split('-').pop() || t) }));
+  const unhit = rows.filter(x => !x.r.ok);
+  console.log('\n' + '-'.repeat(60));
+  console.log('真实问句覆盖（来自 recentTopics，' + rows.length + ' 条）:');
+  rows.forEach(x => console.log('  ' + (x.r.ok ? '\u2705' : '\u274c') + ' ' + x.t + (x.r.ok ? '  via ' + x.r.via : '')));
+  if (unhit.length) {
+    console.log('\n\u26a0\ufe0f 真实问句未命中 ' + unhit.length + ' 条 \u2192 建议补进词典:');
+    unhit.forEach(x => console.log('    ' + x.t));
+  } else {
+    console.log('\u2705 真实问句全部命中');
+  }
+} else {
+  console.log('\n（暂无 recentTopics \u2014\u2014 skill 尚未被实际使用过，或未记录 --topic）');
+}
+
+console.log('\n' + '-'.repeat(60));
+console.log('词典规模: 小白现象 ' + Object.keys(pheno).length +
+  ' / 口语问句 ' + Object.keys(spoken).length +
+  ' / 中英术语 ' + Object.keys(termEn).length +
+  ' / 实战路由 ' + Object.keys(routeCn).length);
+console.log('（记录新问法：node scripts/check-first-run.js --topic "域-对象"）');
+
 const warn = (r, label) => {
   if (r.pct < 95) console.log(`⚠️${label} 命中率 ${r.pct}% (< 95%)，建议补词典`);
   else console.log(`✅ ${label} 命中率 ${r.pct}%`);
