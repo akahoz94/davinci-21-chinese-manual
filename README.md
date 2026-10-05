@@ -18,15 +18,6 @@
   <img src="宣传页横版.png" alt="达芬奇21中文操作手册 · 宣传图（三态递进检索 / 命中率实测 / 六个 tab / 运行逻辑流程图）" width="900">
 </p>
 
-<details>
-<summary>📱 手机上放大看 —— 竖版 9:16（1080×1920，内容同上）</summary>
-
-<p align="center">
-  <img src="宣传页竖版.png" alt="达芬奇21中文操作手册 · 宣传图竖版" width="440">
-</p>
-
-</details>
-
 ---
 
 ## 核心特性
