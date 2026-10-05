@@ -18,9 +18,28 @@ const stateDir = path.join(os.homedir(), '.workbuddy', 'skills', '.state');
 const stateFile = path.join(stateDir, SKILL + '.json');
 const MARK = process.argv.includes('--mark');
 
+// --topic "<主题关键词>"：记录本轮主题，供下轮判定是否追问（跨会话也有效）
+const topicIdx = process.argv.indexOf('--topic');
+const TOPIC = topicIdx > -1 ? (process.argv[topicIdx + 1] || '') : '';
+
 function emit(obj, code) {
   process.stdout.write(JSON.stringify(obj, null, 2) + '\n');
   process.exit(code === undefined ? 0 : code);
+}
+
+// ---------- 0) 若传了 --topic，先记录本轮主题（供下轮判定追问） ----------
+if (TOPIC) {
+  let t = {};
+  try {
+    const o = JSON.parse(fs.readFileSync(stateFile, 'utf-8'));
+    if (o && typeof o === 'object' && !Array.isArray(o)) t = o;
+  } catch (e) { t = {}; }
+  const arr = Array.isArray(t.recentTopics) ? t.recentTopics : [];
+  t.recentTopics = [TOPIC].concat(arr.filter(x => x !== TOPIC)).slice(0, 3);
+  try {
+    fs.mkdirSync(stateDir, { recursive: true });
+    fs.writeFileSync(stateFile, JSON.stringify(t, null, 2) + '\n', 'utf-8');
+  } catch (e) { /* 不可写不阻塞 */ }
 }
 
 // ---------- 1) 读状态（不exit，交给末尾统一处理） ----------
@@ -64,7 +83,8 @@ const base = {
   flowDetailedShown: state ? state.flowDetailedShown === true : false,
   useCount: state ? (Number(state.useCount) || 0) : 0,
   lastUsedAt: state ? (state.lastUsedAt || null) : null,
-  firstRunShownAt: state ? (state.firstRunShownAt || null) : null
+  firstRunShownAt: state ? (state.firstRunShownAt || null) : null,
+  recentTopics: state && Array.isArray(state.recentTopics) ? state.recentTopics : []
 };
 
 // ---------- 2) 只读模式：直接返回 ----------

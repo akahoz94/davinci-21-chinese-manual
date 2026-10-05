@@ -4,6 +4,20 @@
 
 ---
 
+## [v2.9] — 首次引导改为按用户判定（跨会话只弹一次）
+
+- **问题**：原逻辑「首次激活即展示流程图」实际等于**每个新会话都重弹一次**——用户反馈不合理。
+- **改为按用户判定**：「首次」= **该用户是否曾调用过本 skill**，而非「每个新会话」。同一用户后续开新会话不再弹出。
+- **状态文件持久化**：`~/.workbuddy/skills/.state/达芬奇21中文操作手册.json`
+  - **故意放在 skill git 仓库之外**（`skills/.state/` 是仓库的兄弟目录）→ skill 更新 / 重装 / clone 都不会丢。
+  - 字段：`firstRunShown`（判定依据）/ `firstRunShownAt` / `flowOverviewShown` / `flowDetailedShown` / `useCount` / `lastUsedAt`。
+- **新增 `scripts/check-first-run.js`**：探测（只读）/ `--mark`（展示后标记）。输出 JSON `{ isFirstRun, reason, useCount, writable, ... }`。
+  - 命中 `isFirstRun:false` → **不 Read SVG、不 show_widget**，零额外开销直接问答。
+  - 退出码 `1` = 状态不可写 → **不阻塞问答**，如实告知"下次可能重复展示"。
+- **边界情况已处理**：状态文件删除 → 恢复首次；JSON 损坏/字段缺失 → 保守当首次；目录只读 → 引导照常展示但不阻塞；多用户各自独立；用户主动要求可再看详细图。
+
+---
+
 ## [v2.8] — 三态递进检索架构 + 重绘流程图 + 重写 README
 
 ### 流程重构
