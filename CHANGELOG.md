@@ -4,6 +4,28 @@
 
 ---
 
+## [v2.7] — 开源插件板块内联进离线浏览器（第五→第六个 tab）
+
+### 新增
+- **`references/手册浏览器.html` 新增第 6 个标签页「🧬 开源插件」**（原 5 个 → 现 6 个），**数据完全内联**（保持单文件离线自包含）：
+  - **169 条** GitHub 免费开源插件 / 工具 / DCTL，来自用户自己的 [akahoz94/hoz-davinci-plugins](https://github.com/akahoz94/hoz-davinci-plugins)（快照 2026-10-05）。
+  - 六分类：AI/工作流、DCTL（调色）、OFX（特效）、Fusion（模板/宏）、编码器、脚本/MCP/工具。
+  - 功能：**关键词实时搜索**（仓库名/简介/分类/语言）+ **分类筛选** + **平台筛选** + **按 Star 或名称排序**；仓库名为 GitHub 链接可点。
+  - 顶部保留**风险提示**：Star 为快照需核对 21.1 兼容性、先备份工程与数据库、**MCP/脚本类基本需 Studio**（并高亮 `hiteshK03/davinci-resolve-mcp` 是唯一支持免费版的 MCP 桥接）。
+  - 界面沿用原有深色主题与 CSS 变量（`--bg/--panel/--accent2` 等），新增 `.gh-*` 样式类。
+- SKILL.md / README 全部「五个 tab / 五板块」表述更新为**六个**，并在资产表与答后必问里加入「开源插件」。
+
+### 验证
+- 无头 Chrome（CDP）实测：**6 个 tab 逐个点击均正常渲染**（sc 94KB / qk 20KB / fn / pl 24KB / **gh 54KB** / dev 151KB），**控制台无报错**（`err` 为空）。
+- 搜索「抠像」命中 2 条（`hiteshK03/davinci-resolve-mcp`、`MDizzleZA/davinci-resolve-mcp-free`），分类下拉 6 项、总数显示 169。
+
+### 踩坑记录
+- 用 `re.sub(r'//[^\n]*','',arr)` 剥 JS 注释会**把 `https://` 的 `//` 当注释删掉**，导致所有 URL 损坏、解析 0 条 → 只能剥「整行注释行」`re.sub(r'^\s*//[^\n]*$','',arr,flags=re.M)`。
+- 注入的 JS 块若**定义在调用点之后**，`fillGhCats()` 会在 `GH_DATA` 还是 `undefined` 时执行 → 报 `Cannot read properties of undefined (reading 'forEach')`。必须保证「数据 + 函数定义」在 init 调用之前。
+- 替换 `onchange=function(){...}` 内的字符串时容易把 init 调用插进**事件处理器内部**，需锚定独立语句（如 `fillCats();renderPlugins();`）来挂载。
+
+---
+
 ## [v2.6] — 开源插件清单（新增路由：插件问题开源/免费优先）
 
 ### 新增
