@@ -20,16 +20,83 @@ agent_created: true
 
 当用户提到达芬奇相关问题时，**先检索本 skill 的资料，直接在对话框里用中文回答**（给结论 + 步骤 + 快捷键，不要只甩链接或只说"去查"）。
 
-## 首次加载即展示运行逻辑速览（自动）
+## 首次使用引导（按用户判定 · 跨会话只展示一次）
 
-本 skill 被**首次激活 / 加载**时（同一会话只做一次），**立即用 `show_widget` 把速览图亮出来**：
-1. 先 `Read` 本 skill 的 `references/flow-overview.svg`（680×700，矢量，渲染开销小）；
-2. 调用 `show_widget`（title 用「达芬奇21 · 运行逻辑速览」，widget_code 用读到的 SVG）；
-3. 配一句极简说明：**本地查得到就用本地，查不到才联网**；三态 = L1 极速（默认·离线·约300ms）→ L2 深读（自动升级·联网双重比对）→ L3 兜底（明说手册未覆盖）；答后把新问法回写词典，下次走 L1 命中。
+**「首次」的判定依据 = 该用户是否曾经调用过本 skill**，**不是「每个新会话」**。同一用户后续开新会话**不再重复弹出**。
 
-**只展示速览图（700px），不展示详细版**——详细版（`flow-detailed.svg`，1252px，含检索路由表与决策细节）仅在用户明确要图时再给，避免拖慢首答。
+### 状态文件（持久化）
 
-> 用户明确要详细流程图（「画个流程图」「怎么调用的」「给我看看路由」）时，才 `Read` + `show_widget` 展示 `references/flow-detailed.svg`。
+- **路径**：`~/.workbuddy/skills/.state/达芬奇21中文操作手册.json`
+  （**故意放在 skill git 仓库之外**——skill 更新/重装/clone 都不会丢；用户级、跨会话稳定）
+- **内容**（JSON）：
+
+| 字段 | 含义 |
+|---|---|
+| `firstRunShown` | `true` = 首次引导已展示过 → **后续一律不再弹** |
+| `firstRunShownAt` | 首次展示时间（ISO 8601） |
+| `flowOverviewShown` | 速览图是否已展示（可与 firstRun 分开控制） |
+| `flowDetailedShown` | 详细图是否已展示 |
+| `useCount` / `lastUsedAt` | 调用次数 / 最近调用时间 |
+
+### 每次激活时的判定流程（按序执行）
+
+**推荐直接跑脚本**（比手动 Read/Write 可靠，能正确处理文件损坏与只读场景）：
+
+```bash
+# 1) 探测（只读，不改文件）
+node <skill目录>/scripts/check-first-run.js
+
+# 2) 仅在真的要展示引导之后，才标记
+node <skill目录>/scripts/check-first-run.js --mark
+```
+
+脚本输出 JSON：`{ isFirstRun, stateFile, reason, flowOverviewShown, useCount, lastUsedAt, writable }`
+
+- `isFirstRun: false` → **直接开始正常问答**：不要 Read SVG、不要 show_widget（零额外开销）。
+- `isFirstRun: true` → 走下方流程展示引导，展示后执行 `--mark`。
+- 退出码 `1` → 状态不可写，**不阻塞问答**，如实告知"状态未能保存，下次可能重复展示"。
+
+**手动等价流程**（无法执行 node 时）：
+
+```text
+
+1. Read  ~/.workbuddy/skills/.state/达芬奇21中文操作手册.json
+   ├─ 文件不存在 ─────────────→ 视为「首次」→ 走第 2 步
+   ├─ 存在但 firstRunShown=true ─→ 跳过引导，直接进入正常问答（不弹图、不读 SVG）
+   └─ 存在但 firstRunShown=false或字段缺失/损坏 ─→ 视为「首次」→ 走第 2 步
+
+2. 首次：Read references/flow-overview.svg → show_widget 展示
+        + 一句话说明（本地优先 / 三态递进 / 答后回写词典）
+
+3. 展示后 Write 更新状态文件：
+        firstRunShown = true
+        flowOverviewShown = true
+        firstRunShownAt = <当前 ISO8601 时间>
+        useCount += 1 ; lastUsedAt = <当前时间>
+```
+
+**判定要点**：
+- **只 `Read` 状态文件（一次小文件，几百字节，开销可忽略）**，不要为了"确认状态"去读 SVG 或跑别的检测。
+- 状态文件**每次激活都要读**（哪怕上一会话刚写过）——它是跨会话的唯一判据。
+- 命中 `firstRunShown=true` 时，**不要再 `Read` SVG、不要 `show_widget`**，直接回答用户问题（**零额外开销**）。
+
+### 边界情况
+
+| 情况 | 行为 |
+|---|---|
+| 状态文件被删除 | 恢复为「首次」→ 重新展示一次引导（用户主动清缓存的合理预期） |
+| 状态文件 JSON 损坏 / 字段缺失 | 按「首次」处理（保守：宁可多展示一次，也不要该展示不展示） |
+| 状态文件不可写（只读目录 / 权限不足） | 展示引导正常进行；`Write` 失败**不报错、不阻塞问答**，如实告知"状态未能保存，下次可能重复展示" |
+| skill 升级 / 重装 / 换机器 | 状态文件在仓库外 → **不受影响**，不会重复展示 |
+| 多用户共用同一台机器 | 每个用户各自有 `~`，状态互不干扰 |
+| 用户主动想再看 | 明确说"再给我看一遍流程图"时，直接展示 `flow-detailed.svg`，并把 `flowDetailedShown` 置 true |
+| 已展示过但用户忘了内容 | 可在答后补一句"（本 skill 的检索逻辑：本地优先 → L1/L2/L3 三态递进，详见 README 流程图）"，**不必重弹图** |
+
+### 详细图（按需，不属于首次引导）
+
+- 源文件：`references/flow-detailed.svg`（680×1252）
+- **仅在用户明确要**（"画个流程图""怎么调用的""给我看看路由"）时 `Read` + `show_widget`。
+- 展示后把 `flowDetailedShown` 置 `true`。
 
 ## 极速模式（默认模式 · 始终生效，覆盖其它排版偏好）
 
