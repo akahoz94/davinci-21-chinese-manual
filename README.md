@@ -195,29 +195,6 @@ node scripts/check-first-run.js --mark  # 展示引导后才标记
 ### 人类浏览
 双击 `references/手册浏览器.html`，六个 tab 离线即用。
 
-### 重新生成宣传图
-
-改完宣传页 HTML 后重新截图（需本机已装 Chrome）：
-
-```bash
-node scripts/shot-promo.js 宣传页横版.html 宣传页横版.png
-node scripts/shot-promo.js 宣传页竖版.html 宣传页竖版.png
-```
-
-| 参数 | 说明 |
-|---|---|
-| 第 1 参 | 源 HTML（相对 skill 根目录） |
-| 第 2 参 | 输出 PNG；省略则与 HTML 同名 |
-| 第 3 参 | 视口宽度（可选，默认读 `body` 实际宽度） |
-| 第 4 参 | 视口高度（可选，默认读 `body` 实际高度） |
-
-- **路径自动推断**（基于脚本自身位置），从任何目录运行都可以；也可用 `SKILL_ROOT` 环境变量指定根目录。
-- Chrome 路径自动探测多平台；非默认安装位置可用 `CHROME=/path/to/chrome` 指定。
-- 脚本会**等所有嵌入图加载完再截图**，并报告有无加载失败的图。
-- 宣传图必须是 **PNG** —— GitHub 图片代理（camo）不渲染 SVG。
-- 同一份内容出**两版排版**：横版给 PC / README，竖版给手机与社媒。README 只嵌横版，竖版收在折叠块里，避免两张大图重复占位。
-- **尺寸是硬指标**：两个 HTML 都用 `body{width;height;overflow:hidden}` 定死 1920×1080 / 1080×1920，脚本默认按 `body` 实际高度截图（**不加余量**），成品像素必须正好是 3840×2160 / 2160×3840。改动后请用 PIL 复核真实像素，别只看脚本打印的 CSS 值。
-
 ### 更新插件数据源
 见 [使用思路.md · 维护指引](使用思路.md)。
 
@@ -232,7 +209,7 @@ node scripts/shot-promo.js 宣传页竖版.html 宣传页竖版.png
 
 ## 免责声明
 
-原文版权归 Blackmagic Design 所有，本项目仅作离线查阅 / 歧义对照。插件清单由 AI 辅助整理自 GitHub 公开仓库，**不代表任何背书或推荐**；安装前请读源仓库 README / Issue 确认兼容版本，并**备份好工程文件与数据库**。多数 MCP / 脚本类工具需 Studio 版（免费版不开放脚本接口）。
+原文版权归 Blackmagic Design 所有，本项目仅作离线查阅 / 歧义对照。插件清单由 AI 辅助整理自 GitHub 公开仓库，**不代表任何背书或推荐**；安装前请读源仓库 README / Issue 确认兼容版本，并**备份好工程文件与数据库**。多数 MCP / 脚本类工具需Studio版（免费版不开放脚本接口）。
 
 ---
 
