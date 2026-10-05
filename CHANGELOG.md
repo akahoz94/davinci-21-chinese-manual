@@ -4,6 +4,21 @@
 
 ---
 
+## [v2.6] — 开源插件清单（新增路由：插件问题开源/免费优先）
+
+### 新增
+- **`references/开源插件清单.md`**：收录 GitHub 上**真实存在**的开源/免费插件，分四类：
+  - **DCTL（调色/色彩科学）**：AgX-Resolve（⭐110）、Thatcher Freeman DCTLs（⭐412，社区评价 excellent）、V-Log-Alchemy（⭐357，松下 V-Log 胶片感）、protune-transforms（⭐176，GoPro）、photographic-dctls（⭐78）、baldavenger/DCTLs（⭐350）、MoazElgabry/DCTLs（活跃）、ME_OpenDRT-OFX、gamut-compress（⭐110）、CinePrint35、2499 DRT（⭐320）。
+  - **OFX（特效）**：**CorridorKey-Runtime（⭐709，AI 抠像，开源免费）**、BaldavengerPlugins（⭐148）、AE-Fusion-3D-Bridge、Auto-Rename for Resolve、DaVinci-Resolve-DLSS5（实验性）、Akascape 免费 Fuses（Rembg 去背景等）。
+  - **AI/自动化/字幕**：**BadWords（⭐31，离线转写+一键剪静音）**、**arkiv（⭐71，本地语义搜素材，支持中文）**、AutoCut、StoryToolkit AI、Tagger、FireCut、Jumper。
+  - **音频 VST3 免费档**：iZotope RX / KiloHearts / TBProAudio / Valhalla DSP / Auburn Sounds 等（说明 VST3 与 OFX 生态不同）。
+  - **安装路径速查表**：OFX / DCTL / Fusion Fuses / VST3 四类在 Win·Mac·Linux 的路径 + **Mac Gatekeeper 解封命令** + 装完在偏好设置勾选。
+  - **入口总榜**：`Greenysmac/awesome-davinci-resolve`（社区精选几百条，含星数/更新时间/平台），不确定有什么插件时先查它。
+- **新增检索路由 4.5（插件问题）**：先 `Grep 开源插件清单.md`，回答形态 = 先答"有没有"+GitHub 链接，再说"怎么装"（类型→路径→重启→勾选→节点加 OpenFX）。**硬要求**：区分四类插件；DCTL 免费版多数能用但部分 OFX/Fuses 锁 Studio（须标注「仅 Studio」）；必提醒版本兼容（老插件可能不兼容 21.1，让用户看 Issue）。
+- **口语映射 + 小白现象词典补插件类 30 条**：「有没有免费插件」「哪里有免费插件」「装了不生效」「装了没反应」「DCTL 怎么装」「免费版能装插件吗」「这个效果有现成的吗」等。
+
+---
+
 ## [v2.5] — 小白问句命中率根治（三层归一化）
 
 ### 体检发现
