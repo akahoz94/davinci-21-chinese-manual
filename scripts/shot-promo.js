@@ -6,7 +6,10 @@
  *   node scripts/shot-promo.js 宣传页1.html 宣传页1.png
  *   node scripts/shot-promo.js 宣传页2.html 宣传页2.png
  *
- * 可选第三个参数：视口宽度（默认读取 HTML 里 body 的实际宽度，再退回 1000）
+ * 可选第三个参数：视口宽度（默认读取 HTML 里 body 的实际宽度）
+ * 可选第四个参数：视口高度（默认读取 HTML 里 body 的实际高度）
+ *   ⚠️ 页面若用 body{height:1080px;overflow:hidden} 固定尺寸，输出高度就等于该值，
+ *      不会再额外加余量——否则会在底部多出一条白边，破坏严格 16:9 / 9:16。
  *
  * 说明：
  * - 起本地 http server 加载页面（避免 file:// 下嵌图加载失败）
@@ -30,6 +33,7 @@ const ROOT = process.env.SKILL_ROOT
 const PAGE = process.argv[2] || '宣传页1.html';
 const OUT = process.argv[3] || PAGE.replace(/\.html$/i, '.png');
 const FORCED_W = parseInt(process.argv[4], 10) || 0;
+const FORCED_H = parseInt(process.argv[5], 10) || 0;
 
 const PORT = 9400 + (process.pid % 300);
 const CDP = PORT + 1;
@@ -128,9 +132,10 @@ server.listen(PORT, async () => {
     });
     const d = JSON.parse(dim.result.value);
     const W = FORCED_W || d.w;
+    const H = FORCED_H || Math.ceil(d.h);
 
     await send('Emulation.setDeviceMetricsOverride', {
-      width: W, height: Math.ceil(d.h) + 20, deviceScaleFactor: 2, mobile: false
+      width: W, height: H, deviceScaleFactor: 2, mobile: false
     });
     await new Promise(r => setTimeout(r, 500));
     const shot = await send('Page.captureScreenshot', { format: 'png', captureBeyondViewport: true });
@@ -138,7 +143,7 @@ server.listen(PORT, async () => {
     const outPath = path.isAbsolute(OUT) ? OUT : path.join(ROOT, OUT);
     fs.writeFileSync(outPath, Buffer.from(shot.data, 'base64'));
     console.log(`✓ 已保存: ${outPath}`);
-    console.log(`  尺寸 ${W} × ${d.h} · ${(fs.statSync(outPath).size / 1024).toFixed(0)} KB · 嵌入图 ${d.imgs} 张`);
+    console.log(`  尺寸 ${W} × ${H} · ${(fs.statSync(outPath).size / 1024).toFixed(0)} KB · 嵌入图 ${d.imgs} 张`);
     if (d.broken > 0) console.log(`  ⚠️ 有 ${d.broken} 张图没加载出来，检查路径`);
   } catch (e) {
     console.error('✗ 截图失败:', e.message);

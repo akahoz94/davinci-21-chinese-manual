@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<title>达芬奇 21 中文操作手册 · 宣传页（移动端竖版 1080×1920）</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    width:1080px;height:1920px;overflow:hidden;background:#fff;
+    font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif;
+    color:#1f2328;display:flex;flex-direction:column;
+  }
+
+  .hero{
+    flex:0 0 auto;padding:44px 52px 40px;
+    background:linear-gradient(160deg,#14181f 0%,#232a35 100%);color:#fff;
+  }
+  .hero h1{font-size:76px;line-height:1.16;font-weight:800;letter-spacing:-1px}
+  .hero h1 em{font-style:normal;color:#ffb454}
+  .hero .sub{font-size:27px;color:#b8c0cc;margin-top:18px;line-height:1.5}
+  .kpis{margin-top:30px;display:flex;gap:16px}
+  .kpi{flex:1;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:12px;padding:18px 14px;text-align:center}
+  .kpi b{display:block;font-size:52px;font-weight:800;color:#ffb454;line-height:1}
+  .kpi i{display:block;font-style:normal;font-size:21px;color:#c9d1d9;margin-top:10px;line-height:1.35}
+
+  .bd{flex:1;min-height:0;padding:32px 50px 24px;display:flex;flex-direction:column;gap:22px}
+  .hd{font-size:22px;letter-spacing:3px;color:#8c959f;font-weight:800;margin-bottom:13px}
+
+  .tri{display:flex;gap:14px}
+  .st{flex:1;border-radius:12px;padding:18px 17px;border:1.5px solid #d8dee4}
+  .st.l1{background:#f0fdf4;border-color:#86efac}
+  .st.l2{background:#fffbeb;border-color:#fcd34d}
+  .st.l3{background:#fef2f2;border-color:#fca5a5}
+  .st .t{font-size:29px;font-weight:800;margin-bottom:8px;line-height:1.2}
+  .st .d{font-size:21px;line-height:1.45;color:#24292f}
+
+  table{width:100%;border-collapse:collapse;font-size:22px}
+  th{text-align:left;font-size:19px;color:#6e7781;font-weight:800;padding:6px 10px;border-bottom:2px solid #d8dee4}
+  td{padding:9.5px 10px;border-bottom:1px solid #eef1f4;line-height:1.35}
+  td:first-child{white-space:nowrap;font-weight:700}
+  .ok{color:#1a7f37;font-weight:800}
+  .hl{color:#0969da;font-weight:800}
+  .dic{margin-top:12px;font-size:21px;color:#57606a;line-height:1.45}
+  .dic b{color:#24292f}
+
+  .fl{flex:1;min-height:0;display:flex;flex-direction:column}
+  .steps{flex:1;min-height:0;display:flex;flex-direction:column;gap:8px}
+  .sp{display:flex;align-items:center;gap:16px;background:#f6f8fa;border:1.5px solid #d0d7de;border-radius:11px;padding:0 20px;flex:1}
+  .sp.s0{background:#f3e8ff;border-color:#c084fc}
+  .sp.s1{background:#e0f2fe;border-color:#7dd3fc}
+  .sp.s2{background:#dcfce7;border-color:#86efac}
+  .sp.s3{background:#fef3c7;border-color:#fcd34d}
+  .sp.s4{background:#ffe4e6;border-color:#fda4af}
+  .sp .n{flex:0 0 106px;font-size:20px;color:#6e7781;font-weight:800;letter-spacing:1px}
+  .sp .b{flex:0 0 250px;font-size:28px;font-weight:800;line-height:1.2}
+  .sp .s{flex:1;font-size:21px;color:#57606a;line-height:1.35}
+
+  .tabs{margin-top:0;background:#f6f8fa;border:1.5px solid #d0d7de;border-radius:11px;padding:15px 20px;font-size:21px;line-height:1.75;color:#57606a}
+  .tabs b{color:#24292f}
+  .tabs .g{color:#0969da;font-weight:800}
+
+  .ft{flex:0 0 auto;font-size:18px;color:#6e7781;line-height:1.5;border-top:1px solid #e6eaef;padding-top:14px}
+  .ft b{color:#24292f}
+</style></head>
+<body>
+
+<div class="hero">
+  <h1>达芬奇 21<br><em>中文操作手册</em></h1>
+  <div class="sub">离线优先 · 本地检索 · 答完必附出处 · 小白口语也能直接命中</div>
+  <div class="kpis">
+    <div class="kpi"><b>100%</b><i>白话问句<br>命中率 38/38</i></div>
+    <div class="kpi"><b>250ms</b><i>首答延迟<br>本地不联网</i></div>
+    <div class="kpi"><b>454</b><i>三层词典<br>条数</i></div>
+  </div>
+</div>
+
+<div class="bd">
+
+  <div>
+    <div class="hd">① 三态递进检索</div>
+    <div class="tri">
+      <div class="st l1"><div class="t">L1 极速</div><div class="d">本地检索，不联网<br>命中即答</div></div>
+      <div class="st l2"><div class="t">L2 深读</div><div class="d">本地答不上来<br>或用户要深入</div></div>
+      <div class="st l3"><div class="t">L3 兜底</div><div class="d">仍不确定时<br>如实说明，不编造</div></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="hd">② 命中率实测（脚本可复跑）</div>
+    <table>
+      <tr><th>测试集</th><th style="width:24%">命中</th><th>说明</th></tr>
+      <tr><td>A 术语问句</td><td class="ok">37/37</td><td>规范术语</td></tr>
+      <tr><td>B 白话问句</td><td class="ok">38/38</td><td>「声音忽大忽小」</td></tr>
+      <tr><td>真实提问</td><td class="ok">7/7</td><td>实际使用记录</td></tr>
+    </table>
+    <div class="dic"><b>三层词典 454 条</b>：小白现象 108 · 口语问句 212 · 实战术语 113 · 实战路由 21</div>
+  </div>
+
+  <div class="fl">
+    <div class="hd">③ 运行逻辑（每次调用都走这条链）</div>
+    <div class="steps">
+      <div class="sp s0"><div class="n">阶段 0</div><div class="b">首次判定</div><div class="s">读状态文件，引导只弹一次</div></div>
+      <div class="sp s1"><div class="n">阶段 1</div><div class="b">问句归一化</div><div class="s">口语 → 现象 → 中英术语</div></div>
+      <div class="sp s2"><div class="n">阶段 2</div><div class="b">L1 极速</div><div class="s">本地检索，命中即答</div></div>
+      <div class="sp s3"><div class="n">阶段 3</div><div class="b">升级判定</div><div class="s">本地答不上来，或用户要深入</div></div>
+      <div class="sp s4"><div class="n">阶段 4-5</div><div class="b">L2 → L3</div><div class="s">联网比对，不确定则兜底</div></div>
+      <div class="sp s2"><div class="n">阶段 6</div><div class="b">输出与回写</div><div class="s">附出处 · 标 Studio · 记主题</div></div>
+    </div>
+  </div>
+
+  <div>
+    <div class="hd">④ 内置离线浏览器 · 六个 tab</div>
+    <div class="tabs">
+      ⌨ 快捷键 <b>818 条 / 14 模块</b> · ⚡ 高频速查 <b>128 条 / 13 类</b> · 🔍 功能检索 <b>4351 页中英可切</b><br>
+      🧩 内置插件 <b>109 条</b> · 🧬 开源插件 <span class="g">169 项 · 可在线更新</span> · 🛠 开发文档 <b>62 类 / 410 方法</b>
+    </div>
+  </div>
+
+  <div class="ft">
+    <b>github.com/akahoz94/davinci-21-chinese-manual</b><br>
+    数据来源：<b>DaVinci Resolve 21.1 官方参考手册（V2 汉化，4351 页）</b>，歧义处以英文原版为准。插件为 GitHub 开源项目索引，功能与授权以原仓库为准。
+  </div>
+
+</div>
+</body></html>

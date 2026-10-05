@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<title>达芬奇 21 中文操作手册 · 宣传页（PC 横版 1920×1080）</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    width:1920px;height:1080px;overflow:hidden;background:#fff;
+    font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif;
+    color:#1f2328;display:flex;
+  }
+
+  /* ── 左栏：品牌 ── */
+  .side{
+    width:440px;flex:0 0 440px;height:1080px;
+    background:linear-gradient(160deg,#14181f 0%,#232a35 100%);
+    color:#fff;padding:48px 38px 42px;display:flex;flex-direction:column;
+  }
+  .side .k{font-size:16px;letter-spacing:5.5px;color:#7d8590;margin-bottom:15px}
+  .side h1{font-size:52px;line-height:1.18;font-weight:800;letter-spacing:-.5px}
+  .side h1 em{font-style:normal;color:#ffb454}
+  .side .sub{font-size:18.5px;color:#b8c0cc;margin-top:17px;line-height:1.6}
+  .tags{margin-top:21px;display:flex;flex-wrap:wrap;gap:9px}
+  .tags span{font-size:14.5px;padding:6px 14px;border-radius:20px;background:rgba(255,255,255,.11);border:1px solid rgba(255,255,255,.18);color:#e6edf3}
+
+  .kpis{margin-top:44px;display:flex;flex-direction:column;gap:15px}
+  .kpi{display:grid;grid-template-columns:152px 1fr;align-items:center;gap:6px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.1)}
+  .kpi b{font-size:47px;font-weight:800;color:#ffb454;line-height:1;letter-spacing:-1px}
+  .kpi i{font-style:normal;font-size:17px;color:#c9d1d9;line-height:1.5}
+
+  /* 左栏：口语 → 术语 转化示例 */
+  .conv{margin-top:44px}
+  .conv .h{font-size:15.5px;letter-spacing:2.5px;color:#7d8590;font-weight:800;margin-bottom:15px}
+  .cv{display:flex;align-items:center;gap:9px;margin-bottom:16px;font-size:15px;line-height:1.3}
+  .cv .a{flex:1;background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.14);border-radius:7px;padding:11px 10px;color:#e6edf3;white-space:nowrap}
+  .cv .m{flex:0 0 16px;text-align:center;color:#ffb454;font-weight:800;font-size:16px}
+  .cv .b{flex:1;background:rgba(255,180,84,.13);border:1px solid rgba(255,180,84,.35);border-radius:7px;padding:11px 10px;color:#ffd9a0;font-weight:700;white-space:nowrap}
+
+  .repo{margin-top:auto;font-size:14px;color:#8b949e;line-height:1.7;padding-top:18px}
+  .repo b{color:#e6edf3;font-weight:600}
+
+  /* ── 右侧主区 ── */
+  .main{flex:1;height:1080px;padding:40px;display:flex;gap:22px}
+  .ctr{flex:1;min-width:0;display:flex;flex-direction:column;gap:23px}
+  .rgt{width:690px;flex:0 0 690px;display:flex;flex-direction:column;gap:20px;min-height:0}
+
+  .hd{font-size:15.5px;letter-spacing:3px;color:#8c959f;font-weight:800;margin-bottom:11px}
+
+  .tri{display:flex;gap:13px}
+  .st{flex:1;border-radius:10px;padding:17px 17px;border:1px solid #d8dee4;background:#fff}
+  .st.l1{background:#f0fdf4;border-color:#86efac}
+  .st.l2{background:#fffbeb;border-color:#fcd34d}
+  .st.l3{background:#fef2f2;border-color:#fca5a5}
+  .st .t{font-size:20px;font-weight:800;margin-bottom:6px}
+  .st .d{font-size:15px;line-height:1.5;color:#24292f}
+
+  table{width:100%;border-collapse:collapse;font-size:15.5px}
+  th{text-align:left;font-size:14px;color:#6e7781;font-weight:700;padding:8px 10px;border-bottom:1.5px solid #d8dee4}
+  td{padding:17.5px 10px;border-bottom:1px solid #eef1f4;line-height:1.4}
+  td:first-child{white-space:nowrap;font-weight:600}
+  .ok{color:#1a7f37;font-weight:800}
+  .hl{color:#0969da;font-weight:800}
+  .dic{margin-top:16px;font-size:15px;color:#57606a;line-height:1.5}
+  .dic b{color:#24292f}
+
+  .box{border:1px solid #d8dee4;border-radius:10px;padding:18px 20px;background:#fff}
+  .flbox{flex:1;min-height:0;border:1px solid #d8dee4;border-radius:10px;padding:17px 19px;background:#fff;display:flex;flex-direction:column}
+  .flbox img{width:100%;display:block;border:1px solid #eaeef2;border-radius:6px;background:#fff}
+  .note{margin-top:13px;font-size:14.5px;color:#57606a;line-height:1.8}
+  .note b{color:#24292f}
+  .note span{display:block}
+
+  .ft{font-size:13.5px;color:#6e7781;line-height:1.5;border-top:1px solid #e6eaef;padding-top:12px}
+  .ft b{color:#24292f}
+</style></head>
+<body>
+
+<div class="side">
+  <h1>达芬奇 21<br><em>中文操作手册</em></h1>
+  <div class="sub">离线优先 · 本地检索 · 答完必附出处<br>小白口语提问也能直接命中</div>
+  <div class="tags">
+    <span>离线检索</span><span>中英对照</span><span>快捷键</span>
+    <span>开源插件</span><span>脚本 API</span><span>Studio 标注</span>
+  </div>
+
+  <div class="kpis">
+    <div class="kpi"><b>100%</b><i>白话问句命中率<br>38/38 实测</i></div>
+    <div class="kpi"><b>250ms</b><i>首答延迟（本地检索<br>不联网）</i></div>
+    <div class="kpi"><b>454 条</b><i>口语 / 现象 / 术语<br>三层词典</i></div>
+  </div>
+
+  <div class="conv">
+    <div class="h">口语怎么变成可检索的术语</div>
+    <div class="cv"><div class="a">声音忽大忽小</div><div class="m">›</div><div class="b">动态处理 / 压缩器</div></div>
+    <div class="cv"><div class="a">画面灰蒙蒙</div><div class="m">›</div><div class="b">对比度 / 饱和度</div></div>
+    <div class="cv"><div class="a">一整条怎么删</div><div class="m">›</div><div class="b">时间线 / 删除片段</div></div>
+    <div class="cv"><div class="a">导出后颜色变了</div><div class="m">›</div><div class="b">色彩管理 / 色彩空间</div></div>
+  </div>
+
+  <div class="repo">
+    <b>github.com/akahoz94/davinci-21-chinese-manual</b><br>
+    DaVinci Resolve 21.1 官方手册（V2 汉化）
+  </div>
+</div>
+
+<div class="main">
+
+  <div class="ctr">
+    <div>
+      <div class="hd">① 三态递进检索</div>
+      <div class="tri">
+        <div class="st l1"><div class="t">L1 极速（默认）</div><div class="d">本地检索，不联网<br>命中即答，零开场白</div></div>
+        <div class="st l2"><div class="t">L2 深读</div><div class="d">本地答不上来<br>或用户明确要深入</div></div>
+        <div class="st l3"><div class="t">L3 兜底</div><div class="d">仍不确定时<br>如实说明，不编造</div></div>
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="hd">② 命中率实测（脚本可复跑）</div>
+      <table>
+        <tr><th>测试集</th><th style="width:20%">命中</th><th>说明</th></tr>
+        <tr><td>A 术语问句</td><td class="ok">37/37</td><td>规范术语，如「色彩管理」</td></tr>
+        <tr><td>B 白话问句</td><td class="ok">38/38</td><td>如「声音忽大忽小怎么调」</td></tr>
+        <tr><td>真实提问</td><td class="ok">7/7</td><td>来自实际使用记录</td></tr>
+      </table>
+      <div class="dic"><b>三层词典 454 条</b>：小白现象 108 · 口语问句 212 · 实战术语 113 · 实战路由 21</div>
+    </div>
+
+    <div class="box" style="flex:1">
+      <div class="hd">③ 内置离线浏览器 · 六个 tab</div>
+      <table>
+        <tr><th>tab</th><th>内容</th><th style="width:26%">数据量</th></tr>
+        <tr><td>⌨ 快捷键速查</td><td>按模块分组，搜索 + 筛选，Mac/Win 双写</td><td>818 条 / 14 模块</td></tr>
+        <tr><td>⚡ 高频速查</td><td>最常用操作，Mac / Win 双列对照</td><td>128 条 / 13 类</td></tr>
+        <tr><td>🔍 功能检索</td><td>全文搜索，可切中文 / English 原版</td><td>4351 页 × 中英</td></tr>
+        <tr><td>🧩 内置插件对照</td><td>Resolve FX + Fairlight，标 Studio 专属</td><td>109 条</td></tr>
+        <tr><td>🧬 开源插件</td><td>GitHub 免费开源，分类 / 平台 / Star 排序</td><td class="hl">169 项 · 可更新</td></tr>
+        <tr><td>🛠 官方开发文档</td><td>Scripting API · MCP · Workflow Integration</td><td>62 类 / 410 方法</td></tr>
+      </table>
+    </div>
+
+    <div class="ft">
+      数据来源：<b>DaVinci Resolve 21.1 官方参考手册（V2 汉化，4351 页）</b>，歧义处以英文原版为准。插件为 GitHub 开源项目索引，功能与授权以原仓库为准。
+    </div>
+  </div>
+
+  <div class="rgt">
+    <div class="flbox">
+      <div class="hd">④ 运行逻辑（完整流程图）</div>
+      <img src="references/flow-overview.png" alt="运行逻辑流程图">
+      <div class="note">
+        <span><b>离线优先</b>：默认不联网，本地能答就绝不外查</span>
+        <span><b>三态收敛</b>：同一问题无论问几次都走同一路径</span>
+        <span><b>维护闭环</b>：未命中词自动进测试集，命中率随使用上升</span>
+        <span><b>覆盖范围</b>：剪辑 · 调色 · 音频 · Fusion · 交付 全流程</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+</body></html>
